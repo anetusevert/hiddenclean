@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import Link from "next/link";
+import Script from "next/script";
 import "./globals.css";
 import { JsonLd } from "@/components/JsonLd";
 import { Header } from "@/components/Header";
@@ -45,6 +46,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </div>
           <div className="wrap base">© {new Date().getFullYear()} HiddenClean</div>
         </footer>
+        <Script
+          type="module"
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon='{"token": "631017293332446989b37e184208d23d"}'
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
