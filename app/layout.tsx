@@ -1,3 +1,4 @@
+import SubscribeForm from "@/components/SubscribeForm";
 import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import Link from "next/link";
@@ -38,7 +39,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main id="content">{children}</main>
         <footer className="site-footer">
           <div className="wrap foot">
-            <div><b>HiddenClean</b><p>One hidden cleaning hack a day. Every tip has a safety check. Never mix cleaning products.</p></div>
+            <div><b>HiddenClean</b><p>One hidden cleaning hack a day. Every tip has a safety check. Never mix cleaning products.</p><SubscribeForm compact /></div>
             <nav aria-label="Footer">
               <Link href="/tips">All tips</Link><Link href="/how-to">By appliance</Link><Link href="/about">About &amp; safety</Link>
               <Link href="/subscribe">Subscribe</Link><Link href="/llms.txt">llms.txt</Link><Link href="/sitemap.xml">Sitemap</Link>

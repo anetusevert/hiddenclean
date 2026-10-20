@@ -66,3 +66,17 @@ h2 { font-size: clamp(22px, 3vw, 28px); margin: 36px 0 14px; }
   .lede { font-size: 17px; }
   .hubs { grid-template-columns: 1fr 1fr; }
 }
+.sr { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); }
+.subcard { background:#fff; border:1px solid var(--line); border-radius:24px; padding:clamp(22px,5vw,44px); box-shadow:0 18px 50px rgba(20,50,95,.10); margin:24px 0; }
+.subcard h1 { margin:0 0 10px; font-size:clamp(28px,6vw,42px); }
+.subform { display:flex; gap:10px; margin:22px 0 14px; flex-wrap:wrap; }
+.subform input { flex:1 1 220px; min-width:0; font:inherit; padding:14px 16px; border:2px solid var(--line); border-radius:14px; background:var(--paper); color:var(--ink); }
+.subform input:focus { outline:none; border-color:var(--mint); background:#fff; }
+.subform button { flex:0 0 auto; font:inherit; font-weight:800; background:var(--mint); color:#fff; border:0; border-radius:14px; padding:14px 22px; cursor:pointer; }
+.subform button:hover { background:#3aa489; }
+@media (max-width:520px){ .subform button { flex:1 1 100%; } }
+.subform.compact { margin:10px 0 0; max-width:440px; }
+.subform.compact input { background:rgba(255,255,255,.08); border-color:rgba(255,255,255,.25); color:inherit; }
+.subperks { list-style:none; padding:0; margin:0 0 14px; display:flex; flex-wrap:wrap; gap:8px 18px; color:var(--muted); font-size:15px; }
+.subnote { color:var(--muted); font-size:14px; margin:0; }
+.subnote a { color:var(--navy); }
