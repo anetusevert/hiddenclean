@@ -2,7 +2,7 @@
 
 Pipeline copied from TechTipADay's Remotion setup (script / align / render), with a new HiddenClean look, sound and voice. Composition: `HiddenCleanShort` (`src/HiddenCleanShort.tsx`).
 
-## Locked style (approved version = first sample, pending Utena's yes)
+## Locked style (APPROVED by Utena 2026-10-20: do not change voice, sound kit or reveal motif)
 - **Palette:** navy `#14325f` (deep `#0c2245`), mint `#4dbb9f`, pale mint `#9fd9c8`, white ink; warm amber `#ffb85c` only for the hook pill/last hook word and safety.
 - **Type:** Fredoka 700 (display), Nunito 900 (captions, pills).
 - **Backdrop:** navy with a faint bathroom-tile grid and a mint glow behind the appliance.
@@ -26,7 +26,7 @@ Pipeline copied from TechTipADay's Remotion setup (script / align / render), wit
 - render normalises the VO to -16 LUFS (loudnorm, TP -1.5); the bed sits at 0.10 under the voice. Final mix measured -16.2 LUFS integrated.
 
 ## Safety rules (enforced by script.mjs)
-- Every spec should have a `safety` line (warns if missing). Never suggest mixing products; the script throws on "mix"/"combine"/bleach+acid/ammonia patterns unless it's a "never mix" warning.
+- Every spec should have a `safety` line (warns if missing). Never suggest mixing products: script.mjs checks every sentence and throws if one mentions mix/mixing/combine/bleach (or bleach with vinegar/ammonia) unless that sentence is a warning (never/don't/no/not).
 - Keep tips to one product at a time; unplug/switch off appliances first.
 
 ## Content: `specs/<slug>.json` (the site's lib/tips.ts is not touched)
@@ -38,12 +38,17 @@ Pipeline copied from TechTipADay's Remotion setup (script / align / render), wit
   "safety": { "say": "No bleach, and never mix cleaners.", "text": "No bleach. Never mix cleaners." },
   "result": { "say": "...", "headline": "2-5 words", "before": "Gunky filter", "after": "Sparkling clean" } }
 ```
-Copy: VO <= 75 words, hook 5-12 words, 2-4 steps. Illustrations: `src/Dishwasher.tsx` (scenes rack-out, twist, rinse). For other appliances add a new flat illustration component with the same scene/pointer pattern and switch on `appliance`.
+Copy: VO <= 75 words, hook 5-12 words, 2-4 steps. Illustrations: `src/Dishwasher.tsx` (`appliance: "dishwasher"`, scenes rack-out, twist, rinse) and `src/appliances.tsx` for
+`washer`, `oven`, `fridge`, `microwave`, `kettle`, `coffee`, `dryer`, `vacuum`, `airfryer`. Each has a hidden `part`, a `button`, a `Draw` driven by one generic
+state and a `Closeup` for the before/after panels. Generic step scenes: `open`, `remove`, `rinse`, `refit`, `pour`, `press` (button glows, mode on), `steam`,
+`wait` (clock), `wipe` (cloth), `close`. `"revealAt": "button"` puts the hidden-spot reveal on the setting button (hidden-setting tips), otherwise on the part.
+The last rinse/wipe/refit step ends with a second reveal + sparkle. Note: `dryer` currently reuses the washer body (own lint-screen closeup).
 
 ## Daily commands (from `video/`)
 1. Write `specs/<slug>.json`, then `node script.mjs <n|slug>` -> `scripts/<slug>.json` + the ElevenLabs prompt.
 2. ElevenLabs `creative_generate_speech` (voice/model from voice.json, `generations_count: 1`, prompt = printed text exactly). Poll `creative_get_flow_run_status`, then `curl -L -o public/vo/<slug>.mp3 "<content_url>"`. Never re-call to retry.
 3. `node render.mjs <n|slug> --out=/workspace/hiddenclean/video-out/<slug>.mp4` (`--dry` prints timings). Word timing: `align.py` (faster-whisper base.en in `/home/box/whisper-venv`), outputs piece starts + caption words. ~2.5 min render.
-4. QA: frames at hook (~1.9s), a step and the CTA (`ffmpeg -ss <t> -i out.mp4 -frames:v 1 f.png`), look at them; loudness `ffmpeg -i out.mp4 -af ebur128 -f null -` (target -16 LUFS).
+4. Quick pre-render check: `./qa-stills.sh <slug>` -> `out/<slug>-sheet.png` (one still per piece).
+5. QA: frames at hook (~1.9s), a step and the CTA (`ffmpeg -ss <t> -i out.mp4 -frames:v 1 f.png`), look at them; loudness `ffmpeg -i out.mp4 -af ebur128 -f null -` (target -16 LUFS).
 
 Setup: `npm ci` (needs ffmpeg; uses google-chrome if present). Sound kit: `python3 kit-src/make_kit.py` (only if the files are lost).

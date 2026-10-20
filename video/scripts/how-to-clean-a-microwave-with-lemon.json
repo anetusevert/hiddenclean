@@ -1,0 +1,73 @@
+{
+  "key": "how-to-clean-a-microwave-with-lemon",
+  "n": 47,
+  "slug": "how-to-clean-a-microwave-with-lemon",
+  "title": "How to clean a microwave with lemon",
+  "appliance": "microwave",
+  "url": "https://www.hiddenclean.com/tips/how-to-clean-a-microwave-with-lemon",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Stop scrubbing your microwave. Steam does the work.",
+      "text": "Stop scrubbing your microwave. Steam does the work.",
+      "label": "STOP DOING THIS"
+    },
+    {
+      "beat": "do",
+      "say": "Here's the hidden trick. One lemon and a bowl of water.",
+      "text": "Lemon steam"
+    },
+    {
+      "beat": "steps",
+      "say": "Put half a sliced lemon in a bowl of water.",
+      "text": "Lemon in water",
+      "step": 1,
+      "scene": "pour"
+    },
+    {
+      "beat": "steps",
+      "say": "Heat it on high for three to five minutes.",
+      "text": "High, 3-5 minutes",
+      "step": 2,
+      "scene": "steam"
+    },
+    {
+      "beat": "steps",
+      "say": "Keep the door shut for five more.",
+      "text": "Door shut, 5 more",
+      "step": 3,
+      "scene": "wait"
+    },
+    {
+      "beat": "steps",
+      "say": "Then wipe the splatter right off.",
+      "text": "Wipe it off",
+      "step": 4,
+      "scene": "wipe"
+    },
+    {
+      "beat": "safety",
+      "say": "The bowl gets very hot, so use oven gloves.",
+      "text": "Hot bowl! Use oven gloves."
+    },
+    {
+      "beat": "result",
+      "say": "Five minutes, and zero scrubbing.",
+      "text": "Zero scrubbing",
+      "result": {
+        "say": "Five minutes, and zero scrubbing.",
+        "headline": "Zero scrubbing",
+        "before": "Baked-on splatter",
+        "after": "Wipes right off"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "Daily hidden cleaning hacks, at hiddenclean dot com.",
+      "text": "Daily hidden cleaning hacks"
+    }
+  ],
+  "words": 73,
+  "warn": [],
+  "elevenlabsPrompt": "[playful] Stop scrubbing your microwave. Steam does the work.\n\n[intrigued] Here's the hidden trick. One lemon and a bowl of water.\n\n[friendly] Put half a sliced lemon in a bowl of water. Heat it on high for three to five minutes. Keep the door shut for five more. Then wipe the splatter right off. The bowl gets very hot, so use oven gloves.\n\n[delighted] Five minutes, and zero scrubbing.\n\n[warm] Daily hidden cleaning hacks, at hiddenclean dot com."
+}

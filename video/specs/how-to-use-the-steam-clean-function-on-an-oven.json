@@ -1,0 +1,41 @@
+{
+  "hook": "Your oven has a cleaning setting you've never pressed.",
+  "hookLabel": "HIDDEN SETTING",
+  "doLead": "Here's the hidden setting.",
+  "doThis": "It's called Steam Clean.",
+  "doText": "Steam Clean mode",
+  "appliance": "oven",
+  "steps": [
+    {
+      "say": "Pour the water your manual says onto the cold oven floor.",
+      "text": "Water on the cold floor",
+      "scene": "pour"
+    },
+    {
+      "say": "Select Steam Clean, or AquaClean.",
+      "text": "Select Steam Clean",
+      "scene": "press"
+    },
+    {
+      "say": "When it's done, let the oven cool.",
+      "text": "Let it cool",
+      "scene": "wait"
+    },
+    {
+      "say": "Then wipe the loosened grease with a soft sponge.",
+      "text": "Wipe it away",
+      "scene": "wipe"
+    }
+  ],
+  "safety": {
+    "say": "Steam burns, and don't add any cleaner to the water.",
+    "text": "Wait till cool. Water only."
+  },
+  "result": {
+    "say": "The grease just wipes away. No scrubbing.",
+    "headline": "Zero scrubbing",
+    "before": "Baked-on grease",
+    "after": "Wiped clean"
+  },
+  "revealAt": "button"
+}

@@ -1,0 +1,41 @@
+{
+  "hook": "Your Nespresso has a secret button combo.",
+  "hookLabel": "HIDDEN SETTING",
+  "doLead": "Here's the hidden setting.",
+  "doThis": "Descale mode.",
+  "doText": "Secret descale mode",
+  "appliance": "coffee",
+  "steps": [
+    {
+      "say": "Eject the capsule and empty the drip tray.",
+      "text": "Capsule out, tray empty",
+      "scene": "remove"
+    },
+    {
+      "say": "Fill the tank with descaler and half a litre of water.",
+      "text": "Descaler + 0.5 l water",
+      "scene": "pour"
+    },
+    {
+      "say": "On most models, hold both buttons for three seconds, until they blink fast.",
+      "text": "Hold both buttons 3s",
+      "scene": "press"
+    },
+    {
+      "say": "Run it through, then rinse with water.",
+      "text": "Run, then rinse",
+      "scene": "rinse"
+    }
+  ],
+  "safety": {
+    "say": "Use a proper descaler only, and don't add vinegar on top.",
+    "text": "Descaler only. No vinegar on top."
+  },
+  "result": {
+    "say": "Hotter, better coffee again.",
+    "headline": "Coffee tastes better",
+    "before": "Scaly, lukewarm",
+    "after": "Hot and fresh"
+  },
+  "revealAt": "button"
+}

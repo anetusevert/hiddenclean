@@ -1,0 +1,41 @@
+{
+  "hook": "Going away? Your fridge has a secret holiday setting.",
+  "hookLabel": "HIDDEN SETTING",
+  "doLead": "Here's the hidden setting.",
+  "doThis": "Holiday mode, right on the control panel.",
+  "doText": "Holiday mode",
+  "appliance": "fridge",
+  "steps": [
+    {
+      "say": "Empty out anything perishable.",
+      "text": "Empty the perishables",
+      "scene": "remove"
+    },
+    {
+      "say": "Select Holiday or Vacation on the panel.",
+      "text": "Select Holiday",
+      "scene": "press"
+    },
+    {
+      "say": "Keep the doors closed.",
+      "text": "Doors closed",
+      "scene": "close"
+    },
+    {
+      "say": "Switch back to normal a day before you're home.",
+      "text": "Back to normal a day early",
+      "scene": "wait"
+    }
+  ],
+  "safety": {
+    "say": "Don't leave fresh food in there while it's on.",
+    "text": "No fresh food while it's on."
+  },
+  "result": {
+    "say": "The freezer keeps running, and you save energy.",
+    "headline": "Save energy away",
+    "before": "Fridge at 4°C",
+    "after": "Holiday at 15°C"
+  },
+  "revealAt": "button"
+}

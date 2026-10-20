@@ -2,6 +2,7 @@ import { AbsoluteFill, Audio, Sequence, interpolate, spring, staticFile, useCurr
 import { fDisplay, fSans } from "./fonts";
 import { C, Mark, Reveal, HaloDef, Pointer, Star, clamp } from "./brand";
 import { Dishwasher, Filter, FILTER } from "./Dishwasher";
+import { APPLIANCES, type S } from "./appliances";
 import type { Beat, Piece, Props, Word } from "./types";
 
 /** One spring for every entrance ("soft pop"). */
@@ -58,15 +59,16 @@ function SafetyCard({ text, f }: { text: string; f: number }) {
   </div>;
 }
 
-function BeforeAfter({ r, f }: { r: NonNullable<Piece["result"]>; f: number }) {
+function BeforeAfter({ r, f, app }: { r: NonNullable<Piece["result"]>; f: number; app?: string }) {
+  const Cl = app && APPLIANCES[app] ? APPLIANCES[app].Closeup : null;
   const { fps } = useVideoConfig(); const a = pop(f, fps, 0), b = pop(f, fps, 10);
   const panel = (s: number, good: boolean) => <div style={{ width: 430, height: 640, borderRadius: 36, background: good ? "rgba(77,187,159,.16)" : "rgba(255,184,92,.10)",
     border: `6px solid ${good ? C.mint : C.warn}`, transform: `scale(${s})`, opacity: s, display: "flex", flexDirection: "column", alignItems: "center", paddingTop: 30 }}>
     <div style={{ fontFamily: fSans, fontWeight: 900, fontSize: 40, letterSpacing: 3, color: good ? C.mint : C.warn }}>{good ? "AFTER" : "BEFORE"}</div>
     <svg width={400} height={440} viewBox="-200 -230 400 440" style={{ overflow: "visible" }}><HaloDef />
       {good && <Reveal cx={0} cy={-20} r={150} t={f - 14} />}
-      <Filter grime={good ? 0 : 1} scale={1.55} t={f} />
-      {!good && [-50, 10, 60].map((dx, i) => <path key={i} d={`M ${dx} -170 q 14 -25 0 -50`} fill="none" stroke="#9c8a4f" strokeWidth={7} strokeLinecap="round" opacity={0.7} />)}
+      {Cl ? <Cl good={good} t={f} /> : <Filter grime={good ? 0 : 1} scale={1.55} t={f} />}
+      {!good && !Cl && [-50, 10, 60].map((dx, i) => <path key={i} d={`M ${dx} -170 q 14 -25 0 -50`} fill="none" stroke="#9c8a4f" strokeWidth={7} strokeLinecap="round" opacity={0.7} />)}
     </svg>
     <div style={{ fontFamily: fDisplay, fontWeight: 700, fontSize: 50, color: C.ink, marginTop: 10 }}>{good ? r.after : r.before}</div>
   </div>;
@@ -97,6 +99,23 @@ export function HiddenCleanShort(p: Props) {
   const doP = at("do")!, rack = at("steps", "rack-out"), tw = at("steps", "twist"), rin = at("steps", "rinse");
   const safety = at("safety"), result = at("result")!, cta = at("cta")!;
   const rinEnd = rin ? end(ps.indexOf(rin)) : 0;
+  const generic = !!p.appliance && p.appliance !== "dishwasher" && !!APPLIANCES[p.appliance]; const A = generic ? APPLIANCES[p.appliance!] : null;
+  const steps = ps.map((x, i) => ({ x, st: x.start, en: end(i) })).filter((o) => o.x.beat === "steps");
+  const sc = (n: string) => steps.filter((o) => o.x.scene === n);
+  const rise = (n: string, a = 4, b = 26) => Math.max(0, ...sc(n).map((o) => interpolate(f, [o.st + a, o.st + b], [0, 1], clamp)));
+  const during = (n: string) => Math.max(0, ...sc(n).map((o) => interpolate(f, [o.st, o.st + 6, o.en - 6, o.en], [0, 1, 1, 0], clamp)));
+  const cleanSc = steps.filter((o) => ["rinse", "wipe"].includes(o.x.scene ?? ""));
+  const lastClean = steps.filter((o) => ["rinse", "wipe", "refit"].includes(o.x.scene ?? "")).at(-1);
+  const steamFrom = sc("steam")[0]?.st ?? (p.appliance === "oven" ? (sc("press")[0]?.st ?? 1e9) + 16 : 1e9);
+  const steamTo = (cleanSc[0]?.st ?? 1e9);
+  const GS: S = { t: f,
+    open: Math.max(rise("open"), sc("open").length ? 0 : rise("remove")), remove: Math.max(0, rise("remove") - rise("refit", 4, 24)),
+    water: Math.max(during("rinse"), 0), grime: cleanSc.length ? 1 - Math.max(...cleanSc.map((o) => interpolate(f, [o.st + 8, o.en - 12], [0, 1], clamp))) : 1,
+    pour: rise("pour"), mode: rise("press", 13, 15), press: Math.max(0, ...sc("press").map((o) => interpolate(f, [o.st + 10, o.st + 14, o.st + 20], [0, 1, 0], clamp))),
+    steam: steamFrom > 1e8 ? 0 : interpolate(f, [steamFrom, steamFrom + 8, Math.max(steamFrom + 9, Math.min(steamTo, p.total) - 4), Math.max(steamFrom + 10, Math.min(steamTo, p.total))], [0, 1, 1, 0], clamp), wait: during("wait"),
+    wipe: Math.max(0, ...sc("wipe").map((o) => interpolate(f, [o.st + 4, o.en - 8], [0, 1], clamp))) || (sc("wipe").length && f > sc("wipe")[0].en ? 1 : 0),
+    close: rise("close"), stink: interpolate(f, [doP.start - 4, doP.start + 8], [1, 0], clamp) };
+  const revealPt = A ? (p.revealAt === "button" ? A.button : A.part) : [0, 0];
   // dishwasher state, driven by step scenes
   const rackOut = rack ? interpolate(f, [rack.start + 4, rack.start + 22], [0, 1], clamp) : 0;
   const twist = tw ? interpolate(f, [tw.start + 4, tw.start + 22], [0, -90], clamp) : 0;
@@ -124,7 +143,17 @@ export function HiddenCleanShort(p: Props) {
       <span style={{ fontFamily: fSans, fontWeight: 900, fontSize: 34, color: C.pale, letterSpacing: 2, border: `3px solid ${C.pale}55`, padding: "8px 20px", borderRadius: 999 }}>HACK #{String(p.n).padStart(2, "0")}</span>
     </div>}
     {/* appliance */}
-    {f < result.start && <svg width={800} height={780} viewBox="0 0 800 780" style={{ position: "absolute", left: ILL.x, top: ILL.y, overflow: "visible", opacity: illIn * illOut * dim,
+    {generic && A && f < result.start && <svg width={800} height={780} viewBox="0 0 800 780" style={{ position: "absolute", left: ILL.x, top: ILL.y, overflow: "visible", opacity: illIn * illOut * dim,
+      transform: `translateX(${shake}px) translateY(${(1 - illIn) * 80}px)` }}>
+      <HaloDef />
+      <A.Draw s={GS} />
+      <Reveal cx={revealPt[0]} cy={revealPt[1]} r={p.revealAt === "button" ? 110 : 140} t={f - doP.start - 4} />
+      {lastClean && <Reveal cx={A.part[0]} cy={A.part[1]} r={130} t={f - (lastClean.en - 10)} />}
+      {cur.beat === "steps" && f < (safety?.start ?? result.start) && (() => { const tg = cur.scene === "press" ? A.button : A.part; const pi = pop(f, fps, cur.start + 6, 13); const tp = interpolate(f, [cur.start + 14, cur.start + 30], [0, 1], clamp);
+        return <g opacity={pi} transform={`translate(0 ${(1 - pi) * 60})`}><Pointer x={tg[0] + 70} y={tg[1] - 60} tap={tp} /></g>; })()}
+      {cur.beat === "do" && <g opacity={pop(f, fps, cur.start + 6, 13)}><Pointer x={revealPt[0] + 80} y={revealPt[1] - 70} tap={interpolate(f, [cur.start + 14, cur.start + 30], [0, 1], clamp)} /></g>}
+    </svg>}
+    {!generic && f < result.start && <svg width={800} height={780} viewBox="0 0 800 780" style={{ position: "absolute", left: ILL.x, top: ILL.y, overflow: "visible", opacity: illIn * illOut * dim,
       transform: `translateX(${shake}px) translateY(${(1 - illIn) * 80}px)` }}>
       <HaloDef />
       <Dishwasher s={{ rackOut, twist, lift, grime, stink, water, t: f }} />
@@ -136,7 +165,7 @@ export function HiddenCleanShort(p: Props) {
     {/* headline per piece */}
     {cur.beat !== "cta" && cur.beat !== "safety" && f >= introEnd && <Sequence from={cur.start} durationInFrames={end(ci) - cur.start} layout="none"><HeadlineAt p={cur} dur={end(ci) - cur.start} /></Sequence>}
     {cur.beat === "safety" && safety && <><Sequence from={safety.start} layout="none"><HeadlineAt p={{ ...safety, text: "Keep it safe" }} dur={end(ci) - safety.start} /></Sequence><SafetyCard text={safety.text} f={f - safety.start} /></>}
-    {cur.beat === "result" && result.result && <BeforeAfter r={result.result} f={f - result.start} />}
+    {cur.beat === "result" && result.result && <BeforeAfter r={result.result} f={f - result.start} app={generic ? p.appliance : undefined} />}
     {f >= cta.start && <Cta f={f - cta.start} />}
     {f >= introEnd && <Captions words={p.words} f={f} />}
     {/* beat dots */}
@@ -155,7 +184,8 @@ export function HiddenCleanShort(p: Props) {
     <Sfx name="sparkle" at={doP.start + 4} volume={0.55} />
     {ps.slice(1).map((x, i) => x.beat !== ps[i].beat ? <Sfx key={`s${i}`} name="swish" at={x.start - 3} volume={0.3} /> : null)}
     {ps.filter((x) => x.beat === "steps").map((x, i) => <Sfx key={`p${i}`} name="pop" at={x.start + 14} volume={0.5} />)}
-    {rin && <Sfx name="sparkle" at={rinEnd - 10} volume={0.5} />}
+    {!generic && rin && <Sfx name="sparkle" at={rinEnd - 10} volume={0.5} />}
+    {generic && lastClean && <Sfx name="sparkle" at={lastClean.en - 10} volume={0.5} />}
     <Sfx name="sparkle" at={result.start + 14} volume={0.55} />
     <Sfx name="sting" at={cta.start + 6} volume={0.6} />
   </AbsoluteFill>;

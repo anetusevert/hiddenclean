@@ -1,0 +1,40 @@
+{
+  "hook": "That little door on your washer? Almost nobody opens it.",
+  "hookLabel": "HIDDEN DOOR",
+  "doLead": "Here's the hidden part.",
+  "doThis": "Behind it sits the pump filter.",
+  "doText": "The hidden pump filter",
+  "appliance": "washer",
+  "steps": [
+    {
+      "say": "Unplug it, let any hot water cool, and open the flap.",
+      "text": "Unplug, open the flap",
+      "scene": "open"
+    },
+    {
+      "say": "Put a tray down and slowly unscrew the filter.",
+      "text": "Tray down, unscrew",
+      "scene": "remove"
+    },
+    {
+      "say": "Pull out the lint and coins, then rinse it.",
+      "text": "Lint out, rinse",
+      "scene": "rinse"
+    },
+    {
+      "say": "Screw it back in tight.",
+      "text": "Screw it back tight",
+      "scene": "refit"
+    }
+  ],
+  "safety": {
+    "say": "Expect more water than you think.",
+    "text": "Hot water? Let it cool first."
+  },
+  "result": {
+    "say": "No more slow draining or funky smells.",
+    "headline": "Drains like new",
+    "before": "Clogged filter",
+    "after": "Clear filter"
+  }
+}

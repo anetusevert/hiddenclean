@@ -1,0 +1,73 @@
+{
+  "key": "how-to-clean-a-washing-machine-filter",
+  "n": 37,
+  "slug": "how-to-clean-a-washing-machine-filter",
+  "title": "How to clean a washing machine filter",
+  "appliance": "washer",
+  "url": "https://www.hiddenclean.com/tips/how-to-clean-a-washing-machine-filter",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "That little door on your washer? Almost nobody opens it.",
+      "text": "That little door on your washer? Almost nobody opens it.",
+      "label": "HIDDEN DOOR"
+    },
+    {
+      "beat": "do",
+      "say": "Here's the hidden part. Behind it sits the pump filter.",
+      "text": "The hidden pump filter"
+    },
+    {
+      "beat": "steps",
+      "say": "Unplug it, let any hot water cool, and open the flap.",
+      "text": "Unplug, open the flap",
+      "step": 1,
+      "scene": "open"
+    },
+    {
+      "beat": "steps",
+      "say": "Put a tray down and slowly unscrew the filter.",
+      "text": "Tray down, unscrew",
+      "step": 2,
+      "scene": "remove"
+    },
+    {
+      "beat": "steps",
+      "say": "Pull out the lint and coins, then rinse it.",
+      "text": "Lint out, rinse",
+      "step": 3,
+      "scene": "rinse"
+    },
+    {
+      "beat": "steps",
+      "say": "Screw it back in tight.",
+      "text": "Screw it back tight",
+      "step": 4,
+      "scene": "refit"
+    },
+    {
+      "beat": "safety",
+      "say": "Expect more water than you think.",
+      "text": "Hot water? Let it cool first."
+    },
+    {
+      "beat": "result",
+      "say": "No more slow draining or funky smells.",
+      "text": "Drains like new",
+      "result": {
+        "say": "No more slow draining or funky smells.",
+        "headline": "Drains like new",
+        "before": "Clogged filter",
+        "after": "Clear filter"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "Daily hidden cleaning hacks, at hiddenclean dot com.",
+      "text": "Daily hidden cleaning hacks"
+    }
+  ],
+  "words": 75,
+  "warn": [],
+  "elevenlabsPrompt": "[playful] That little door on your washer? Almost nobody opens it.\n\n[intrigued] Here's the hidden part. Behind it sits the pump filter.\n\n[friendly] Unplug it, let any hot water cool, and open the flap. Put a tray down and slowly unscrew the filter. Pull out the lint and coins, then rinse it. Screw it back in tight. Expect more water than you think.\n\n[delighted] No more slow draining or funky smells.\n\n[warm] Daily hidden cleaning hacks, at hiddenclean dot com."
+}

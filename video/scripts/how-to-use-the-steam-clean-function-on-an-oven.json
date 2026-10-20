@@ -1,0 +1,73 @@
+{
+  "key": "how-to-use-the-steam-clean-function-on-an-oven",
+  "n": 42,
+  "slug": "how-to-use-the-steam-clean-function-on-an-oven",
+  "title": "How to use the steam clean function on an oven",
+  "appliance": "oven",
+  "url": "https://www.hiddenclean.com/tips/how-to-use-the-steam-clean-function-on-an-oven",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Your oven has a cleaning setting you've never pressed.",
+      "text": "Your oven has a cleaning setting you've never pressed.",
+      "label": "HIDDEN SETTING"
+    },
+    {
+      "beat": "do",
+      "say": "Here's the hidden setting. It's called Steam Clean.",
+      "text": "Steam Clean mode"
+    },
+    {
+      "beat": "steps",
+      "say": "Pour the water your manual says onto the cold oven floor.",
+      "text": "Water on the cold floor",
+      "step": 1,
+      "scene": "pour"
+    },
+    {
+      "beat": "steps",
+      "say": "Select Steam Clean, or AquaClean.",
+      "text": "Select Steam Clean",
+      "step": 2,
+      "scene": "press"
+    },
+    {
+      "beat": "steps",
+      "say": "When it's done, let the oven cool.",
+      "text": "Let it cool",
+      "step": 3,
+      "scene": "wait"
+    },
+    {
+      "beat": "steps",
+      "say": "Then wipe the loosened grease with a soft sponge.",
+      "text": "Wipe it away",
+      "step": 4,
+      "scene": "wipe"
+    },
+    {
+      "beat": "safety",
+      "say": "Steam burns, and don't add any cleaner to the water.",
+      "text": "Wait till cool. Water only."
+    },
+    {
+      "beat": "result",
+      "say": "The grease just wipes away. No scrubbing.",
+      "text": "Zero scrubbing",
+      "result": {
+        "say": "The grease just wipes away. No scrubbing.",
+        "headline": "Zero scrubbing",
+        "before": "Baked-on grease",
+        "after": "Wiped clean"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "Daily hidden cleaning hacks, at hiddenclean dot com.",
+      "text": "Daily hidden cleaning hacks"
+    }
+  ],
+  "words": 74,
+  "warn": [],
+  "elevenlabsPrompt": "[playful] Your oven has a cleaning setting you've never pressed.\n\n[intrigued] Here's the hidden setting. It's called Steam Clean.\n\n[friendly] Pour the water your manual says onto the cold oven floor. Select Steam Clean, or AquaClean. When it's done, let the oven cool. Then wipe the loosened grease with a soft sponge. Steam burns, and don't add any cleaner to the water.\n\n[delighted] The grease just wipes away. No scrubbing.\n\n[warm] Daily hidden cleaning hacks, at hiddenclean dot com."
+}

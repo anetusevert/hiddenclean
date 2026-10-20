@@ -1,0 +1,73 @@
+{
+  "key": "how-to-use-the-vacation-mode-on-a-fridge",
+  "n": 54,
+  "slug": "how-to-use-the-vacation-mode-on-a-fridge",
+  "title": "How to use the vacation mode on a fridge",
+  "appliance": "fridge",
+  "url": "https://www.hiddenclean.com/tips/how-to-use-the-vacation-mode-on-a-fridge",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Going away? Your fridge has a secret holiday setting.",
+      "text": "Going away? Your fridge has a secret holiday setting.",
+      "label": "HIDDEN SETTING"
+    },
+    {
+      "beat": "do",
+      "say": "Here's the hidden setting. Holiday mode, right on the control panel.",
+      "text": "Holiday mode"
+    },
+    {
+      "beat": "steps",
+      "say": "Empty out anything perishable.",
+      "text": "Empty the perishables",
+      "step": 1,
+      "scene": "remove"
+    },
+    {
+      "beat": "steps",
+      "say": "Select Holiday or Vacation on the panel.",
+      "text": "Select Holiday",
+      "step": 2,
+      "scene": "press"
+    },
+    {
+      "beat": "steps",
+      "say": "Keep the doors closed.",
+      "text": "Doors closed",
+      "step": 3,
+      "scene": "close"
+    },
+    {
+      "beat": "steps",
+      "say": "Switch back to normal a day before you're home.",
+      "text": "Back to normal a day early",
+      "step": 4,
+      "scene": "wait"
+    },
+    {
+      "beat": "safety",
+      "say": "Don't leave fresh food in there while it's on.",
+      "text": "No fresh food while it's on."
+    },
+    {
+      "beat": "result",
+      "say": "The freezer keeps running, and you save energy.",
+      "text": "Save energy away",
+      "result": {
+        "say": "The freezer keeps running, and you save energy.",
+        "headline": "Save energy away",
+        "before": "Fridge at 4°C",
+        "after": "Holiday at 15°C"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "Daily hidden cleaning hacks, at hiddenclean dot com.",
+      "text": "Daily hidden cleaning hacks"
+    }
+  ],
+  "words": 69,
+  "warn": [],
+  "elevenlabsPrompt": "[playful] Going away? Your fridge has a secret holiday setting.\n\n[intrigued] Here's the hidden setting. Holiday mode, right on the control panel.\n\n[friendly] Empty out anything perishable. Select Holiday or Vacation on the panel. Keep the doors closed. Switch back to normal a day before you're home. Don't leave fresh food in there while it's on.\n\n[delighted] The freezer keeps running, and you save energy.\n\n[warm] Daily hidden cleaning hacks, at hiddenclean dot com."
+}

@@ -22,7 +22,7 @@ const f = (x) => Math.round(x * FPS);
 const voStart = f(INTRO), voEnd = f(INTRO + dur);
 const pieces = s.pieces.map((p, i) => ({ ...p, start: voStart + f(al.starts[i]) }));
 const words = al.words.map((w) => ({ w: w.w, p: w.p, s: voStart + f(w.s), e: voStart + f(w.e) }));
-const props = { n: s.n, title: s.title, url: s.url, pieces, words, voStart, voEnd, total: voEnd + f(OUTRO), voFile: `vo/.norm/${s.key}.wav` };
+const props = { appliance: s.appliance, revealAt: s.revealAt, n: s.n, title: s.title, url: s.url, pieces, words, voStart, voEnd, total: voEnd + f(OUTRO), voFile: `vo/.norm/${s.key}.wav` };
 fs.mkdirSync(path.join(dir, ".cache"), { recursive: true }); const pp = path.join(dir, ".cache", `${s.key}.props.json`); fs.writeFileSync(pp, JSON.stringify(props, null, 2));
 console.log(`VO ${dur.toFixed(2)}s, total ${(props.total / FPS).toFixed(1)}s. Piece starts (s):`, pieces.map((p) => `${p.beat}@${(p.start / FPS).toFixed(2)}`).join(" "));
 if (process.argv.includes("--dry")) process.exit(0);

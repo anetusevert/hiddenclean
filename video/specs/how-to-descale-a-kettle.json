@@ -1,0 +1,40 @@
+{
+  "hook": "Flakes in your tea? Your kettle is hiding limescale.",
+  "hookLabel": "SOUND FAMILIAR?",
+  "doLead": "Here's the hidden fix.",
+  "doThis": "White vinegar, and an hour of patience.",
+  "doText": "The vinegar soak",
+  "appliance": "kettle",
+  "steps": [
+    {
+      "say": "Fill it halfway, equal parts water and white vinegar.",
+      "text": "Half water, half vinegar",
+      "scene": "pour"
+    },
+    {
+      "say": "Boil it, switch it off, and leave it for an hour.",
+      "text": "Boil, wait an hour",
+      "scene": "steam"
+    },
+    {
+      "say": "Pour it away and wipe out the loose scale.",
+      "text": "Pour, wipe the scale",
+      "scene": "rinse"
+    },
+    {
+      "say": "Boil fresh water twice.",
+      "text": "Boil fresh water twice",
+      "scene": "refit"
+    }
+  ],
+  "safety": {
+    "say": "Never add bleach, and keep a window open.",
+    "text": "No bleach. Open a window."
+  },
+  "result": {
+    "say": "Clear water, and tea with no flakes.",
+    "headline": "Flake-free tea",
+    "before": "Scaly kettle",
+    "after": "Shiny kettle"
+  }
+}

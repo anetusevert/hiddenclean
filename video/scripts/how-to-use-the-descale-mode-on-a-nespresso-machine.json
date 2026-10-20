@@ -1,0 +1,73 @@
+{
+  "key": "how-to-use-the-descale-mode-on-a-nespresso-machine",
+  "n": 60,
+  "slug": "how-to-use-the-descale-mode-on-a-nespresso-machine",
+  "title": "How to use the descale mode on a nespresso machine",
+  "appliance": "coffee",
+  "url": "https://www.hiddenclean.com/tips/how-to-use-the-descale-mode-on-a-nespresso-machine",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Your Nespresso has a secret button combo.",
+      "text": "Your Nespresso has a secret button combo.",
+      "label": "HIDDEN SETTING"
+    },
+    {
+      "beat": "do",
+      "say": "Here's the hidden setting. Descale mode.",
+      "text": "Secret descale mode"
+    },
+    {
+      "beat": "steps",
+      "say": "Eject the capsule and empty the drip tray.",
+      "text": "Capsule out, tray empty",
+      "step": 1,
+      "scene": "remove"
+    },
+    {
+      "beat": "steps",
+      "say": "Fill the tank with descaler and half a litre of water.",
+      "text": "Descaler + 0.5 l water",
+      "step": 2,
+      "scene": "pour"
+    },
+    {
+      "beat": "steps",
+      "say": "On most models, hold both buttons for three seconds, until they blink fast.",
+      "text": "Hold both buttons 3s",
+      "step": 3,
+      "scene": "press"
+    },
+    {
+      "beat": "steps",
+      "say": "Run it through, then rinse with water.",
+      "text": "Run, then rinse",
+      "step": 4,
+      "scene": "rinse"
+    },
+    {
+      "beat": "safety",
+      "say": "Use a proper descaler only, and don't add vinegar on top.",
+      "text": "Descaler only. No vinegar on top."
+    },
+    {
+      "beat": "result",
+      "say": "Hotter, better coffee again.",
+      "text": "Coffee tastes better",
+      "result": {
+        "say": "Hotter, better coffee again.",
+        "headline": "Coffee tastes better",
+        "before": "Scaly, lukewarm",
+        "after": "Hot and fresh"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "Daily hidden cleaning hacks, at hiddenclean dot com.",
+      "text": "Daily hidden cleaning hacks"
+    }
+  ],
+  "words": 75,
+  "warn": [],
+  "elevenlabsPrompt": "[playful] Your Nespresso has a secret button combo.\n\n[intrigued] Here's the hidden setting. Descale mode.\n\n[friendly] Eject the capsule and empty the drip tray. Fill the tank with descaler and half a litre of water. On most models, hold both buttons for three seconds, until they blink fast. Run it through, then rinse with water. Use a proper descaler only, and don't add vinegar on top.\n\n[delighted] Hotter, better coffee again.\n\n[warm] Daily hidden cleaning hacks, at hiddenclean dot com."
+}

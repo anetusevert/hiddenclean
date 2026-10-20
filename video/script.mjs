@@ -8,11 +8,11 @@ import { build } from "esbuild";
 const dir = path.dirname(fileURLToPath(import.meta.url));
 const MAX_WORDS = 75;
 export const CTA_SAY = "Daily hidden cleaning hacks, at hiddenclean dot com.";
-const BANNED = [/\bmix\b(?!.*never)/i, /bleach.*(vinegar|ammonia)|(vinegar|ammonia).*bleach/i, /\bcombine\b/i];
+const BANNED = [/\bmix(ed|ing)?\b/i, /\bbleach\b/i, /bleach.*(vinegar|ammonia)|(vinegar|ammonia).*bleach/i, /\bcombine\b/i];
 export async function loadTips() {
-  const out = path.join(dir, ".cache", "tips.mjs"); fs.mkdirSync(path.dirname(out), { recursive: true });
+  const out = path.join(dir, ".cache", `tips-${process.pid}.mjs`); fs.mkdirSync(path.dirname(out), { recursive: true });
   await build({ entryPoints: [path.join(dir, "..", "lib", "tips.ts")], bundle: true, platform: "node", format: "esm", outfile: out, logLevel: "error" });
-  return (await import(pathToFileURL(out).href + `?t=${Date.now()}`)).ALL_TIPS;
+  const m = await import(pathToFileURL(out).href); fs.rmSync(out, { force: true }); return m.ALL_TIPS;
 }
 export async function buildScript(arg) {
   const tips = await loadTips();
@@ -36,9 +36,11 @@ export async function buildScript(arg) {
   if (words > MAX_WORDS) warn.push(`VO is ${words} words (> ${MAX_WORDS})`);
   const hw = v.hook.split(/\s+/).length; if (hw < 5 || hw > 12) warn.push(`hook is ${hw} words (want 5-12)`);
   if (!v.safety) warn.push("no safety line: add one unless the tip truly needs none");
-  for (const re of BANNED) if (re.test(all.replace(/never mix[^.]*\./gi, ""))) throw new Error(`Safety: script matches ${re} (never suggest mixing chemicals)`);
+  // Safety rule: no sentence may suggest mixing/combining products. Warning sentences (never/don't/no/not) are allowed.
+  for (const sent of all.match(/[^.!?]+[.!?]*/g) ?? []) { if (/\b(never|don't|do not|no|not)\b/i.test(sent)) continue;
+    for (const re of BANNED) if (re.test(sent)) throw new Error(`Safety: "${sent.trim()}" matches ${re} (never suggest mixing chemicals)`); }
   if (v.steps.length < 2 || v.steps.length > 4) warn.push(`${v.steps.length} steps (want 2-4)`);
-  return { key: tip.slug, n, slug: tip.slug, title: tip.title, appliance: v.appliance ?? "dishwasher", url: `https://www.hiddenclean.com/tips/${tip.slug}`,
+  return { key: tip.slug, n, slug: tip.slug, title: tip.title, appliance: v.appliance ?? "dishwasher", revealAt: v.revealAt ?? "part", url: `https://www.hiddenclean.com/tips/${tip.slug}`,
     pieces, words, warn, elevenlabsPrompt: beats.map((b) => `${tags[b.beat]} ${b.text}`).join("\n\n") };
 }
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {

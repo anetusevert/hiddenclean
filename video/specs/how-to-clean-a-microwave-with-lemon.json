@@ -1,0 +1,40 @@
+{
+  "hook": "Stop scrubbing your microwave. Steam does the work.",
+  "hookLabel": "STOP DOING THIS",
+  "doLead": "Here's the hidden trick.",
+  "doThis": "One lemon and a bowl of water.",
+  "doText": "Lemon steam",
+  "appliance": "microwave",
+  "steps": [
+    {
+      "say": "Put half a sliced lemon in a bowl of water.",
+      "text": "Lemon in water",
+      "scene": "pour"
+    },
+    {
+      "say": "Heat it on high for three to five minutes.",
+      "text": "High, 3-5 minutes",
+      "scene": "steam"
+    },
+    {
+      "say": "Keep the door shut for five more.",
+      "text": "Door shut, 5 more",
+      "scene": "wait"
+    },
+    {
+      "say": "Then wipe the splatter right off.",
+      "text": "Wipe it off",
+      "scene": "wipe"
+    }
+  ],
+  "safety": {
+    "say": "The bowl gets very hot, so use oven gloves.",
+    "text": "Hot bowl! Use oven gloves."
+  },
+  "result": {
+    "say": "Five minutes, and zero scrubbing.",
+    "headline": "Zero scrubbing",
+    "before": "Baked-on splatter",
+    "after": "Wipes right off"
+  }
+}

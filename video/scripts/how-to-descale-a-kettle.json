@@ -1,0 +1,75 @@
+{
+  "key": "how-to-descale-a-kettle",
+  "n": 63,
+  "slug": "how-to-descale-a-kettle",
+  "title": "How to descale a kettle",
+  "appliance": "kettle",
+  "url": "https://www.hiddenclean.com/tips/how-to-descale-a-kettle",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Flakes in your tea? Your kettle is hiding limescale.",
+      "text": "Flakes in your tea? Your kettle is hiding limescale.",
+      "label": "SOUND FAMILIAR?"
+    },
+    {
+      "beat": "do",
+      "say": "Here's the hidden fix. White vinegar, and an hour of patience.",
+      "text": "The vinegar soak"
+    },
+    {
+      "beat": "steps",
+      "say": "Fill it halfway, equal parts water and white vinegar.",
+      "text": "Half water, half vinegar",
+      "step": 1,
+      "scene": "pour"
+    },
+    {
+      "beat": "steps",
+      "say": "Boil it, switch it off, and leave it for an hour.",
+      "text": "Boil, wait an hour",
+      "step": 2,
+      "scene": "steam"
+    },
+    {
+      "beat": "steps",
+      "say": "Pour it away and wipe out the loose scale.",
+      "text": "Pour, wipe the scale",
+      "step": 3,
+      "scene": "rinse"
+    },
+    {
+      "beat": "steps",
+      "say": "Boil fresh water twice.",
+      "text": "Boil fresh water twice",
+      "step": 4,
+      "scene": "refit"
+    },
+    {
+      "beat": "safety",
+      "say": "Never add bleach, and keep a window open.",
+      "text": "No bleach. Open a window."
+    },
+    {
+      "beat": "result",
+      "say": "Clear water, and tea with no flakes.",
+      "text": "Flake-free tea",
+      "result": {
+        "say": "Clear water, and tea with no flakes.",
+        "headline": "Flake-free tea",
+        "before": "Scaly kettle",
+        "after": "Shiny kettle"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "Daily hidden cleaning hacks, at hiddenclean dot com.",
+      "text": "Daily hidden cleaning hacks"
+    }
+  ],
+  "words": 76,
+  "warn": [
+    "VO is 76 words (> 75)"
+  ],
+  "elevenlabsPrompt": "[playful] Flakes in your tea? Your kettle is hiding limescale.\n\n[intrigued] Here's the hidden fix. White vinegar, and an hour of patience.\n\n[friendly] Fill it halfway, equal parts water and white vinegar. Boil it, switch it off, and leave it for an hour. Pour it away and wipe out the loose scale. Boil fresh water twice. Never add bleach, and keep a window open.\n\n[delighted] Clear water, and tea with no flakes.\n\n[warm] Daily hidden cleaning hacks, at hiddenclean dot com."
+}
