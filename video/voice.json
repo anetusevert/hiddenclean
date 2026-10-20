@@ -1,0 +1,10 @@
+{
+  "provider": "ElevenLabs",
+  "voice_id": "rdEyNni8e60Jlx1RsV9N",
+  "voice_name": "Mira - Bright & Friendly Narrator",
+  "description": "Warm, youthful American female, naturally conversational.",
+  "model_id": "eleven_v4",
+  "generations_count": 1,
+  "chosen": "2026-10-20",
+  "note": "The one HiddenClean voice. Distinct from TechTipADay (Bennett) and One Agent a Day (Marcus). Never change it once Utena approves."
+}

@@ -1,0 +1,15 @@
+{
+  "hook": "You've been cleaning your dishwasher wrong.",
+  "hookLabel": "YOU'RE DOING IT WRONG",
+  "doLead": "Here's the hidden part.",
+  "doThis": "There's a filter under the bottom spray arm.",
+  "doText": "The hidden filter",
+  "appliance": "dishwasher",
+  "steps": [
+    { "say": "Switch it off and pull out the bottom rack.", "text": "Power off, rack out", "scene": "rack-out", "point": [540, 1020] },
+    { "say": "Twist the filter a quarter turn and lift it out.", "text": "Twist ¼ turn, lift", "scene": "twist", "point": [540, 1180] },
+    { "say": "Rinse it in warm, soapy water with a soft brush, then click it back in.", "text": "Warm soapy rinse, click in", "scene": "rinse", "point": [540, 1150] }
+  ],
+  "safety": { "say": "No bleach, and never mix cleaners.", "text": "No bleach. Never mix cleaners." },
+  "result": { "say": "Cleaner dishes, and no more funky smell.", "headline": "No more funky smell", "before": "Gunky filter", "after": "Sparkling clean" }
+}

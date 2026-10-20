@@ -1,0 +1,78 @@
+{
+  "key": "how-to-clean-a-dishwasher-filter",
+  "n": 31,
+  "slug": "how-to-clean-a-dishwasher-filter",
+  "title": "How to clean a dishwasher filter",
+  "appliance": "dishwasher",
+  "url": "https://www.hiddenclean.com/tips/how-to-clean-a-dishwasher-filter",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "You've been cleaning your dishwasher wrong.",
+      "text": "You've been cleaning your dishwasher wrong.",
+      "label": "YOU'RE DOING IT WRONG"
+    },
+    {
+      "beat": "do",
+      "say": "Here's the hidden part. There's a filter under the bottom spray arm.",
+      "text": "The hidden filter"
+    },
+    {
+      "beat": "steps",
+      "say": "Switch it off and pull out the bottom rack.",
+      "text": "Power off, rack out",
+      "step": 1,
+      "scene": "rack-out",
+      "point": [
+        540,
+        1020
+      ]
+    },
+    {
+      "beat": "steps",
+      "say": "Twist the filter a quarter turn and lift it out.",
+      "text": "Twist ¼ turn, lift",
+      "step": 2,
+      "scene": "twist",
+      "point": [
+        540,
+        1180
+      ]
+    },
+    {
+      "beat": "steps",
+      "say": "Rinse it in warm, soapy water with a soft brush, then click it back in.",
+      "text": "Warm soapy rinse, click in",
+      "step": 3,
+      "scene": "rinse",
+      "point": [
+        540,
+        1150
+      ]
+    },
+    {
+      "beat": "safety",
+      "say": "No bleach, and never mix cleaners.",
+      "text": "No bleach. Never mix cleaners."
+    },
+    {
+      "beat": "result",
+      "say": "Cleaner dishes, and no more funky smell.",
+      "text": "No more funky smell",
+      "result": {
+        "say": "Cleaner dishes, and no more funky smell.",
+        "headline": "No more funky smell",
+        "before": "Gunky filter",
+        "after": "Sparkling clean"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "Daily hidden cleaning hacks, at hiddenclean dot com.",
+      "text": "Daily hidden cleaning hacks"
+    }
+  ],
+  "words": 73,
+  "warn": [],
+  "elevenlabsPrompt": "[playful] You've been cleaning your dishwasher wrong.\n\n[intrigued] Here's the hidden part. There's a filter under the bottom spray arm.\n\n[friendly] Switch it off and pull out the bottom rack. Twist the filter a quarter turn and lift it out. Rinse it in warm, soapy water with a soft brush, then click it back in. No bleach, and never mix cleaners.\n\n[delighted] Cleaner dishes, and no more funky smell.\n\n[warm] Daily hidden cleaning hacks, at hiddenclean dot com."
+}
