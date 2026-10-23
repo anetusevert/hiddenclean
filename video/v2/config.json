@@ -1,0 +1,23 @@
+{
+ "how-to-clean-a-dishwasher-filter": { "hook": "Your dishwasher is hiding *THIS*", "hookSay": "Your dishwasher is hiding something gross.", "vo": "v2-how-to-clean-a-dishwasher-filter.mp3",
+   "clips": { "hook": ["4109344@1.5", "4109350@5"], "do": ["35999383@3", "gfx:reveal"], "s1": ["7292490@3", "35999383@10"], "s2": ["gfx:twist", "gfx:lift"],
+     "s3": ["7204592@1", "9462908@0.5", "9474125@4"], "safety": ["9462908@6"], "result": ["10568460@3.5", "9462916@3"] } },
+ "how-to-clean-a-washing-machine-filter": { "hook": "Nobody opens *THIS* door",
+   "clips": { "hook": ["9462947@1", "8756892@2"], "do": ["8756701@1", "8756713@2"], "s1": ["8756952@1"], "s2": ["8756886@2"], "s3": ["9462946@1", "7204592@1"], "s4": ["8756813@2"],
+     "safety": ["9462947@4"], "result": ["7086406@2", "8756892@5"] } },
+ "how-to-use-the-steam-clean-function-on-an-oven": { "hook": "Your oven's *SECRET* setting",
+   "clips": { "hook": ["9472813@1", "9473225@2"], "do": ["39769869@1", "6269000@1"], "s1": ["7964588@1"], "s2": ["8180406@1", "6269000@3"], "s3": ["6517569@0"], "s4": ["9472815@1", "9472813@4"],
+     "safety": ["6517569@4"], "result": ["9473225@5", "39769869@4"] } },
+ "how-to-use-the-vacation-mode-on-a-fridge": { "hook": "Your fridge's *SECRET* holiday mode",
+   "clips": { "hook": ["30205992@1", "9142428@1"], "do": ["6995077@1", "5418706@2"], "s1": ["35095287@1"], "s2": ["6595464@2"], "s3": ["5418706@5"], "s4": ["7431860@2"],
+     "safety": ["35576751@1"], "result": ["35576751@4", "9462939@2"] } },
+ "how-to-clean-a-microwave-with-lemon": { "hook": "*STOP* scrubbing your microwave",
+   "clips": { "hook": ["9473240@1", "9462920@1"], "do": ["7964825@1", "5876044@1"], "s1": ["9001896@1"], "s2": ["9462920@4"], "s3": ["9462920@6"], "s4": ["9473240@4", "9462944@2"],
+     "safety": ["9462944@5"], "result": ["9473240@6", "5876044@4"] } },
+ "how-to-descale-a-kettle": { "hook": "Flakes in your *TEA?*",
+   "clips": { "hook": ["5983910@2", "10596200@1"], "do": ["5824188@1", "10596200@4"], "s1": ["8295360@1"], "s2": ["6316937@1"], "s3": ["39111244@1"], "s4": ["5824188@4"],
+     "safety": ["6316937@5"], "result": ["5983910@5", "9888679@2"] } },
+ "how-to-use-the-descale-mode-on-a-nespresso-machine": { "hook": "Your Nespresso's *SECRET* combo",
+   "clips": { "hook": ["29532371@1", "14916793@1"], "do": ["33455899@1", "31398861@1"], "s1": ["31398861@4"], "s2": ["39111244@3"], "s3": ["33455899@4", "29532371@4"], "s4": ["13737156@1"],
+     "safety": ["29532371@6"], "result": ["14916793@4", "6202090@2"] } }
+}

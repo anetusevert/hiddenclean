@@ -1,3 +1,7 @@
 out
 .cache
 public/vo/.norm
+public/stock/
+public/vo/.norm/
+.cache/
+out/

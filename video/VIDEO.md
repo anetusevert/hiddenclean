@@ -52,3 +52,17 @@ The last rinse/wipe/refit step ends with a second reveal + sparkle. Note: `dryer
 5. QA: frames at hook (~1.9s), a step and the CTA (`ffmpeg -ss <t> -i out.mp4 -frames:v 1 f.png`), look at them; loudness `ffmpeg -i out.mp4 -af ebur128 -f null -` (target -16 LUFS).
 
 Setup: `npm ci` (needs ffmpeg; uses google-chrome if present). Sound kit: `python3 kit-src/make_kit.py` (only if the files are lost).
+
+## Hook standard (Utena, 2026-10-23: applies to ALL videos, overrides the 0.7s intro above)
+- **No logo/intro before the hook.** Frame 1 is the most striking REAL shot (gross gunk close-up, or a before/after flash).
+- **Bold 3-6 word on-screen hook in the first frame** (e.g. "Your dishwasher is hiding THIS"), last/key word on an amber chip, centred, big (Fredoka ~120px).
+- **Motion hit at 0s:** punch zoom (1.5 -> 1.0 spring) + whoosh (`swish`) + sparkle hit (`sparkle` + Reveal ring) in the first 3 frames.
+- VO starts by 0.2s. If the VO opening is slow, trim/shift it (props offset) rather than buying new audio; only regenerate the first line if trimming can't work.
+- Header/logo appear only after the hook (~1.7s); the brand sign-off stays in the CTA.
+- Footage style (v2, `HiddenCleanV2` composition): real 9:16 stock cuts every 1-2s (Pexels/Pixabay, free licence, list in credits.txt), mint brand frame, navy gradients for legibility, brand illustrations only for parts no stock shows (e.g. the filter twist). Stock pre-cut to `public/stock/*.mp4` (1080x1920, 30fps).
+
+## v2 pipeline (all videos, 2026-10-23)
+- Config per video in `v2/config.json`: `hook` (3-6 words, `*KEY*` = amber chip), optional `hookSay` + `vo` (spliced VO when the first line was regenerated), `clips` per beat (`hook`, `do`, `s1..s4`, `safety`, `result`), entries `<pexelsId>@<startSec>` or `gfx:reveal|twist|lift`.
+- Stock: download the Pexels file, pre-cut to `public/stock/<id>.mp4` (9s, 1080x1920, 30fps, no audio; gitignored, re-download from credits.txt URLs). Run ffmpeg pre-cuts max 3 in parallel (54 at once got OOM-killed).
+- `node v2/build.mjs <slug>` -> whisper re-timing, shots auto-split to <=1.8s per piece, renders `video-out/v2-<slug minus how-to->.mp4`. `--dry` prints timings.
+- Hook line regen: generate only the first line in Mira/eleven_v4 (`generations_count: 1`, ~50 credits), trim its tail silence, concat with the original VO from the second piece onwards.

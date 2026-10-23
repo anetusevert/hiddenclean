@@ -192,3 +192,4 @@ export function HiddenCleanShort(p: Props) {
 }
 function HeadlineAt({ p, dur }: { p: Piece; dur: number }) { const f = useCurrentFrame(); return <Headline p={p} f={f} dur={dur} />; }
 export { Star };
+export { Captions, SafetyCard, Cta, Pill, Sfx, HeadlineAt };
