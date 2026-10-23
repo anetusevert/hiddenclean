@@ -6,6 +6,8 @@ import Script from "next/script";
 import "./globals.css";
 import { JsonLd } from "@/components/JsonLd";
 import { Header } from "@/components/Header";
+import { Social } from "@/components/Social";
+import { SOCIAL } from "@/lib/videos";
 import { pageAlternates } from "@/lib/seo";
 import { SITE_DESC, SITE_NAME, SITE_URL } from "@/lib/tips";
 
@@ -26,7 +28,7 @@ const graph = {
   "@context": "https://schema.org",
   "@graph": [
     { "@type": "WebSite", name: SITE_NAME, url: SITE_URL, description: SITE_DESC, publisher: { "@id": `${SITE_URL}/#org` } },
-    { "@type": "Organization", "@id": `${SITE_URL}/#org`, name: SITE_NAME, url: SITE_URL, logo: `${SITE_URL}/icons/icon-512.png` },
+    { "@type": "Organization", "@id": `${SITE_URL}/#org`, name: SITE_NAME, url: SITE_URL, logo: `${SITE_URL}/icons/icon-512.png`, sameAs: [SOCIAL.tiktok, SOCIAL.instagram] },
   ],
 };
 
@@ -39,7 +41,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main id="content">{children}</main>
         <footer className="site-footer">
           <div className="wrap foot">
-            <div><b>HiddenClean</b><p>One hidden cleaning hack a day. Every tip has a safety check. Never mix cleaning products.</p><SubscribeForm compact /></div>
+            <div><b>HiddenClean</b><p>One hidden cleaning hack a day. Every tip has a safety check. Never mix cleaning products.</p><SubscribeForm compact /><Social /></div>
             <nav aria-label="Footer">
               <Link href="/tips">All tips</Link><Link href="/how-to">By appliance</Link><Link href="/about">About &amp; safety</Link>
               <Link href="/subscribe">Subscribe</Link><Link href="/llms.txt">llms.txt</Link><Link href="/sitemap.xml">Sitemap</Link>

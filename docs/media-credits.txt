@@ -1,0 +1,78 @@
+v2-dishwasher-filter.mp4 - stock footage credits
+All clips: Pexels License (free for commercial use, no attribution required): https://www.pexels.com/license/
+Shot a/hook  https://www.pexels.com/video/woman-girl-house-glass-4109344/
+Shot b       https://www.pexels.com/video/4109350/
+Shot c,f     https://www.pexels.com/video/loading-dishwasher-with-assorted-glassware-35999383/
+Shot e       https://www.pexels.com/video/a-boy-helping-his-mother-7292490/
+Shot h       https://www.pexels.com/video/7204592/
+Shot i,k     https://www.pexels.com/video/a-flowing-water-on-the-plates-9462908/
+Shot j       https://www.pexels.com/video/a-person-washing-the-dishes-9474125/
+Shot l       https://www.pexels.com/video/close-up-of-a-stack-of-plates-10568460/
+Shot m       https://www.pexels.com/video/woman-drying-a-plate-9462916/
+Voice: existing ElevenLabs VO (Mira), reused; no new credits. Music/SFX: own HiddenClean kit.
+
+=== v2 batch (2026-10-23): all clips Pexels License, free commercial use, no attribution required: https://www.pexels.com/license/ ===
+v2-clean-a-dishwasher-filter.mp4
+  https://www.pexels.com/video/woman-girl-house-glass-4109344/
+  https://www.pexels.com/video/house-glass-kitchen-apartment-4109350/
+  https://www.pexels.com/video/loading-dishwasher-with-assorted-glassware-35999383/
+  https://www.pexels.com/video/a-boy-helping-his-mother-7292490/
+  https://www.pexels.com/video/person-washing-a-drinking-glass-7204592/
+  https://www.pexels.com/video/a-flowing-water-on-the-plates-9462908/
+  https://www.pexels.com/video/a-person-washing-the-dishes-9474125/
+  https://www.pexels.com/video/close-up-of-a-stack-of-plates-10568460/
+  https://www.pexels.com/video/woman-drying-a-plate-9462916/
+v2-clean-a-washing-machine-filter.mp4
+  https://www.pexels.com/video/soap-bubbles-going-through-sink-drainage-9462947/
+  https://www.pexels.com/video/woman-using-washing-machine-8756892/
+  https://www.pexels.com/video/man-removing-clothes-in-washing-machine-8756701/
+  https://www.pexels.com/video/man-putting-towels-in-a-washing-machine-8756713/
+  https://www.pexels.com/video/a-man-closing-the-door-of-a-commercial-washing-machine-8756952/
+  https://www.pexels.com/video/woman-putting-clothes-in-washing-machine-8756886/
+  https://www.pexels.com/video/person-cleaning-a-sink-9462946/
+  https://www.pexels.com/video/person-washing-a-drinking-glass-7204592/
+  https://www.pexels.com/video/woman-putting-towels-inside-a-washing-machine-8756813/
+  https://www.pexels.com/video/girl-getting-clothes-in-washing-machine-7086406/
+v2-use-the-steam-clean-function-on-an-oven.mp4
+  https://www.pexels.com/video/a-person-wearing-gloves-and-a-yellow-glove-is-cleaning-an-oven-9472813/
+  https://www.pexels.com/video/a-woman-cleaning-an-oven-with-a-broom-9473225/
+  https://www.pexels.com/video/modern-kitchen-interior-with-built-in-oven-39769869/
+  https://www.pexels.com/video/a-person-increasing-the-temperature-6269000/
+  https://www.pexels.com/video/a-person-putting-the-baking-tray-in-the-oven-7964588/
+  https://www.pexels.com/video/a-person-turning-a-knob-on-a-stove-8180406/
+  https://www.pexels.com/video/a-person-opening-the-oven-6517569/
+  https://www.pexels.com/video/a-woman-in-gloves-and-rubber-gloves-cleaning-an-oven-9472815/
+v2-use-the-vacation-mode-on-a-fridge.mp4
+  https://www.pexels.com/video/man-looking-into-refrigerator-at-night-30205992/
+  https://www.pexels.com/video/a-woman-closing-a-suitcase-9142428/
+  https://www.pexels.com/video/a-woman-checking-her-fridge-6995077/
+  https://www.pexels.com/video/a-woman-getting-food-from-a-refrigerator-5418706/
+  https://www.pexels.com/video/organizing-fresh-produce-in-refrigerator-35095287/
+  https://www.pexels.com/video/woman-getting-orange-from-a-refrigirator-6595464/
+  https://www.pexels.com/video/a-person-pushing-a-suitcase-7431860/
+  https://www.pexels.com/video/organized-fridge-with-fresh-vegetables-and-fruits-35576751/
+  https://www.pexels.com/video/person-wiping-a-refrigerator-s-handle-9462939/
+v2-clean-a-microwave-with-lemon.mp4
+  https://www.pexels.com/video/a-person-cleaning-a-microwave-oven-with-a-green-cloth-9473240/
+  https://www.pexels.com/video/woman-cleaning-a-microwave-9462920/
+  https://www.pexels.com/video/person-slicing-the-lemon-7964825/
+  https://www.pexels.com/video/vertical-video-of-falling-lemon-slices-5876044/
+  https://www.pexels.com/video/a-person-slicing-lemon-on-wooden-chopping-board-9001896/
+  https://www.pexels.com/video/woman-cleaning-a-microwave-with-a-towel-9462944/
+v2-descale-a-kettle.mp4
+  https://www.pexels.com/video/person-pouring-tea-5983910/
+  https://www.pexels.com/video/close-up-on-boiling-water-in-kettle-10596200/
+  https://www.pexels.com/video/person-heating-water-with-a-kettle-5824188/
+  https://www.pexels.com/video/a-woman-pouring-hot-water-on-the-teapot-8295360/
+  https://www.pexels.com/video/a-stainless-kettle-with-smoke-6316937/
+  https://www.pexels.com/video/close-up-of-water-pouring-into-glass-tap-39111244/
+  https://www.pexels.com/video/close-up-of-person-pouring-tea-into-glass-9888679/
+v2-use-the-descale-mode-on-a-nespresso-machine.mp4
+  https://www.pexels.com/video/modern-espresso-machine-brewing-coffee-29532371/
+  https://www.pexels.com/video/close-up-of-an-espresso-machine-pouring-coffee-into-a-ceramic-cup-14916793/
+  https://www.pexels.com/video/modern-coffee-machine-brewing-espresso-33455899/
+  https://www.pexels.com/video/modern-coffee-machine-pouring-fresh-espresso-31398861/
+  https://www.pexels.com/video/close-up-of-water-pouring-into-glass-tap-39111244/
+  https://www.pexels.com/video/cleaning-a-coffee-filter-with-hot-water-from-the-espresso-machine-13737156/
+  https://www.pexels.com/video/woman-using-coffee-machine-6202090/
+Voice: existing Mira VOs reused; dishwasher hook line regenerated (ElevenLabs eleven_v4, ~52 credits).
