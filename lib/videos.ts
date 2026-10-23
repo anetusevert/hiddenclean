@@ -10,3 +10,4 @@ export const SHORTS: Short[] = [
   { id: "nespresso-descale", hook: "Your Nespresso's *SECRET* combo", tipSlug: "how-to-use-the-descale-mode-on-a-nespresso-machine", label: "Nespresso descale" },
 ];
 export const SOCIAL = { tiktok: "https://www.tiktok.com/@hiddenclean.tips", instagram: "https://www.instagram.com/hiddenclean.hacks" };
+export const shortFor = (slug: string) => SHORTS.find((s) => s.tipSlug === slug);

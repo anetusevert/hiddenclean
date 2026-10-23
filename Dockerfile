@@ -16,5 +16,7 @@ ENV NODE_ENV=production NEXT_TELEMETRY_DISABLED=1 HOSTNAME=0.0.0.0 PORT=8080
 COPY --from=builder /app/.next/standalone ./
 COPY --from=builder /app/.next/static ./.next/static
 COPY --from=builder /app/public ./public
+COPY --from=builder /app/scripts/indexnow.mjs ./scripts/indexnow.mjs
 EXPOSE 8080
-CMD ["node", "server.js"]
+# Ping IndexNow once the new deploy is serving (non-fatal).
+CMD ["sh", "-c", "(sleep 45 && node scripts/indexnow.mjs || true) & exec node server.js"]

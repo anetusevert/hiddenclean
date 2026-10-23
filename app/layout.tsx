@@ -20,15 +20,15 @@ export const metadata: Metadata = {
   title: { default: `${SITE_NAME}: one hidden cleaning hack a day`, template: `%s | ${SITE_NAME}` },
   description: SITE_DESC,
   alternates: pageAlternates("/"),
-  openGraph: { siteName: SITE_NAME, type: "website", description: SITE_DESC, locale: "en_US", images: ["/icons/icon-512.png"] },
-  twitter: { card: "summary" },
+  openGraph: { siteName: SITE_NAME, type: "website", description: SITE_DESC, locale: "en_US", images: [{ url: "/og.png", width: 1200, height: 630, alt: "HiddenClean: one hidden cleaning hack a day" }] },
+  twitter: { card: "summary_large_image", images: ["/og.png"] },
 };
 
 const graph = {
   "@context": "https://schema.org",
   "@graph": [
-    { "@type": "WebSite", name: SITE_NAME, url: SITE_URL, description: SITE_DESC, publisher: { "@id": `${SITE_URL}/#org` } },
-    { "@type": "Organization", "@id": `${SITE_URL}/#org`, name: SITE_NAME, url: SITE_URL, logo: `${SITE_URL}/icons/icon-512.png`, sameAs: [SOCIAL.tiktok, SOCIAL.instagram] },
+    { "@type": "WebSite", "@id": `${SITE_URL}/#website`, inLanguage: "en", name: SITE_NAME, url: SITE_URL, description: SITE_DESC, publisher: { "@id": `${SITE_URL}/#org` } },
+    { "@type": "Organization", "@id": `${SITE_URL}/#org`, name: SITE_NAME, url: SITE_URL, logo: `${SITE_URL}/icons/icon-512.png`, email: "hello@hiddenclean.com", sameAs: [SOCIAL.tiktok, SOCIAL.instagram] },
   ],
 };
 

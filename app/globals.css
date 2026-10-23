@@ -129,3 +129,4 @@ h1, h2 { letter-spacing: -.035em; }
   .shorts { grid-auto-columns: 62%; margin: 0 -20px; padding: 0 20px 8px; scroll-padding: 0 20px; }
 }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } .phone { transform: none; } }
+.tip-video{display:block;width:100%;max-width:340px;height:auto;aspect-ratio:9/16;border-radius:18px;background:#0b1a33;margin:.5rem 0 1.5rem}

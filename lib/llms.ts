@@ -6,7 +6,7 @@ export function llmsTxt() {
     `# ${SITE_NAME}`, "", `> ${SITE_DESC}`, "", `Safety rule on every tip: ${SAFETY_RULE}`, "",
     "## Find by task", ...liveHubs().map((h) => `- ${SITE_URL}/how-to/${h.id}: ${h.title}. ${h.intro} (${hubTips(h).length} tips)`), "",
     "## Tips", ...tips.map((t) => `- ${SITE_URL}/tips/${t.slug}: ${t.searchPhrase} - ${t.answer}`), "",
-    "## More", `- Full text: ${SITE_URL}/llms-full.txt`, `- Sitemap: ${SITE_URL}/sitemap.xml`, "",
+    "## More", `- Full text: ${SITE_URL}/llms-full.txt`, `- JSON for agents: ${SITE_URL}/tips.json`, `- RSS: ${SITE_URL}/feed.xml`, `- Videos: https://www.tiktok.com/@hiddenclean.tips and https://www.instagram.com/hiddenclean.hacks`, `- Sitemap: ${SITE_URL}/sitemap.xml`, "",
   ].join("\n");
 }
 
