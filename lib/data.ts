@@ -1,5 +1,6 @@
-// The tip library. One line per tip: [search phrase, display name, hubs, answer, steps (|), safety, use-when].
-// Dates are assigned in order from START (one tip a day). Keep the order; append new tips at the end.
+// The tip library. One line per tip: [search phrase, display name, hubs, answer, steps (|), safety, optional YYYY-MM-DD].
+// Dates: optional ISO date, else day after the previous tip (first tip uses START). Append new tips at the end.
+// Mix rule (Utena 2026-10-25): mostly general cleaning hacks; ~1 appliance/secret-button tip per week.
 export const START = "2026-08-03";
 
 export type Raw = [string, string, string, string, string, string, string?];
@@ -337,4 +338,45 @@ export const RAW: Raw[] = [
     "Soak in oxygen bleach and warm water, then wash.",
     "Mix oxygen bleach in warm water|Soak 1-2 hours|Wash as usual",
     "Never use chlorine bleach on sweat stains; it can make them worse. Don't mix bleaches."],
+  // --- General cleaning batch (live library expansion, Utena 2026-10-25) ---
+  ["how to blot a stain instead of rubbing", "Stop rubbing stains. Blot them.", "ls",
+    "Blot from the outside in with a clean white cloth. Rubbing pushes the stain deeper and spreads it.",
+    "Act while the stain is wet|Press a clean white cloth or paper towel on the spot|Work from the outside of the stain inwards|Keep blotting with a fresh area of cloth until no more colour lifts|Then pretreat and wash as usual",
+    "Don't rub. Don't mix stain removers with bleach. Check the care label before any product.",
+    "2026-10-18"],
+  ["how to mop floors without streaks", "Your mop water is the problem", "fl",
+    "Use two buckets (one soapy, one rinse), wring the mop almost dry, and change the water as soon as it looks grey.",
+    "Sweep or vacuum first|Fill one bucket with cleaner and warm water, one with clean rinse water|Dip, wring hard, mop a small area|Rinse the mop in the clean bucket and wring again|Change both buckets when the water looks dirty",
+    "Don't mix floor cleaners. Skip vinegar and steam on hardwood and natural stone.",
+    "2026-10-19"],
+  ["how to clean a wooden cutting board", "Never soak a wooden cutting board", "sk",
+    "Wash with hot water and a drop of washing-up liquid, scrub with coarse salt and a cut lemon for smells, then dry upright and oil monthly.",
+    "Wash promptly with hot water and a little washing-up liquid|Scrub with coarse salt and half a lemon if it smells|Rinse and stand it on its edge to dry|Once a month, rub in a thin coat of food-safe mineral oil",
+    "Don't soak wood or put it in the dishwasher; it cracks and warps. Hot water only — no bleach on a board you cut food on.",
+    "2026-10-20"],
+  ["how to clean bathroom tiles", "Soap-scum tiles wipe clean with this", "bt",
+    "Spray warm white vinegar on ceramic or porcelain tiles, leave 10 minutes, wipe, then dry with a microfibre cloth so spots don't return.",
+    "Dry-dust or vacuum loose hair first|Spray warm white vinegar on the tiles (not natural stone)|Leave 10 minutes|Wipe with a microfibre cloth and rinse|Dry with a clean cloth to stop water spots",
+    "Never use vinegar on marble, limestone or other natural stone. Don't mix vinegar with bleach.",
+    "2026-10-21"],
+  ["how to clean pillows", "Wash your pillows. Yes, really.", "fl",
+    "Check the care label, wash two pillows at a time on a gentle warm cycle with a little detergent, rinse twice, then dry fully with cleaner tennis balls in the drum.",
+    "Read the care label (most polyester and some down pillows are machine-washable)|Wash two at a time on gentle/warm with a small amount of detergent|Run an extra rinse|Tumble dry low with two clean tennis balls until fully dry all the way through",
+    "Don't wash foam or memory-foam pillows in a machine. Pillows must be completely dry before you sleep on them or mildew can grow. Don't mix bleach into the wash.",
+    "2026-10-22"],
+  ["how to clean baseboards", "The baseboard trick that skips the backache", "fl",
+    "Vacuum the edge first, then wipe with a microfibre cloth wrapped around a paint pad or sponge mop so you can clean standing up.",
+    "Vacuum along the baseboard to pick up dust and hair|Spray a light mist of warm water with a drop of washing-up liquid on a microfibre cloth|Wrap the cloth around a flat mop or paint pad|Wipe along the boards without soaking the woodwork|Dry with a second cloth if needed",
+    "Don't soak wood baseboards. Spot-test painted finishes. One mild cleaner only — never mix products.",
+    "2026-10-23"],
+  ["how to clean a mirror without streaks", "Streak-free mirrors need a dry finish", "bt",
+    "Wipe with a mix of one part white vinegar to three parts water, then buff dry immediately with a clean microfibre cloth.",
+    "Dust the mirror first|Spray vinegar-water on the cloth, not the mirror (keeps frames and seals dry)|Wipe in an S pattern|Buff dry with a second dry microfibre cloth",
+    "Don't spray liquid into the mirror edges or frame. Don't mix vinegar with bleach-based glass cleaners.",
+    "2026-10-24"],
+  ["how to remove grease stains from clothes", "Kitchen grease on a shirt? Dish soap first", "ls",
+    "Dab washing-up liquid on the dry grease stain, work it in, wait 5 minutes, then wash warm. Air-dry and repeat if a shadow remains.",
+    "Lay the garment flat and dab (don't rub) a drop of washing-up liquid on the grease|Work it in gently with a finger or soft brush|Leave 5 minutes|Wash on the warmest safe setting on the care label|Air-dry and check before using a tumble dryer (heat sets grease)",
+    "Don't put the item in a hot dryer until the stain is gone. Don't mix dish soap with bleach. Check the care label.",
+    "2026-10-25"],
 ];

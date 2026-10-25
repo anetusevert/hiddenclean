@@ -3,7 +3,7 @@ import { slugify } from "./seo";
 
 export const SITE_NAME = "HiddenClean";
 export const SITE_URL = "https://www.hiddenclean.com";
-export const SITE_DESC = "One hidden cleaning hack a day: secret settings, buttons and filters on the appliances you already own. Every tip is safety-checked.";
+export const SITE_DESC = "One cleaning hack a day: bathrooms, floors, stains and the secret settings on appliances you already own. Every tip is safety-checked.";
 export const SAFETY_RULE = "Never mix cleaning products. Bleach plus ammonia, vinegar or other acids releases toxic gases. Use one product at a time, rinse between them, ventilate, and unplug appliances before you clean them.";
 
 export type Hub = { id: string; key: string; label: string; searchPhrase: string; title: string; intro: string };
@@ -17,10 +17,10 @@ const HUB_DEFS: [string, string, string, string][] = [
   ["cf", "Coffee makers", "how to clean a coffee maker", "Descaling, secret descale modes, grinders and presses."],
   ["sm", "Small appliances", "how to clean small kitchen appliances", "Kettles, air fryers, toasters, blenders and pans."],
   ["sk", "Kitchen sink", "how to clean a kitchen sink", "Drains, disposals, overflows, taps and stainless steel."],
-  ["bt", "Bathroom", "how to clean a bathroom", "Shower heads, grout, toilets, tubs and fans."],
+  ["bt", "Bathroom", "how to clean a bathroom", "Shower heads, grout, tiles, toilets, tubs and fans."],
   ["vc", "Vacuums", "how to clean a vacuum cleaner", "Filters, brush rolls and robot vacuums."],
-  ["ls", "Laundry stains", "how to remove laundry stains", "Grass, wine and sweat stains without ruining fabric."],
-  ["fl", "Floors & home", "how to clean floors and home surfaces", "Floors, mattresses, windows and air appliances."],
+  ["ls", "Laundry stains", "how to remove laundry stains", "Grass, wine, grease and sweat stains without ruining fabric."],
+  ["fl", "Floors & home", "how to clean floors and home surfaces", "Floors, mattresses, pillows, mirrors, baseboards and air appliances."],
 ];
 const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
 export const HUBS: Hub[] = HUB_DEFS.map(([key, label, searchPhrase, intro]) => ({
@@ -38,22 +38,26 @@ function addDays(iso: string, n: number) {
   return d.toISOString().slice(0, 10);
 }
 
-export const ALL_TIPS: Tip[] = RAW.map(([searchPhrase, displayName, hubKeys, answer, steps, safety], i) => {
+export const ALL_TIPS: Tip[] = RAW.reduce<Tip[]>((acc, [searchPhrase, displayName, hubKeys, answer, steps, safety, maybeDate]) => {
   const hubs = hubKeys.split(",").map((k) => {
     const h = HUBS.find((x) => x.key === k);
     if (!h) throw new Error(`Unknown hub ${k} on "${searchPhrase}"`);
     return h;
   });
   const title = cap(searchPhrase);
-  return {
-    slug: slugify(searchPhrase), title, displayName, date: addDays(START, i), hubs, searchPhrase, answer,
+  const date = maybeDate && /^\d{4}-\d{2}-\d{2}$/.test(maybeDate)
+    ? maybeDate
+    : acc.length ? addDays(acc[acc.length - 1].date, 1) : START;
+  acc.push({
+    slug: slugify(searchPhrase), title, displayName, date, hubs, searchPhrase, answer,
     steps: steps.split("|"), safety,
     faq: [
       { q: `Is it safe to ${searchPhrase.replace(/^how to /, "")} at home?`, a: `Yes, with care. ${safety} ${SAFETY_RULE}` },
-      { q: "How often should I do this?", a: "Monthly for most appliances, or as soon as you notice smells, residue or slower performance. Your manual has the final word." },
+      { q: "How often should I do this?", a: "As soon as you notice the mess, or on a weekly/monthly rhythm for upkeep. Your product label or appliance manual has the final word." },
     ],
-  };
-});
+  });
+  return acc;
+}, []);
 
 // assertLibrary: slugs unique, phrase lowercase, slug = slugify(phrase), every tip has a safety note.
 (function assertLibrary() {

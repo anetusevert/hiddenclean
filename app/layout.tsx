@@ -17,10 +17,10 @@ export const viewport: Viewport = { themeColor: "#14325f", width: "device-width"
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   applicationName: SITE_NAME,
-  title: { default: `${SITE_NAME}: one hidden cleaning hack a day`, template: `%s | ${SITE_NAME}` },
+  title: { default: `${SITE_NAME}: one cleaning hack a day`, template: `%s | ${SITE_NAME}` },
   description: SITE_DESC,
   alternates: pageAlternates("/"),
-  openGraph: { siteName: SITE_NAME, type: "website", description: SITE_DESC, locale: "en_US", images: [{ url: "/og.png", width: 1200, height: 630, alt: "HiddenClean: one hidden cleaning hack a day" }] },
+  openGraph: { siteName: SITE_NAME, type: "website", description: SITE_DESC, locale: "en_US", images: [{ url: "/og.png", width: 1200, height: 630, alt: "HiddenClean: one cleaning hack a day" }] },
   twitter: { card: "summary_large_image", images: ["/og.png"] },
 };
 
@@ -41,9 +41,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main id="content">{children}</main>
         <footer className="site-footer">
           <div className="wrap foot">
-            <div><b>HiddenClean</b><p>One hidden cleaning hack a day. Every tip has a safety check. Never mix cleaning products.</p><SubscribeForm compact /><Social /></div>
+            <div><b>HiddenClean</b><p>One cleaning hack a day — bathrooms, stains, floors and appliance secrets. Every tip has a safety check. Never mix cleaning products.</p><SubscribeForm compact /><Social /></div>
             <nav aria-label="Footer">
-              <Link href="/tips">All tips</Link><Link href="/how-to">By appliance</Link><Link href="/about">About &amp; safety</Link>
+              <Link href="/tips">All tips</Link><Link href="/how-to">Browse</Link><Link href="/about">About &amp; safety</Link>
               <Link href="/subscribe">Subscribe</Link><Link href="/llms.txt">llms.txt</Link><Link href="/sitemap.xml">Sitemap</Link>
             </nav>
           </div>

@@ -20,7 +20,7 @@ export function Header() {
         </Link>
         <nav aria-label="Main">
           <Link href="/tips">Tips</Link>
-          <Link href="/how-to">By appliance</Link>
+          <Link href="/how-to">Browse</Link>
           <Link href="/subscribe" className="pill">Daily email</Link>
         </nav>
       </div>

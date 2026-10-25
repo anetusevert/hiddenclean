@@ -5,9 +5,9 @@ export default function About() {
   return (
     <div className="wrap page narrow">
       <h1>About HiddenClean</h1>
-      <p className="lede">Your dishwasher, washer and oven have settings and filters most people never find. We publish one each morning, in plain steps.</p>
+      <p className="lede">Most cleaning advice is either boring or dangerous. We publish one useful hack each morning — bathrooms, floors, stains, and the odd secret setting on an appliance you already own — in plain steps, with a safety check.</p>
       <h2>Our safety rules</h2>
-      <ul className="steps"><li>{SAFETY_RULE}</li><li>Bleach + ammonia makes chloramine gas. Bleach + vinegar or other acids makes chlorine gas. Bleach + rubbing alcohol makes chloroform.</li><li>Unplug or switch off at the mains before cleaning any appliance, and let hot parts cool.</li><li>Check your manual. If it says not to do something, follow the manual.</li></ul>
+      <ul className="steps"><li>{SAFETY_RULE}</li><li>Bleach + ammonia makes chloramine gas. Bleach + vinegar or other acids makes chlorine gas. Bleach + rubbing alcohol makes chloroform.</li><li>Unplug or switch off at the mains before cleaning any appliance, and let hot parts cool.</li><li>Check your manual or product label. If it says not to do something, follow that.</li></ul>
     </div>
   );
 }

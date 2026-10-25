@@ -1,5 +1,7 @@
 # HiddenClean daily short (9:16, 1080x1920, 30 fps, ~25-35s)
 
+Content mix (Utena 2026-10-25): mostly **general cleaning hacks** (bathroom, floors, stains, kitchen surfaces). About **one appliance / secret-button** video per week as the signature. Same safety rules. Details in `docs/CONTENT.md`.
+
 Pipeline copied from TechTipADay's Remotion setup (script / align / render), with a new HiddenClean look, sound and voice. Composition: `HiddenCleanShort` (`src/HiddenCleanShort.tsx`).
 
 ## Locked style (APPROVED by Utena 2026-10-20: do not change voice, sound kit or reveal motif)

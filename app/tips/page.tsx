@@ -11,7 +11,7 @@ export default function Tips() {
       <JsonLd data={collectionLd({ name: "All HiddenClean tips", url: `${SITE_URL}/tips`, description: "Every tip, newest first.", items: tips.map((t) => ({ name: t.title, url: `${SITE_URL}/tips/${t.slug}` })) })} />
       <JsonLd data={breadcrumbLd([{ name: "Home", url: SITE_URL }, { name: "Tips", url: `${SITE_URL}/tips` }])} />
       <h1>All cleaning tips</h1>
-      <p className="lede">{tips.length} hidden settings, filters and tricks. A new one every morning.</p>
+      <p className="lede">{tips.length} cleaning hacks — bathrooms, stains, floors and appliance secrets. A new one every morning.</p>
       <div className="grid">{tips.map((t) => <TipCard key={t.slug} tip={t} />)}</div>
     </div>
   );
