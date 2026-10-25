@@ -1,0 +1,74 @@
+{
+  "key": "how-to-mop-floors-without-streaks",
+  "n": 85,
+  "slug": "how-to-mop-floors-without-streaks",
+  "title": "How to mop floors without streaks",
+  "appliance": "dishwasher",
+  "revealAt": "part",
+  "url": "https://www.hiddenclean.com/tips/how-to-mop-floors-without-streaks",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Your mop water is the problem.",
+      "text": "Your mop water is the problem.",
+      "label": "STREAKY FLOORS?"
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix most people skip. Two buckets. One soapy, one rinse.",
+      "text": "Two-bucket mop"
+    },
+    {
+      "beat": "steps",
+      "say": "Sweep or vacuum first.",
+      "text": "Sweep first",
+      "step": 1,
+      "scene": "wipe"
+    },
+    {
+      "beat": "steps",
+      "say": "One bucket with cleaner, one with rinse water.",
+      "text": "Soap + rinse",
+      "step": 2,
+      "scene": "pour"
+    },
+    {
+      "beat": "steps",
+      "say": "Wring the mop almost dry, mop a small area.",
+      "text": "Wring hard",
+      "step": 3,
+      "scene": "wipe"
+    },
+    {
+      "beat": "steps",
+      "say": "Rinse the mop, and change water when it looks grey.",
+      "text": "Change grey water",
+      "step": 4,
+      "scene": "rinse"
+    },
+    {
+      "beat": "safety",
+      "say": "Don't mix floor cleaners. Skip vinegar on hardwood and stone.",
+      "text": "One cleaner. No vinegar on stone."
+    },
+    {
+      "beat": "result",
+      "say": "Clean floors, no cloudy streaks.",
+      "text": "No more streaks",
+      "result": {
+        "say": "Clean floors, no cloudy streaks.",
+        "headline": "No more streaks",
+        "before": "Grey mop water",
+        "after": "Clear and dry"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "Daily hidden cleaning hacks, at hiddenclean dot com.",
+      "text": "Daily hidden cleaning hacks"
+    }
+  ],
+  "words": 72,
+  "warn": [],
+  "elevenlabsPrompt": "[playful] Your mop water is the problem.\n\n[intrigued] Here's the fix most people skip. Two buckets. One soapy, one rinse.\n\n[friendly] Sweep or vacuum first. One bucket with cleaner, one with rinse water. Wring the mop almost dry, mop a small area. Rinse the mop, and change water when it looks grey. Don't mix floor cleaners. Skip vinegar on hardwood and stone.\n\n[delighted] Clean floors, no cloudy streaks.\n\n[warm] Daily hidden cleaning hacks, at hiddenclean dot com."
+}

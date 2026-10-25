@@ -20,8 +20,8 @@ export const metadata: Metadata = {
   title: { default: `${SITE_NAME}: one cleaning hack a day`, template: `%s | ${SITE_NAME}` },
   description: SITE_DESC,
   alternates: pageAlternates("/"),
-  openGraph: { siteName: SITE_NAME, type: "website", description: SITE_DESC, locale: "en_US", images: [{ url: "/og.png", width: 1200, height: 630, alt: "HiddenClean: one cleaning hack a day" }] },
-  twitter: { card: "summary_large_image", images: ["/og.png"] },
+  openGraph: { siteName: SITE_NAME, type: "website", description: SITE_DESC, locale: "en_US", images: [{ url: "/og.webp", width: 1200, height: 630, alt: "HiddenClean: one cleaning hack a day" }] },
+  twitter: { card: "summary_large_image", images: ["/og.webp"] },
 };
 
 const graph = {

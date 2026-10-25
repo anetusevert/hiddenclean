@@ -1,0 +1,24 @@
+{
+  "hook": "Stop rubbing that stain. You're making it worse.",
+  "hookLabel": "STOP DOING THIS",
+  "doLead": "Here's the move that works.",
+  "doThis": "Blot from the outside in.",
+  "doText": "Blot, don't rub",
+  "appliance": "dishwasher",
+  "steps": [
+    { "say": "Act while the stain is still wet.", "text": "Catch it wet", "scene": "wipe" },
+    { "say": "Press a clean white cloth. Don't scrub.", "text": "Press, don't scrub", "scene": "wipe" },
+    { "say": "Work from the outside inwards.", "text": "Outside in", "scene": "wipe" },
+    { "say": "Keep blotting with a fresh area until colour stops lifting.", "text": "Fresh cloth", "scene": "wipe" }
+  ],
+  "safety": {
+    "say": "Don't mix stain removers with bleach. Check the care label.",
+    "text": "Never mix with bleach."
+  },
+  "result": {
+    "say": "The stain lifts instead of spreading.",
+    "headline": "Lifts, not spreads",
+    "before": "Rubbed and bigger",
+    "after": "Blotted clean"
+  }
+}

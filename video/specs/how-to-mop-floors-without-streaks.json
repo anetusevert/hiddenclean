@@ -1,0 +1,24 @@
+{
+  "hook": "Your mop water is the problem.",
+  "hookLabel": "STREAKY FLOORS?",
+  "doLead": "Here's the fix most people skip.",
+  "doThis": "Two buckets. One soapy, one rinse.",
+  "doText": "Two-bucket mop",
+  "appliance": "dishwasher",
+  "steps": [
+    { "say": "Sweep or vacuum first.", "text": "Sweep first", "scene": "wipe" },
+    { "say": "One bucket with cleaner, one with rinse water.", "text": "Soap + rinse", "scene": "pour" },
+    { "say": "Wring the mop almost dry, mop a small area.", "text": "Wring hard", "scene": "wipe" },
+    { "say": "Rinse the mop, and change water when it looks grey.", "text": "Change grey water", "scene": "rinse" }
+  ],
+  "safety": {
+    "say": "Don't mix floor cleaners. Skip vinegar on hardwood and stone.",
+    "text": "One cleaner. No vinegar on stone."
+  },
+  "result": {
+    "say": "Clean floors, no cloudy streaks.",
+    "headline": "No more streaks",
+    "before": "Grey mop water",
+    "after": "Clear and dry"
+  }
+}

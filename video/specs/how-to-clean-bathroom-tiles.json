@@ -1,0 +1,24 @@
+{
+  "hook": "Soap scum tiles wipe clean with this.",
+  "hookLabel": "SOAP SCUM?",
+  "doLead": "Here's the bathroom shortcut.",
+  "doThis": "Warm white vinegar on ceramic tiles.",
+  "doText": "Warm vinegar spray",
+  "appliance": "dishwasher",
+  "steps": [
+    { "say": "Dust or vacuum loose hair first.", "text": "Dust first", "scene": "wipe" },
+    { "say": "Spray warm white vinegar. Not on natural stone.", "text": "Warm vinegar", "scene": "pour" },
+    { "say": "Leave it for ten minutes.", "text": "Wait 10 minutes", "scene": "wait" },
+    { "say": "Wipe, rinse, then dry so spots don't return.", "text": "Wipe, rinse, dry", "scene": "wipe" }
+  ],
+  "safety": {
+    "say": "Never use vinegar on marble, and don't mix it with bleach.",
+    "text": "No vinegar on stone. Never mix bleach."
+  },
+  "result": {
+    "say": "Tiles that actually look clean again.",
+    "headline": "Tiles look new",
+    "before": "Cloudy soap scum",
+    "after": "Fresh and dry"
+  }
+}

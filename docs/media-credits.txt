@@ -76,3 +76,19 @@ v2-use-the-descale-mode-on-a-nespresso-machine.mp4
   https://www.pexels.com/video/cleaning-a-coffee-filter-with-hot-water-from-the-espresso-machine-13737156/
   https://www.pexels.com/video/woman-using-coffee-machine-6202090/
 Voice: existing Mira VOs reused; dishwasher hook line regenerated (ElevenLabs eleven_v4, ~52 credits).
+
+=== v2 general batch (2026-10-26): Pexels License, free commercial use: https://www.pexels.com/license/ ===
+v2-blot-a-stain-instead-of-rubbing.mp4
+  https://www.pexels.com/video/close-up-on-hand-taking-cup-and-cleaning-stain-10568255/
+  https://www.pexels.com/video/house-apartment-home-clean-4109491/
+  https://www.pexels.com/video/a-person-wiping-a-table-with-a-cloth-9462907/
+v2-mop-floors-without-streaks.mp4
+  https://www.pexels.com/video/woman-mopping-a-floor-6195518/
+  https://www.pexels.com/video/woman-cleaning-the-floor-7551204/
+v2-clean-bathroom-tiles.mp4
+  https://www.pexels.com/video/man-scrubbing-tiles-in-kitchen-6195522/
+  https://www.pexels.com/video/a-person-is-cleaning-a-bathroom-sink-with-a-sponge-9472852/
+  https://www.pexels.com/video/house-apartment-home-clean-4109491/
+  https://www.pexels.com/video/professional-cleaning-in-modern-restroom-34786211/
+  https://www.pexels.com/video/a-person-wiping-a-table-with-a-cloth-9462907/
+Voice: ElevenLabs Mira (rdEyNni8e60Jlx1RsV9N), eleven_v4. Music/SFX: own HiddenClean kit.

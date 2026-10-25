@@ -1,0 +1,74 @@
+{
+  "key": "how-to-clean-bathroom-tiles",
+  "n": 87,
+  "slug": "how-to-clean-bathroom-tiles",
+  "title": "How to clean bathroom tiles",
+  "appliance": "dishwasher",
+  "revealAt": "part",
+  "url": "https://www.hiddenclean.com/tips/how-to-clean-bathroom-tiles",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Soap scum tiles wipe clean with this.",
+      "text": "Soap scum tiles wipe clean with this.",
+      "label": "SOAP SCUM?"
+    },
+    {
+      "beat": "do",
+      "say": "Here's the bathroom shortcut. Warm white vinegar on ceramic tiles.",
+      "text": "Warm vinegar spray"
+    },
+    {
+      "beat": "steps",
+      "say": "Dust or vacuum loose hair first.",
+      "text": "Dust first",
+      "step": 1,
+      "scene": "wipe"
+    },
+    {
+      "beat": "steps",
+      "say": "Spray warm white vinegar. Not on natural stone.",
+      "text": "Warm vinegar",
+      "step": 2,
+      "scene": "pour"
+    },
+    {
+      "beat": "steps",
+      "say": "Leave it for ten minutes.",
+      "text": "Wait 10 minutes",
+      "step": 3,
+      "scene": "wait"
+    },
+    {
+      "beat": "steps",
+      "say": "Wipe, rinse, then dry so spots don't return.",
+      "text": "Wipe, rinse, dry",
+      "step": 4,
+      "scene": "wipe"
+    },
+    {
+      "beat": "safety",
+      "say": "Never use vinegar on marble, and don't mix it with bleach.",
+      "text": "No vinegar on stone. Never mix bleach."
+    },
+    {
+      "beat": "result",
+      "say": "Tiles that actually look clean again.",
+      "text": "Tiles look new",
+      "result": {
+        "say": "Tiles that actually look clean again.",
+        "headline": "Tiles look new",
+        "before": "Cloudy soap scum",
+        "after": "Fresh and dry"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "Daily hidden cleaning hacks, at hiddenclean dot com.",
+      "text": "Daily hidden cleaning hacks"
+    }
+  ],
+  "words": 69,
+  "warn": [],
+  "elevenlabsPrompt": "[playful] Soap scum tiles wipe clean with this.\n\n[intrigued] Here's the bathroom shortcut. Warm white vinegar on ceramic tiles.\n\n[friendly] Dust or vacuum loose hair first. Spray warm white vinegar. Not on natural stone. Leave it for ten minutes. Wipe, rinse, then dry so spots don't return. Never use vinegar on marble, and don't mix it with bleach.\n\n[delighted] Tiles that actually look clean again.\n\n[warm] Daily hidden cleaning hacks, at hiddenclean dot com."
+}

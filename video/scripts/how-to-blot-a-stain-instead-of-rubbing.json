@@ -1,0 +1,74 @@
+{
+  "key": "how-to-blot-a-stain-instead-of-rubbing",
+  "n": 84,
+  "slug": "how-to-blot-a-stain-instead-of-rubbing",
+  "title": "How to blot a stain instead of rubbing",
+  "appliance": "dishwasher",
+  "revealAt": "part",
+  "url": "https://www.hiddenclean.com/tips/how-to-blot-a-stain-instead-of-rubbing",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Stop rubbing that stain. You're making it worse.",
+      "text": "Stop rubbing that stain. You're making it worse.",
+      "label": "STOP DOING THIS"
+    },
+    {
+      "beat": "do",
+      "say": "Here's the move that works. Blot from the outside in.",
+      "text": "Blot, don't rub"
+    },
+    {
+      "beat": "steps",
+      "say": "Act while the stain is still wet.",
+      "text": "Catch it wet",
+      "step": 1,
+      "scene": "wipe"
+    },
+    {
+      "beat": "steps",
+      "say": "Press a clean white cloth. Don't scrub.",
+      "text": "Press, don't scrub",
+      "step": 2,
+      "scene": "wipe"
+    },
+    {
+      "beat": "steps",
+      "say": "Work from the outside inwards.",
+      "text": "Outside in",
+      "step": 3,
+      "scene": "wipe"
+    },
+    {
+      "beat": "steps",
+      "say": "Keep blotting with a fresh area until colour stops lifting.",
+      "text": "Fresh cloth",
+      "step": 4,
+      "scene": "wipe"
+    },
+    {
+      "beat": "safety",
+      "say": "Don't mix stain removers with bleach. Check the care label.",
+      "text": "Never mix with bleach."
+    },
+    {
+      "beat": "result",
+      "say": "The stain lifts instead of spreading.",
+      "text": "Lifts, not spreads",
+      "result": {
+        "say": "The stain lifts instead of spreading.",
+        "headline": "Lifts, not spreads",
+        "before": "Rubbed and bigger",
+        "after": "Blotted clean"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "Daily hidden cleaning hacks, at hiddenclean dot com.",
+      "text": "Daily hidden cleaning hacks"
+    }
+  ],
+  "words": 71,
+  "warn": [],
+  "elevenlabsPrompt": "[playful] Stop rubbing that stain. You're making it worse.\n\n[intrigued] Here's the move that works. Blot from the outside in.\n\n[friendly] Act while the stain is still wet. Press a clean white cloth. Don't scrub. Work from the outside inwards. Keep blotting with a fresh area until colour stops lifting. Don't mix stain removers with bleach. Check the care label.\n\n[delighted] The stain lifts instead of spreading.\n\n[warm] Daily hidden cleaning hacks, at hiddenclean dot com."
+}
