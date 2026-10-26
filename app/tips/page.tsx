@@ -3,7 +3,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { breadcrumbLd, collectionLd, pageAlternates } from "@/lib/seo";
 import { byNewest, SITE_URL } from "@/lib/tips";
 export const revalidate = 3600;
-export const metadata = { title: "All cleaning tips", description: "Every HiddenClean tip, newest first.", alternates: pageAlternates("/tips") };
+export const metadata = { title: "All cleaning tips", description: `All ${byNewest().length} HiddenClean cleaning hacks, newest first: bathrooms, stains, floors, kitchens and appliance secrets. Every tip is safety-checked.`, alternates: pageAlternates("/tips") };
 export default function Tips() {
   const tips = byNewest();
   return (

@@ -84,3 +84,11 @@ export const hubTips = (hub: Hub) => byNewest().filter((t) => t.hubs.includes(hu
 export const liveHubs = () => HUBS.filter((h) => hubTips(h).length >= MIN_HUB_TIPS);
 export const prettyDate = (iso: string) =>
   new Date(iso + "T12:00:00Z").toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" });
+
+/** "+01:00" or "+02:00": Europe/Berlin offset on that date (CET/CEST). */
+export function berlinOffset(iso: string) {
+  const d = new Date(iso + "T12:00:00Z");
+  const part = new Intl.DateTimeFormat("en-US", { timeZone: "Europe/Berlin", timeZoneName: "shortOffset" }).formatToParts(d).find((p) => p.type === "timeZoneName")?.value ?? "GMT+1";
+  const h = Number(part.replace("GMT", "")) || 1;
+  return `+${String(h).padStart(2, "0")}:00`;
+}

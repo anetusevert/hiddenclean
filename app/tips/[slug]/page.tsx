@@ -5,7 +5,7 @@ import { shortFor } from "@/lib/videos";
 import { JsonLd } from "@/components/JsonLd";
 import { TipCard } from "@/components/TipCard";
 import { breadcrumbLd, faqLd, metaDescription, pageAlternates } from "@/lib/seo";
-import { byNewest, getTip, hubTips, prettyDate, SAFETY_RULE, SITE_NAME, SITE_URL } from "@/lib/tips";
+import { berlinOffset, byNewest, getTip, hubTips, prettyDate, SAFETY_RULE, SITE_NAME, SITE_URL } from "@/lib/tips";
 export const revalidate = 3600;
 export const dynamicParams = true;
 export function generateStaticParams() { return byNewest().map((t) => ({ slug: t.slug })); }
@@ -24,13 +24,26 @@ export default async function TipPage({ params }: { params: Promise<{ slug: stri
   const url = `${SITE_URL}/tips/${tip.slug}`;
   const hub = tip.hubs[0];
   const v = shortFor(tip.slug);
-  const video = v ? { "@type": "VideoObject", name: tip.displayName, description: `${tip.answer} Safety: ${tip.safety}`, thumbnailUrl: `${SITE_URL}/v/${v.id}.jpg`, contentUrl: `${SITE_URL}/v/${v.id}.mp4`, uploadDate: `${tip.date}T07:30:00+02:00`, duration: "PT30S", publisher: { "@id": `${SITE_URL}/#org` } } : null;
-  const related = hubTips(hub).filter((t) => t.slug !== tip.slug).slice(0, 3);
+  const video = v ? { "@type": "VideoObject", name: tip.displayName, description: `${tip.answer} Safety: ${tip.safety}`, thumbnailUrl: `${SITE_URL}/v/${v.id}.jpg`, contentUrl: `${SITE_URL}/v/${v.id}.mp4`, uploadDate: `${tip.date}T07:30:00${berlinOffset(tip.date)}`, duration: "PT30S", publisher: { "@id": `${SITE_URL}/#org` } } : null;
+  // Related: the tips either side of this one in its hub (circular), so every tip gets inbound links, not just the newest 3.
+  const inHub = hubTips(hub);
+  const at = inHub.findIndex((t) => t.slug === tip.slug);
+  const relatedSet = new Map<string, (typeof inHub)[number]>();
+  for (const off of [1, -1, 2, -2, 3, -3]) {
+    if (inHub.length < 2 || relatedSet.size >= 4) break;
+    const t = inHub[(at + off + inHub.length * 4) % inHub.length];
+    if (t.slug !== tip.slug) relatedSet.set(t.slug, t);
+  }
+  const related = [...relatedSet.values()];
+  const all = byNewest();
+  const idx = all.findIndex((t) => t.slug === tip.slug);
+  const newer = idx > 0 ? all[idx - 1] : undefined;
+  const older = idx >= 0 && idx < all.length - 1 ? all[idx + 1] : undefined;
   return (
     <article className="wrap page tip">
       <JsonLd data={{ "@context": "https://schema.org", "@type": "HowTo", name: tip.title, description: tip.answer, url, datePublished: tip.date, inLanguage: "en", totalTime: "PT15M",
         ...(video ? { image: video.thumbnailUrl, video } : { image: `${SITE_URL}/og.png` }),
-        publisher: { "@id": `${SITE_URL}/#org` },
+        publisher: { "@id": `${SITE_URL}/#org` }, isPartOf: { "@id": `${SITE_URL}/#website` }, about: hub.title,
         step: tip.steps.map((s, i) => ({ "@type": "HowToStep", position: i + 1, name: s.split(/[.!]/)[0].slice(0, 80), text: s, url: `${url}#step-${i + 1}` })) }} />
       {video && <JsonLd data={{ "@context": "https://schema.org", ...video }} />}
       <JsonLd data={faqLd(tip.faq)} />
@@ -49,6 +62,8 @@ export default async function TipPage({ params }: { params: Promise<{ slug: stri
       <h2>FAQ</h2>
       <div className="faq">{tip.faq.map((f) => <details key={f.q}><summary>{f.q}</summary><p>{f.a}</p></details>)}</div>
       {related.length > 0 && (<><h2>More {hub.title.replace(/^How to /, "").toLowerCase()} hacks</h2><div className="grid">{related.map((t) => <TipCard key={t.slug} tip={t} />)}</div></>)}
+      {tip.hubs.length > 1 && <p className="meta">Also in: {tip.hubs.slice(1).map((h, i) => <span key={h.id}>{i ? ", " : ""}<Link href={`/how-to/${h.id}`}>{h.title}</Link></span>)}</p>}
+      {(older || newer) && (<nav className="pager" aria-label="More tips">{older && <Link href={`/tips/${older.slug}`} rel="prev">← Previous hack: {older.title}</Link>}{newer && <Link href={`/tips/${newer.slug}`} rel="next">Next hack: {newer.title} →</Link>}</nav>)}
     </article>
   );
 }

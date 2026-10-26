@@ -35,6 +35,7 @@ const graph = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={sans.variable}>
+      <head><link rel="preconnect" href="https://cloudflareinsights.com" crossOrigin="anonymous" /><link rel="dns-prefetch" href="https://static.cloudflareinsights.com" /></head>
       <body>
         <JsonLd data={graph} />
         <Header />

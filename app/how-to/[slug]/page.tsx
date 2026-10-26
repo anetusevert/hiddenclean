@@ -2,14 +2,14 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { JsonLd } from "@/components/JsonLd";
 import { TipCard } from "@/components/TipCard";
-import { breadcrumbLd, collectionLd, faqLd, pageAlternates } from "@/lib/seo";
+import { breadcrumbLd, collectionLd, faqLd, metaDescription, pageAlternates } from "@/lib/seo";
 import { hubTips, liveHubs, SAFETY_RULE, SITE_URL } from "@/lib/tips";
 export const revalidate = 3600;
 export function generateStaticParams() { return liveHubs().map((h) => ({ slug: h.id })); }
 const find = (slug: string) => liveHubs().find((h) => h.id === slug);
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const hub = find((await params).slug);
-  return hub ? { title: hub.title, description: `${hub.title}: ${hub.intro}`, alternates: pageAlternates(`/how-to/${hub.id}`) } : {};
+  return hub ? { title: hub.title, description: metaDescription(hub.title, `${hubTips(hub).length} safety-checked hacks. ${hub.intro} Start with ${hubTips(hub)[0]?.searchPhrase ?? hub.searchPhrase}.`), alternates: pageAlternates(`/how-to/${hub.id}`) } : {};
 }
 export default async function Hub({ params }: { params: Promise<{ slug: string }> }) {
   const hub = find((await params).slug);
