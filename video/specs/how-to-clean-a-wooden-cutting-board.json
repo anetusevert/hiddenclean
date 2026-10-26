@@ -1,0 +1,24 @@
+{
+  "hook": "Stop soaking your wooden cutting board. Seriously.",
+  "hookLabel": "YOU'RE DOING IT WRONG",
+  "doLead": "Here's the fix.",
+  "doThis": "Coarse salt and half a lemon.",
+  "doText": "Salt + half a lemon",
+  "appliance": "dishwasher",
+  "steps": [
+    { "say": "Wash with hot water and a drop of soap.", "text": "Hot water + soap", "scene": "rinse" },
+    { "say": "Sprinkle coarse salt, then scrub with half a lemon.", "text": "Salt + lemon scrub", "scene": "wipe" },
+    { "say": "Rinse, then dry it standing upright.", "text": "Rinse, dry upright", "scene": "rinse" },
+    { "say": "Once a month, rub in food-safe mineral oil.", "text": "Mineral oil monthly", "scene": "wipe" }
+  ],
+  "safety": {
+    "say": "Never soak it, no dishwasher, no bleach, never mix cleaners.",
+    "text": "No soaking. No dishwasher. No bleach."
+  },
+  "result": {
+    "say": "Fresh, smooth, and no cracks.",
+    "headline": "Board looks new",
+    "before": "Smelly, dry board",
+    "after": "Fresh and oiled"
+  }
+}

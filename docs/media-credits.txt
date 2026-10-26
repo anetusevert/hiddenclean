@@ -92,3 +92,19 @@ v2-clean-bathroom-tiles.mp4
   https://www.pexels.com/video/professional-cleaning-in-modern-restroom-34786211/
   https://www.pexels.com/video/a-person-wiping-a-table-with-a-cloth-9462907/
 Voice: ElevenLabs Mira (rdEyNni8e60Jlx1RsV9N), eleven_v4. Music/SFX: own HiddenClean kit.
+
+=== v2 general (2026-10-26): Pexels License, free commercial use: https://www.pexels.com/license/ ===
+v2-clean-a-wooden-cutting-board.mp4
+  https://www.pexels.com/video/hands-cutting-lemon-11142458/
+  https://www.pexels.com/video/slicing-fresh-tomato-on-wooden-cutting-board-37188022/
+  https://www.pexels.com/video/person-slicing-a-lemon-6664272/
+  https://www.pexels.com/video/droplets-of-water-in-kitchen-sink-6247913/
+  https://www.pexels.com/video/a-person-is-cleaning-a-bathroom-sink-with-a-sponge-9472852/
+  https://www.pexels.com/video/a-person-dusting-salt-on-a-raw-fish-10432096/
+  https://www.pexels.com/video/washing-red-apples-in-a-kitchen-sink-39123023/
+  https://www.pexels.com/video/woman-drying-a-plate-9462916/
+  https://www.pexels.com/video/a-man-brushing-a-lumber-wood-5973232/
+  https://www.pexels.com/video/olive-oil-being-poured-into-a-glass-bottle-25745552/
+  https://www.pexels.com/video/loading-dishwasher-with-assorted-glassware-35999383/
+  https://www.pexels.com/video/fresh-lemons-sliced-on-a-wooden-cutting-board-33668408/
+Voice: ElevenLabs Mira (rdEyNni8e60Jlx1RsV9N), eleven_v4 (~469 credits). Music/SFX: own HiddenClean kit.

@@ -1,0 +1,74 @@
+{
+  "key": "how-to-clean-a-wooden-cutting-board",
+  "n": 86,
+  "slug": "how-to-clean-a-wooden-cutting-board",
+  "title": "How to clean a wooden cutting board",
+  "appliance": "dishwasher",
+  "revealAt": "part",
+  "url": "https://www.hiddenclean.com/tips/how-to-clean-a-wooden-cutting-board",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Stop soaking your wooden cutting board. Seriously.",
+      "text": "Stop soaking your wooden cutting board. Seriously.",
+      "label": "YOU'RE DOING IT WRONG"
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Coarse salt and half a lemon.",
+      "text": "Salt + half a lemon"
+    },
+    {
+      "beat": "steps",
+      "say": "Wash with hot water and a drop of soap.",
+      "text": "Hot water + soap",
+      "step": 1,
+      "scene": "rinse"
+    },
+    {
+      "beat": "steps",
+      "say": "Sprinkle coarse salt, then scrub with half a lemon.",
+      "text": "Salt + lemon scrub",
+      "step": 2,
+      "scene": "wipe"
+    },
+    {
+      "beat": "steps",
+      "say": "Rinse, then dry it standing upright.",
+      "text": "Rinse, dry upright",
+      "step": 3,
+      "scene": "rinse"
+    },
+    {
+      "beat": "steps",
+      "say": "Once a month, rub in food-safe mineral oil.",
+      "text": "Mineral oil monthly",
+      "step": 4,
+      "scene": "wipe"
+    },
+    {
+      "beat": "safety",
+      "say": "Never soak it, no dishwasher, no bleach, never mix cleaners.",
+      "text": "No soaking. No dishwasher. No bleach."
+    },
+    {
+      "beat": "result",
+      "say": "Fresh, smooth, and no cracks.",
+      "text": "Board looks new",
+      "result": {
+        "say": "Fresh, smooth, and no cracks.",
+        "headline": "Board looks new",
+        "before": "Smelly, dry board",
+        "after": "Fresh and oiled"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "Daily hidden cleaning hacks, at hiddenclean dot com.",
+      "text": "Daily hidden cleaning hacks"
+    }
+  ],
+  "words": 71,
+  "warn": [],
+  "elevenlabsPrompt": "[playful] Stop soaking your wooden cutting board. Seriously.\n\n[intrigued] Here's the fix. Coarse salt and half a lemon.\n\n[friendly] Wash with hot water and a drop of soap. Sprinkle coarse salt, then scrub with half a lemon. Rinse, then dry it standing upright. Once a month, rub in food-safe mineral oil. Never soak it, no dishwasher, no bleach, never mix cleaners.\n\n[delighted] Fresh, smooth, and no cracks.\n\n[warm] Daily hidden cleaning hacks, at hiddenclean dot com."
+}

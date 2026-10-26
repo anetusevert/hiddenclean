@@ -4,6 +4,7 @@ export const SHORTS: Short[] = [
   { id: "blot-stain", hook: "Stop rubbing that *STAIN*", tipSlug: "how-to-blot-a-stain-instead-of-rubbing", label: "Blot, don't rub" },
   { id: "mop-floors", hook: "Your mop water is the *PROBLEM*", tipSlug: "how-to-mop-floors-without-streaks", label: "Streak-free mopping" },
   { id: "bathroom-tiles", hook: "Soap scum tiles wipe *CLEAN*", tipSlug: "how-to-clean-bathroom-tiles", label: "Bathroom tiles" },
+  { id: "cutting-board", hook: "Stop soaking your *BOARD*", tipSlug: "how-to-clean-a-wooden-cutting-board", label: "Wooden cutting board" },
   { id: "dishwasher-filter", hook: "Your dishwasher is hiding *THIS*", tipSlug: "how-to-clean-a-dishwasher-filter", label: "Dishwasher filter" },
   { id: "microwave-lemon", hook: "*STOP* scrubbing your microwave", tipSlug: "how-to-clean-a-microwave-with-lemon", label: "Microwave + lemon" },
   { id: "washer-filter", hook: "Nobody opens *THIS* door", tipSlug: "how-to-clean-a-washing-machine-filter", label: "Washer filter" },
