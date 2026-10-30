@@ -51,9 +51,11 @@ export const ALL_TIPS: Tip[] = RAW.reduce<Tip[]>((acc, [searchPhrase, displayNam
   acc.push({
     slug: slugify(searchPhrase), title, displayName, date, hubs, searchPhrase, answer,
     steps: steps.split("|"), safety,
+    // FAQ built only from this tip's own answer, steps and safety check (FAQPage JSON-LD + visible FAQ).
     faq: [
+      { q: `${title}?`, a: answer },
+      { q: `What are the steps to ${searchPhrase.replace(/^how to /, "")}?`, a: steps.split("|").map((s, i) => `${i + 1}. ${s.replace(/[.\s]+$/, "")}.`).join(" ") },
       { q: `Is it safe to ${searchPhrase.replace(/^how to /, "")} at home?`, a: `Yes, with care. ${safety} ${SAFETY_RULE}` },
-      { q: "How often should I do this?", a: "As soon as you notice the mess, or on a weekly/monthly rhythm for upkeep. Your product label or appliance manual has the final word." },
     ],
   });
   return acc;

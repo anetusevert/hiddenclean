@@ -21,6 +21,7 @@ export function Header() {
         <nav aria-label="Main">
           <Link href="/tips">Tips</Link>
           <Link href="/how-to">Browse</Link>
+          <Link href="/how-to/weekly-cleaning-checklist">Checklist</Link>
           <Link href="/subscribe" className="pill">Daily email</Link>
         </nav>
       </div>

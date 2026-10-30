@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { shortFor } from "@/lib/videos";
+import { guidesForTip, liveGuides } from "@/lib/guides";
 import { JsonLd } from "@/components/JsonLd";
 import { TipCard } from "@/components/TipCard";
 import { breadcrumbLd, faqLd, metaDescription, pageAlternates } from "@/lib/seo";
@@ -35,6 +36,8 @@ export default async function TipPage({ params }: { params: Promise<{ slug: stri
     if (t.slug !== tip.slug) relatedSet.set(t.slug, t);
   }
   const related = [...relatedSet.values()];
+  const inGuides = guidesForTip(tip.slug);
+  const moreGuides = liveGuides().filter((g) => !inGuides.includes(g));
   const all = byNewest();
   const idx = all.findIndex((t) => t.slug === tip.slug);
   const newer = idx > 0 ? all[idx - 1] : undefined;
@@ -56,6 +59,7 @@ export default async function TipPage({ params }: { params: Promise<{ slug: stri
       </header>
       <div className="answer"><b>Quick answer</b><p>{tip.answer}</p></div>
       <div className="safety" role="note"><b>⚠ Safety check</b><p>{tip.safety}</p><p className="rule">{SAFETY_RULE}</p></div>
+      {inGuides.length > 0 && <p className="in-guide">Part of: {inGuides.map((g, i) => <span key={g.id}>{i ? " · " : ""}<Link href={`/how-to/${g.id}`}>{g.displayName}</Link></span>)}</p>}
       <h2>Step by step</h2>
       <ol className="steps">{tip.steps.map((s, i) => <li key={s} id={`step-${i + 1}`}>{s}</li>)}</ol>
       {v && (<><h2>Watch it in 30 seconds</h2><video className="tip-video" src={`/v/${v.id}.mp4`} poster={`/v/${v.id}.jpg`} controls playsInline preload="none" width={1080} height={1920} aria-label={`Video: ${tip.displayName}`} /></>)}
@@ -63,6 +67,7 @@ export default async function TipPage({ params }: { params: Promise<{ slug: stri
       <div className="faq">{tip.faq.map((f) => <details key={f.q}><summary>{f.q}</summary><p>{f.a}</p></details>)}</div>
       {related.length > 0 && (<><h2>More {hub.title.replace(/^How to /, "").toLowerCase()} hacks</h2><div className="grid">{related.map((t) => <TipCard key={t.slug} tip={t} />)}</div></>)}
       {tip.hubs.length > 1 && <p className="meta">Also in: {tip.hubs.slice(1).map((h, i) => <span key={h.id}>{i ? ", " : ""}<Link href={`/how-to/${h.id}`}>{h.title}</Link></span>)}</p>}
+      {liveGuides().length > 0 && (<><h2>Quick cleaning routines</h2><div className="hubs">{[...inGuides, ...moreGuides].map((g) => <Link key={g.id} href={`/how-to/${g.id}`} className="hub"><strong>{g.displayName}</strong><span>{g.title}</span></Link>)}</div></>)}
       {(older || newer) && (<nav className="pager" aria-label="More tips">{older && <Link href={`/tips/${older.slug}`} rel="prev">← Previous hack: {older.title}</Link>}{newer && <Link href={`/tips/${newer.slug}`} rel="next">Next hack: {newer.title} →</Link>}</nav>)}
     </article>
   );

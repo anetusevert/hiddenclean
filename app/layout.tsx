@@ -44,7 +44,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="wrap foot">
             <div><b>HiddenClean</b><p>One cleaning hack a day — bathrooms, stains, floors and appliance secrets. Every tip has a safety check. Never mix cleaning products.</p><SubscribeForm compact /><Social /></div>
             <nav aria-label="Footer">
-              <Link href="/tips">All tips</Link><Link href="/how-to">Browse</Link><Link href="/about">About &amp; safety</Link>
+              <Link href="/tips">All tips</Link><Link href="/how-to">Browse</Link><Link href="/how-to/weekly-cleaning-checklist">Weekly checklist</Link><Link href="/how-to/clean-a-bathroom-in-15-minutes">15-min bathroom</Link><Link href="/how-to/deep-clean-a-kitchen-in-30-minutes">30-min kitchen</Link><Link href="/how-to/hidden-appliance-cleaning-settings">Hidden appliance buttons</Link><Link href="/about">About &amp; safety</Link>
               <Link href="/subscribe">Subscribe</Link><Link href="/llms.txt">llms.txt</Link><Link href="/sitemap.xml">Sitemap</Link>
             </nav>
           </div>

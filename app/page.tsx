@@ -6,6 +6,7 @@ import { SHORTS } from "@/lib/videos";
 import { JsonLd } from "@/components/JsonLd";
 import { itemListLd, pageAlternates } from "@/lib/seo";
 import { byNewest, liveHubs, hubTips, SITE_URL, SAFETY_RULE } from "@/lib/tips";
+import { liveGuides } from "@/lib/guides";
 export const revalidate = 3600;
 export const metadata = { alternates: pageAlternates("/") };
 
@@ -38,6 +39,8 @@ export default function Home() {
       </div></section>
       <div className="wrap">
         <aside className="safety-strip"><b>Safety first:</b> {SAFETY_RULE}</aside>
+        <h2 className="section" id="routines">Quick cleaning routines <span className="h-sub">timed, free, printable</span></h2>
+        <div className="hubs guides">{liveGuides().map((g) => <Link key={g.id} href={`/how-to/${g.id}`} className="hub"><strong>{g.displayName}</strong><span>{g.title}{g.kind !== "list" ? ` · ${g.minutes} min` : ""}</span></Link>)}</div>
         <h2 className="section" id="watch">Latest cleaning hacks <span className="h-sub">tap to watch</span></h2>
         <div className="shorts">{SHORTS.map((v) => <ShortCard key={v.id} s={v} href={liveSlugs.has(v.tipSlug) ? `/tips/${v.tipSlug}` : undefined} />)}
           <aside className="follow"><strong>New hack every day</strong><p>Bathrooms, stains, floors and the odd appliance secret. Follow along.</p><Social /><Link className="btn" href="/subscribe">Get it by email</Link></aside></div>
