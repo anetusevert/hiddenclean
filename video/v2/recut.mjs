@@ -52,5 +52,5 @@ fs.mkdirSync(path.join(dir, ".cache"), { recursive: true }); const pp = path.joi
 console.log(`${key}: total ${(tot / FPS).toFixed(1)}s kept ${pieces.map((p) => p.beat[0] + (p.step ?? "")).join(",")}`, pieces.map((p) => `${p.beat}@${(p.start / FPS).toFixed(2)}`).join(" "));
 if (process.argv.includes("--dry")) process.exit(0);
 const out = `/workspace/hiddenclean/video-out/${key}.mp4`;
-const rr = spawnSync(path.join(dir, "node_modules/.bin/remotion"), ["render", "src/index.ts", "HiddenCleanV2", out, `--props=${pp}`, "--overwrite", "--concurrency=4", "--browser-executable=/usr/bin/google-chrome", "--gl=angle", "--log=error"], { cwd: dir, stdio: "inherit" });
+const rr = spawnSync(path.join(dir, "node_modules/.bin/remotion"), ["render", "src/index.ts", "HiddenCleanV2", out, `--props=${pp}`, "--overwrite", `--concurrency=${process.env.CONC ?? 4}`, "--browser-executable=/usr/bin/google-chrome", "--gl=angle", "--log=error"], { cwd: dir, stdio: "inherit" });
 console.log(rr.status === 0 ? `Rendered ${out}` : "render failed"); process.exit(rr.status ?? 1);
