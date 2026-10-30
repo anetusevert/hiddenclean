@@ -68,3 +68,8 @@ Setup: `npm ci` (needs ffmpeg; uses google-chrome if present). Sound kit: `pytho
 - Stock: download the Pexels file, pre-cut to `public/stock/<id>.mp4` (9s, 1080x1920, 30fps, no audio; gitignored, re-download from credits.txt URLs). Run ffmpeg pre-cuts max 3 in parallel (54 at once got OOM-killed).
 - `node v2/build.mjs <slug>` -> whisper re-timing, shots auto-split to <=1.8s per piece, renders `video-out/v2-<slug minus how-to->.mp4`. `--dry` prints timings.
 - Hook line regen: generate only the first line in Mira/eleven_v4 (`generations_count: 1`, ~50 credits), trim its tail silence, concat with the original VO from the second piece onwards.
+
+## TikTok recuts (v2r, 2026-10-30: TikTok at 3 posts/day)
+- `v2/recut.json`: per recut id `v2r-<name>`: source `slug`, new on-screen `hook` (`*KEY*` = amber chip), spoken first line `say`, `first` (`do` = open on the hidden-spot clip, `hook2` = second hook clip), `drop` (steps removed, in order, only while the cut is over ~24.4 s).
+- New hook lines: one ElevenLabs Mira/eleven_v4 generation with every line as its own `[playful]` paragraph (~57 credits a line), split with align.py into `public/vo/r/<id>-hook.wav`.
+- `node v2/recut.mjs <id>`: drops the do piece's lead-in ("Here's the hidden part."), splices hook + original VO, re-times with whisper, renders `video-out/<id>.mp4` (22-25 s). `v2/timings.mjs <slug>` prints the source piece lengths.

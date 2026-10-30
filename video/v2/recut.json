@@ -1,0 +1,127 @@
+{
+ "v2r-washer-filter": {
+  "slug": "how-to-clean-a-washing-machine-filter",
+  "hook": "Open *THIS* tiny door",
+  "say": "Nobody opens this tiny door on their washer.",
+  "first": "do",
+  "drop": [
+   "s4"
+  ]
+ },
+ "v2r-bathroom-tiles": {
+  "slug": "how-to-clean-bathroom-tiles",
+  "hook": "Your tiles aren't *CLEAN*",
+  "say": "Your shower tiles look clean. They're not.",
+  "first": "hook2",
+  "drop": [
+   "s1"
+  ]
+ },
+ "v2r-dishwasher-filter": {
+  "slug": "how-to-clean-a-dishwasher-filter",
+  "hook": "Nobody cleans *THIS* part",
+  "say": "There's a part in your dishwasher nobody cleans.",
+  "first": "do",
+  "drop": []
+ },
+ "v2r-mop-floors": {
+  "slug": "how-to-mop-floors-without-streaks",
+  "hook": "Streaks? Blame your *BUCKET*",
+  "say": "Streaky floors? Blame your mop bucket.",
+  "first": "hook2",
+  "drop": [
+   "s1",
+   "s2"
+  ]
+ },
+ "v2r-microwave-lemon": {
+  "slug": "how-to-clean-a-microwave-with-lemon",
+  "hook": "Your microwave cleans *ITSELF*",
+  "say": "Your microwave can basically clean itself.",
+  "first": "hook2",
+  "drop": [
+   "s3"
+  ]
+ },
+ "v2r-blot-stain": {
+  "slug": "how-to-blot-a-stain-instead-of-rubbing",
+  "hook": "You're spreading that *STAIN*",
+  "say": "Rubbing a stain just spreads it.",
+  "first": "hook2",
+  "drop": [
+   "s1"
+  ]
+ },
+ "v2r-oven-steam": {
+  "slug": "how-to-use-the-steam-clean-function-on-an-oven",
+  "hook": "Your oven cleans with *WATER*",
+  "say": "Your oven has a hidden mode that cleans with water.",
+  "first": "do",
+  "drop": [
+   "s3"
+  ]
+ },
+ "v2r-cutting-board": {
+  "slug": "how-to-clean-a-wooden-cutting-board",
+  "hook": "Never do *THIS* to wood",
+  "say": "Never do this to a wooden cutting board.",
+  "first": "hook2",
+  "drop": [
+   "s3"
+  ]
+ },
+ "v2r-kettle-descale": {
+  "slug": "how-to-descale-a-kettle",
+  "hook": "Look *INSIDE* your kettle",
+  "say": "Look inside your kettle. That's limescale.",
+  "first": "hook2",
+  "drop": [
+   "s4"
+  ]
+ },
+ "v2r-fridge-holiday": {
+  "slug": "how-to-use-the-vacation-mode-on-a-fridge",
+  "hook": "Your fridge's *HIDDEN* button",
+  "say": "Going away? Your fridge has a hidden button.",
+  "first": "do",
+  "drop": [
+   "s3"
+  ]
+ },
+ "v2r-nespresso-descale": {
+  "slug": "how-to-use-the-descale-mode-on-a-nespresso-machine",
+  "hook": "Press *TWO* buttons at once",
+  "say": "Press two buttons at once on your Nespresso.",
+  "first": "do",
+  "drop": [
+   "s4"
+  ]
+ },
+ "v2r-toilet-rim": {
+  "slug": "how-to-clean-under-the-toilet-rim",
+  "hook": "The spot nobody *SEES*",
+  "say": "The dirtiest spot in your bathroom? Nobody sees it.",
+  "first": "do",
+  "drop": [
+   "s4"
+  ]
+ },
+ "v2r-iron-self-clean": {
+  "slug": "how-to-use-the-self-clean-button-on-a-steam-iron",
+  "hook": "White flakes? Press *THIS*",
+  "say": "White flakes on your shirt? Your iron has a hidden button.",
+  "first": "do",
+  "drop": [
+   "s2"
+  ]
+ },
+ "v2r-hairbrush": {
+  "slug": "how-to-clean-a-hairbrush",
+  "hook": "When did you clean *THIS?*",
+  "say": "When did you last clean your hairbrush? Be honest.",
+  "first": "hook2",
+  "drop": [
+   "s4"
+  ]
+ }
+}
