@@ -29,7 +29,7 @@ keep.forEach((i, k) => { const a = Math.max(0, al.starts[i] - 0.04), b = ends[i]
 fc += `${labels}concat=n=${keep.length + 1}:v=0:a=1[out]`;
 let r = spawnSync("ffmpeg", ["-hide_banner", "-loglevel", "error", "-y", ...inputs, "-filter_complex", fc, "-map", "[out]", voOut], { encoding: "utf8" }); if (r.status) throw new Error(r.stderr);
 const dur = Number(spawnSync("ffprobe", ["-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", voOut], { encoding: "utf8" }).stdout);
-const pieces0 = [{ ...s.pieces[0], say: rc.say, text: rc.say }, ...keep.map((i) => s.pieces[i])];
+let sn = 0; const pieces0 = [{ ...s.pieces[0], say: rc.say, text: rc.say }, ...keep.map((i) => s.pieces[i].beat === "steps" ? { ...s.pieces[i], origStep: s.pieces[i].step, step: ++sn } : s.pieces[i])];
 const key = id; const voNorm = path.join(dir, "public/vo/.norm", `${key}.wav`); fs.mkdirSync(path.dirname(voNorm), { recursive: true });
 spawnSync("ffmpeg", ["-hide_banner", "-loglevel", "error", "-y", "-i", voOut, "-af", "loudnorm=I=-16:TP=-1.5:LRA=11", "-ar", "44100", voNorm]);
 r = spawnSync("/home/box/whisper-venv/bin/python", [path.join(dir, "align.py"), voOut, JSON.stringify(pieces0.map((p) => p.say))], { encoding: "utf8" });
@@ -40,7 +40,7 @@ const words = al2.words.map((w) => ({ w: w.w, p: w.p, s: voStart + f(w.s), e: vo
 const tot = voEnd + f(OUTRO); const cta = pieces.find((p) => p.beat === "cta").start;
 const clips = { ...cfg.clips, hook: rc.first === "do" ? [cfg.clips.do[0].startsWith("gfx:") ? cfg.clips.hook[1] : cfg.clips.do[0], ...cfg.clips.hook] : [cfg.clips.hook[1] ?? cfg.clips.hook[0], cfg.clips.hook[0]] };
 const shots = [];
-pieces.forEach((p, i) => { if (p.beat === "cta") return; const key2 = p.beat === "steps" ? "s" + p.step : p.beat; const list = clips[key2] ?? clips.result;
+pieces.forEach((p, i) => { if (p.beat === "cta") return; const key2 = p.beat === "steps" ? "s" + (p.origStep ?? p.step) : p.beat; const list = clips[key2] ?? clips.result;
   const st = i === 0 ? 0 : p.start, en = pieces[i + 1].start; const n = Math.max(1, Math.ceil((en - st) / (1.8 * FPS)));
   const lastClean = p.beat === "steps" && pieces[i + 1].beat !== "steps";
   for (let k = 0; k < n; k++) { const e = list[k % list.length]; const [clip, ss] = e.split("@"); const a = st + Math.round(((en - st) * k) / n);
