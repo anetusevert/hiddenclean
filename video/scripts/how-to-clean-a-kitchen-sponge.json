@@ -1,0 +1,74 @@
+{
+  "key": "how-to-clean-a-kitchen-sponge",
+  "n": 104,
+  "slug": "how-to-clean-a-kitchen-sponge",
+  "title": "How to clean a kitchen sponge",
+  "appliance": "dishwasher",
+  "revealAt": "part",
+  "url": "https://www.hiddenclean.com/tips/how-to-clean-a-kitchen-sponge",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Your sponge might be the grossest thing in your kitchen.",
+      "text": "Your sponge might be the grossest thing in your kitchen.",
+      "label": "YOU'RE DOING IT WRONG"
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Squeeze it dry, every single time.",
+      "text": "Squeeze it dry"
+    },
+    {
+      "beat": "steps",
+      "say": "Rinse the food bits out in hot water.",
+      "text": "Rinse out food",
+      "step": 1,
+      "scene": "rinse"
+    },
+    {
+      "beat": "steps",
+      "say": "Wring it out hard after every use.",
+      "text": "Wring it hard",
+      "step": 2,
+      "scene": "wipe"
+    },
+    {
+      "beat": "steps",
+      "say": "Stand it up to dry, never in a puddle.",
+      "text": "Dry it upright",
+      "step": 3,
+      "scene": "wait"
+    },
+    {
+      "beat": "steps",
+      "say": "Once a week, run it through a hot dishwasher cycle.",
+      "text": "Weekly hot cycle",
+      "step": 4,
+      "scene": "rinse"
+    },
+    {
+      "beat": "safety",
+      "say": "Still smelly? Bin it. And never mix cleaners.",
+      "text": "Smells? Replace it."
+    },
+    {
+      "beat": "result",
+      "say": "Fresher sponge, fresher dishes.",
+      "text": "No more sponge stink",
+      "result": {
+        "say": "Fresher sponge, fresher dishes.",
+        "headline": "No more sponge stink",
+        "before": "Smelly sponge",
+        "after": "Fresh sponge"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "Daily hidden cleaning hacks, at hiddenclean dot com.",
+      "text": "Daily hidden cleaning hacks"
+    }
+  ],
+  "words": 73,
+  "warn": [],
+  "elevenlabsPrompt": "[playful] Your sponge might be the grossest thing in your kitchen.\n\n[intrigued] Here's the fix. Squeeze it dry, every single time.\n\n[friendly] Rinse the food bits out in hot water. Wring it out hard after every use. Stand it up to dry, never in a puddle. Once a week, run it through a hot dishwasher cycle. Still smelly? Bin it. And never mix cleaners.\n\n[delighted] Fresher sponge, fresher dishes.\n\n[warm] Daily hidden cleaning hacks, at hiddenclean dot com."
+}

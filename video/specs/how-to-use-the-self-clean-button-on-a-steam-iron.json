@@ -1,0 +1,17 @@
+{
+  "hook": "Your iron has a secret self-clean button.",
+  "hookLabel": "HIDDEN SETTING",
+  "doLead": "Here's the hidden setting.",
+  "doThis": "It's called self-clean or calc-clean.",
+  "doText": "Self-clean button",
+  "appliance": "kettle",
+  "revealAt": "button",
+  "steps": [
+    { "say": "Fill it, heat to max, then unplug.", "text": "Fill, heat, unplug", "scene": "pour" },
+    { "say": "Hold it flat over the sink.", "text": "Over the sink", "scene": "open" },
+    { "say": "Press and hold the button, and shake gently.", "text": "Hold + shake", "scene": "press" },
+    { "say": "Reheat, and iron an old towel dry.", "text": "Iron a towel dry", "scene": "wipe" }
+  ],
+  "safety": { "say": "Hot steam, so keep your hands clear. Water only.", "text": "Hot steam. Water only." },
+  "result": { "say": "No more white flakes on your shirts.", "headline": "Flake-free soleplate", "before": "Chalky flakes", "after": "Clean steam" }
+}

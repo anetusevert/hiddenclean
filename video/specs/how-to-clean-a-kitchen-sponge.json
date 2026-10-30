@@ -1,0 +1,16 @@
+{
+  "hook": "Your sponge might be the grossest thing in your kitchen.",
+  "hookLabel": "YOU'RE DOING IT WRONG",
+  "doLead": "Here's the fix.",
+  "doThis": "Squeeze it dry, every single time.",
+  "doText": "Squeeze it dry",
+  "appliance": "dishwasher",
+  "steps": [
+    { "say": "Rinse the food bits out in hot water.", "text": "Rinse out food", "scene": "rinse" },
+    { "say": "Wring it out hard after every use.", "text": "Wring it hard", "scene": "wipe" },
+    { "say": "Stand it up to dry, never in a puddle.", "text": "Dry it upright", "scene": "wait" },
+    { "say": "Once a week, run it through a hot dishwasher cycle.", "text": "Weekly hot cycle", "scene": "rinse" }
+  ],
+  "safety": { "say": "Still smelly? Bin it. And never mix cleaners.", "text": "Smells? Replace it." },
+  "result": { "say": "Fresher sponge, fresher dishes.", "headline": "No more sponge stink", "before": "Smelly sponge", "after": "Fresh sponge" }
+}

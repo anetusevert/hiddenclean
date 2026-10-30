@@ -1,0 +1,16 @@
+{
+  "hook": "Your toothbrush cup is hiding a slimy secret.",
+  "hookLabel": "HIDDEN GRIME",
+  "doLead": "Here's the hidden spot.",
+  "doThis": "The gunk pools at the bottom.",
+  "doText": "Slime at the bottom",
+  "appliance": "dishwasher",
+  "steps": [
+    { "say": "Empty it and rinse out the gunk.", "text": "Empty + rinse", "scene": "remove" },
+    { "say": "Scrub inside with hot soapy water and a bottle brush.", "text": "Hot soapy scrub", "scene": "wipe" },
+    { "say": "Rinse, and let it dry completely.", "text": "Dry completely", "scene": "rinse" },
+    { "say": "Repeat every week.", "text": "Every week", "scene": "wait" }
+  ],
+  "safety": { "say": "Dishwasher only if the label says so, and never mix cleaners.", "text": "Dishwasher-safe only. Never mix." },
+  "result": { "say": "Fresh cup, fresher brush.", "headline": "No more slime", "before": "Slimy cup", "after": "Fresh cup" }
+}

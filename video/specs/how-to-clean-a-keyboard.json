@@ -1,0 +1,16 @@
+{
+  "hook": "Flip your keyboard over. Seriously, do it.",
+  "hookLabel": "HIDDEN GRIME",
+  "doLead": "Here's the hidden spot.",
+  "doThis": "Crumbs live under the keys.",
+  "doText": "Crumbs under the keys",
+  "appliance": "dishwasher",
+  "steps": [
+    { "say": "Unplug it or switch it off.", "text": "Unplug / switch off", "scene": "open" },
+    { "say": "Flip it over and tap out the crumbs.", "text": "Flip + tap", "scene": "remove" },
+    { "say": "Brush between the keys with a soft brush.", "text": "Soft brush", "scene": "wipe" },
+    { "say": "Wipe with a cloth barely damp with rubbing alcohol.", "text": "Barely-damp wipe", "scene": "wipe" }
+  ],
+  "safety": { "say": "Never spray anything onto the keys. Damp cloth only.", "text": "Never spray the keys." },
+  "result": { "say": "Clean keys, zero crumbs.", "headline": "Crumb-free keys", "before": "Crumby keys", "after": "Clean keys" }
+}

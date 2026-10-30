@@ -1,0 +1,74 @@
+{
+  "key": "how-to-clean-a-hairbrush",
+  "n": 101,
+  "slug": "how-to-clean-a-hairbrush",
+  "title": "How to clean a hairbrush",
+  "appliance": "dishwasher",
+  "revealAt": "part",
+  "url": "https://www.hiddenclean.com/tips/how-to-clean-a-hairbrush",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Your hairbrush is way dirtier than you think.",
+      "text": "Your hairbrush is way dirtier than you think.",
+      "label": "YOU'RE DOING IT WRONG"
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. A comb and a shampoo soak.",
+      "text": "Comb + shampoo soak"
+    },
+    {
+      "beat": "steps",
+      "say": "Rake the hair out with a comb.",
+      "text": "Comb the hair out",
+      "step": 1,
+      "scene": "remove"
+    },
+    {
+      "beat": "steps",
+      "say": "Dip the bristles in warm water with a drop of shampoo.",
+      "text": "Shampoo soak, 10 min",
+      "step": 2,
+      "scene": "rinse"
+    },
+    {
+      "beat": "steps",
+      "say": "Scrub the base with an old toothbrush.",
+      "text": "Toothbrush scrub",
+      "step": 3,
+      "scene": "wipe"
+    },
+    {
+      "beat": "steps",
+      "say": "Rinse, then dry it bristles down.",
+      "text": "Dry bristles down",
+      "step": 4,
+      "scene": "rinse"
+    },
+    {
+      "beat": "safety",
+      "say": "Wooden or cushioned brush? Don't soak it, just dip and wipe.",
+      "text": "Wood or cushion: no soak."
+    },
+    {
+      "beat": "result",
+      "say": "Soft, fresh, and zero gunk.",
+      "text": "Brush looks new",
+      "result": {
+        "say": "Soft, fresh, and zero gunk.",
+        "headline": "Brush looks new",
+        "before": "Linty, greasy brush",
+        "after": "Fresh bristles"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "Daily hidden cleaning hacks, at hiddenclean dot com.",
+      "text": "Daily hidden cleaning hacks"
+    }
+  ],
+  "words": 72,
+  "warn": [],
+  "elevenlabsPrompt": "[playful] Your hairbrush is way dirtier than you think.\n\n[intrigued] Here's the fix. A comb and a shampoo soak.\n\n[friendly] Rake the hair out with a comb. Dip the bristles in warm water with a drop of shampoo. Scrub the base with an old toothbrush. Rinse, then dry it bristles down. Wooden or cushioned brush? Don't soak it, just dip and wipe.\n\n[delighted] Soft, fresh, and zero gunk.\n\n[warm] Daily hidden cleaning hacks, at hiddenclean dot com."
+}

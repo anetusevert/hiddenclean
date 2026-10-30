@@ -1,0 +1,74 @@
+{
+  "key": "how-to-clean-a-toothbrush-holder",
+  "n": 103,
+  "slug": "how-to-clean-a-toothbrush-holder",
+  "title": "How to clean a toothbrush holder",
+  "appliance": "dishwasher",
+  "revealAt": "part",
+  "url": "https://www.hiddenclean.com/tips/how-to-clean-a-toothbrush-holder",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Your toothbrush cup is hiding a slimy secret.",
+      "text": "Your toothbrush cup is hiding a slimy secret.",
+      "label": "HIDDEN GRIME"
+    },
+    {
+      "beat": "do",
+      "say": "Here's the hidden spot. The gunk pools at the bottom.",
+      "text": "Slime at the bottom"
+    },
+    {
+      "beat": "steps",
+      "say": "Empty it and rinse out the gunk.",
+      "text": "Empty + rinse",
+      "step": 1,
+      "scene": "remove"
+    },
+    {
+      "beat": "steps",
+      "say": "Scrub inside with hot soapy water and a bottle brush.",
+      "text": "Hot soapy scrub",
+      "step": 2,
+      "scene": "wipe"
+    },
+    {
+      "beat": "steps",
+      "say": "Rinse, and let it dry completely.",
+      "text": "Dry completely",
+      "step": 3,
+      "scene": "rinse"
+    },
+    {
+      "beat": "steps",
+      "say": "Repeat every week.",
+      "text": "Every week",
+      "step": 4,
+      "scene": "wait"
+    },
+    {
+      "beat": "safety",
+      "say": "Dishwasher only if the label says so, and never mix cleaners.",
+      "text": "Dishwasher-safe only. Never mix."
+    },
+    {
+      "beat": "result",
+      "say": "Fresh cup, fresher brush.",
+      "text": "No more slime",
+      "result": {
+        "say": "Fresh cup, fresher brush.",
+        "headline": "No more slime",
+        "before": "Slimy cup",
+        "after": "Fresh cup"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "Daily hidden cleaning hacks, at hiddenclean dot com.",
+      "text": "Daily hidden cleaning hacks"
+    }
+  ],
+  "words": 67,
+  "warn": [],
+  "elevenlabsPrompt": "[playful] Your toothbrush cup is hiding a slimy secret.\n\n[intrigued] Here's the hidden spot. The gunk pools at the bottom.\n\n[friendly] Empty it and rinse out the gunk. Scrub inside with hot soapy water and a bottle brush. Rinse, and let it dry completely. Repeat every week. Dishwasher only if the label says so, and never mix cleaners.\n\n[delighted] Fresh cup, fresher brush.\n\n[warm] Daily hidden cleaning hacks, at hiddenclean dot com."
+}

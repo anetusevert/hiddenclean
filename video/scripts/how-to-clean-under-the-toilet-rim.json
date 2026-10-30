@@ -1,0 +1,74 @@
+{
+  "key": "how-to-clean-under-the-toilet-rim",
+  "n": 99,
+  "slug": "how-to-clean-under-the-toilet-rim",
+  "title": "How to clean under the toilet rim",
+  "appliance": "dishwasher",
+  "revealAt": "part",
+  "url": "https://www.hiddenclean.com/tips/how-to-clean-under-the-toilet-rim",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Your toilet is hiding something gross under the rim.",
+      "text": "Your toilet is hiding something gross under the rim.",
+      "label": "HIDDEN GRIME"
+    },
+    {
+      "beat": "do",
+      "say": "Here's the hidden spot. Lift the seat and look up under the rim.",
+      "text": "Under the rim"
+    },
+    {
+      "beat": "steps",
+      "say": "Put on gloves and flush once.",
+      "text": "Gloves on, flush",
+      "step": 1,
+      "scene": "open"
+    },
+    {
+      "beat": "steps",
+      "say": "Squeeze toilet cleaner right up under the rim.",
+      "text": "Cleaner under the rim",
+      "step": 2,
+      "scene": "pour"
+    },
+    {
+      "beat": "steps",
+      "say": "Leave it ten minutes, then scrub upwards with the brush.",
+      "text": "10 min, scrub up",
+      "step": 3,
+      "scene": "wipe"
+    },
+    {
+      "beat": "steps",
+      "say": "Flush and rinse the brush.",
+      "text": "Flush + rinse brush",
+      "step": 4,
+      "scene": "rinse"
+    },
+    {
+      "beat": "safety",
+      "say": "One cleaner only. Never mix toilet cleaner with bleach.",
+      "text": "One cleaner. Never mix."
+    },
+    {
+      "beat": "result",
+      "say": "No more mystery smell.",
+      "text": "Fresh under the rim",
+      "result": {
+        "say": "No more mystery smell.",
+        "headline": "Fresh under the rim",
+        "before": "Hidden grime",
+        "after": "Fresh rim"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "Daily hidden cleaning hacks, at hiddenclean dot com.",
+      "text": "Daily hidden cleaning hacks"
+    }
+  ],
+  "words": 72,
+  "warn": [],
+  "elevenlabsPrompt": "[playful] Your toilet is hiding something gross under the rim.\n\n[intrigued] Here's the hidden spot. Lift the seat and look up under the rim.\n\n[friendly] Put on gloves and flush once. Squeeze toilet cleaner right up under the rim. Leave it ten minutes, then scrub upwards with the brush. Flush and rinse the brush. One cleaner only. Never mix toilet cleaner with bleach.\n\n[delighted] No more mystery smell.\n\n[warm] Daily hidden cleaning hacks, at hiddenclean dot com."
+}

@@ -1,0 +1,74 @@
+{
+  "key": "how-to-use-the-self-clean-button-on-a-steam-iron",
+  "n": 100,
+  "slug": "how-to-use-the-self-clean-button-on-a-steam-iron",
+  "title": "How to use the self clean button on a steam iron",
+  "appliance": "kettle",
+  "revealAt": "button",
+  "url": "https://www.hiddenclean.com/tips/how-to-use-the-self-clean-button-on-a-steam-iron",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Your iron has a secret self-clean button.",
+      "text": "Your iron has a secret self-clean button.",
+      "label": "HIDDEN SETTING"
+    },
+    {
+      "beat": "do",
+      "say": "Here's the hidden setting. It's called self-clean or calc-clean.",
+      "text": "Self-clean button"
+    },
+    {
+      "beat": "steps",
+      "say": "Fill it, heat to max, then unplug.",
+      "text": "Fill, heat, unplug",
+      "step": 1,
+      "scene": "pour"
+    },
+    {
+      "beat": "steps",
+      "say": "Hold it flat over the sink.",
+      "text": "Over the sink",
+      "step": 2,
+      "scene": "open"
+    },
+    {
+      "beat": "steps",
+      "say": "Press and hold the button, and shake gently.",
+      "text": "Hold + shake",
+      "step": 3,
+      "scene": "press"
+    },
+    {
+      "beat": "steps",
+      "say": "Reheat, and iron an old towel dry.",
+      "text": "Iron a towel dry",
+      "step": 4,
+      "scene": "wipe"
+    },
+    {
+      "beat": "safety",
+      "say": "Hot steam, so keep your hands clear. Water only.",
+      "text": "Hot steam. Water only."
+    },
+    {
+      "beat": "result",
+      "say": "No more white flakes on your shirts.",
+      "text": "Flake-free soleplate",
+      "result": {
+        "say": "No more white flakes on your shirts.",
+        "headline": "Flake-free soleplate",
+        "before": "Chalky flakes",
+        "after": "Clean steam"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "Daily hidden cleaning hacks, at hiddenclean dot com.",
+      "text": "Daily hidden cleaning hacks"
+    }
+  ],
+  "words": 68,
+  "warn": [],
+  "elevenlabsPrompt": "[playful] Your iron has a secret self-clean button.\n\n[intrigued] Here's the hidden setting. It's called self-clean or calc-clean.\n\n[friendly] Fill it, heat to max, then unplug. Hold it flat over the sink. Press and hold the button, and shake gently. Reheat, and iron an old towel dry. Hot steam, so keep your hands clear. Water only.\n\n[delighted] No more white flakes on your shirts.\n\n[warm] Daily hidden cleaning hacks, at hiddenclean dot com."
+}

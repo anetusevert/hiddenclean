@@ -1,0 +1,16 @@
+{
+  "hook": "Your toilet is hiding something gross under the rim.",
+  "hookLabel": "HIDDEN GRIME",
+  "doLead": "Here's the hidden spot.",
+  "doThis": "Lift the seat and look up under the rim.",
+  "doText": "Under the rim",
+  "appliance": "dishwasher",
+  "steps": [
+    { "say": "Put on gloves and flush once.", "text": "Gloves on, flush", "scene": "open" },
+    { "say": "Squeeze toilet cleaner right up under the rim.", "text": "Cleaner under the rim", "scene": "pour" },
+    { "say": "Leave it ten minutes, then scrub upwards with the brush.", "text": "10 min, scrub up", "scene": "wipe" },
+    { "say": "Flush and rinse the brush.", "text": "Flush + rinse brush", "scene": "rinse" }
+  ],
+  "safety": { "say": "One cleaner only. Never mix toilet cleaner with bleach.", "text": "One cleaner. Never mix." },
+  "result": { "say": "No more mystery smell.", "headline": "Fresh under the rim", "before": "Hidden grime", "after": "Fresh rim" }
+}

@@ -1,0 +1,16 @@
+{
+  "hook": "Your microfibre cloths stopped working. Here's why.",
+  "hookLabel": "YOU'RE DOING IT WRONG",
+  "doLead": "Here's the problem.",
+  "doThis": "Fabric softener clogs the fibres.",
+  "doText": "Softener clogs fibres",
+  "appliance": "washer",
+  "steps": [
+    { "say": "Wash them on their own, at forty to sixty degrees.", "text": "Alone, 40-60°C", "scene": "open" },
+    { "say": "Use just a little liquid detergent.", "text": "A little detergent", "scene": "pour" },
+    { "say": "Skip the fabric softener and dryer sheets.", "text": "No softener", "scene": "press" },
+    { "say": "Air dry, or tumble on low.", "text": "Air dry or low heat", "scene": "wait" }
+  ],
+  "safety": { "say": "And no bleach, it breaks down the fibres.", "text": "No bleach. No softener." },
+  "result": { "say": "They grab dust like new again.", "headline": "Grippy again", "before": "Smeary cloth", "after": "Grabs dust" }
+}

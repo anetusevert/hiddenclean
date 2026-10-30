@@ -1,0 +1,74 @@
+{
+  "key": "how-to-clean-a-keyboard",
+  "n": 105,
+  "slug": "how-to-clean-a-keyboard",
+  "title": "How to clean a keyboard",
+  "appliance": "dishwasher",
+  "revealAt": "part",
+  "url": "https://www.hiddenclean.com/tips/how-to-clean-a-keyboard",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Flip your keyboard over. Seriously, do it.",
+      "text": "Flip your keyboard over. Seriously, do it.",
+      "label": "HIDDEN GRIME"
+    },
+    {
+      "beat": "do",
+      "say": "Here's the hidden spot. Crumbs live under the keys.",
+      "text": "Crumbs under the keys"
+    },
+    {
+      "beat": "steps",
+      "say": "Unplug it or switch it off.",
+      "text": "Unplug / switch off",
+      "step": 1,
+      "scene": "open"
+    },
+    {
+      "beat": "steps",
+      "say": "Flip it over and tap out the crumbs.",
+      "text": "Flip + tap",
+      "step": 2,
+      "scene": "remove"
+    },
+    {
+      "beat": "steps",
+      "say": "Brush between the keys with a soft brush.",
+      "text": "Soft brush",
+      "step": 3,
+      "scene": "wipe"
+    },
+    {
+      "beat": "steps",
+      "say": "Wipe with a cloth barely damp with rubbing alcohol.",
+      "text": "Barely-damp wipe",
+      "step": 4,
+      "scene": "wipe"
+    },
+    {
+      "beat": "safety",
+      "say": "Never spray anything onto the keys. Damp cloth only.",
+      "text": "Never spray the keys."
+    },
+    {
+      "beat": "result",
+      "say": "Clean keys, zero crumbs.",
+      "text": "Crumb-free keys",
+      "result": {
+        "say": "Clean keys, zero crumbs.",
+        "headline": "Crumb-free keys",
+        "before": "Crumby keys",
+        "after": "Clean keys"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "Daily hidden cleaning hacks, at hiddenclean dot com.",
+      "text": "Daily hidden cleaning hacks"
+    }
+  ],
+  "words": 68,
+  "warn": [],
+  "elevenlabsPrompt": "[playful] Flip your keyboard over. Seriously, do it.\n\n[intrigued] Here's the hidden spot. Crumbs live under the keys.\n\n[friendly] Unplug it or switch it off. Flip it over and tap out the crumbs. Brush between the keys with a soft brush. Wipe with a cloth barely damp with rubbing alcohol. Never spray anything onto the keys. Damp cloth only.\n\n[delighted] Clean keys, zero crumbs.\n\n[warm] Daily hidden cleaning hacks, at hiddenclean dot com."
+}

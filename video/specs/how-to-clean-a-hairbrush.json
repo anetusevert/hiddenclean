@@ -1,0 +1,16 @@
+{
+  "hook": "Your hairbrush is way dirtier than you think.",
+  "hookLabel": "YOU'RE DOING IT WRONG",
+  "doLead": "Here's the fix.",
+  "doThis": "A comb and a shampoo soak.",
+  "doText": "Comb + shampoo soak",
+  "appliance": "dishwasher",
+  "steps": [
+    { "say": "Rake the hair out with a comb.", "text": "Comb the hair out", "scene": "remove" },
+    { "say": "Dip the bristles in warm water with a drop of shampoo.", "text": "Shampoo soak, 10 min", "scene": "rinse" },
+    { "say": "Scrub the base with an old toothbrush.", "text": "Toothbrush scrub", "scene": "wipe" },
+    { "say": "Rinse, then dry it bristles down.", "text": "Dry bristles down", "scene": "rinse" }
+  ],
+  "safety": { "say": "Wooden or cushioned brush? Don't soak it, just dip and wipe.", "text": "Wood or cushion: no soak." },
+  "result": { "say": "Soft, fresh, and zero gunk.", "headline": "Brush looks new", "before": "Linty, greasy brush", "after": "Fresh bristles" }
+}

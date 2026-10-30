@@ -1,0 +1,74 @@
+{
+  "key": "how-to-wash-microfibre-cloths",
+  "n": 102,
+  "slug": "how-to-wash-microfibre-cloths",
+  "title": "How to wash microfibre cloths",
+  "appliance": "washer",
+  "revealAt": "part",
+  "url": "https://www.hiddenclean.com/tips/how-to-wash-microfibre-cloths",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Your microfibre cloths stopped working. Here's why.",
+      "text": "Your microfibre cloths stopped working. Here's why.",
+      "label": "YOU'RE DOING IT WRONG"
+    },
+    {
+      "beat": "do",
+      "say": "Here's the problem. Fabric softener clogs the fibres.",
+      "text": "Softener clogs fibres"
+    },
+    {
+      "beat": "steps",
+      "say": "Wash them on their own, at forty to sixty degrees.",
+      "text": "Alone, 40-60°C",
+      "step": 1,
+      "scene": "open"
+    },
+    {
+      "beat": "steps",
+      "say": "Use just a little liquid detergent.",
+      "text": "A little detergent",
+      "step": 2,
+      "scene": "pour"
+    },
+    {
+      "beat": "steps",
+      "say": "Skip the fabric softener and dryer sheets.",
+      "text": "No softener",
+      "step": 3,
+      "scene": "press"
+    },
+    {
+      "beat": "steps",
+      "say": "Air dry, or tumble on low.",
+      "text": "Air dry or low heat",
+      "step": 4,
+      "scene": "wait"
+    },
+    {
+      "beat": "safety",
+      "say": "And no bleach, it breaks down the fibres.",
+      "text": "No bleach. No softener."
+    },
+    {
+      "beat": "result",
+      "say": "They grab dust like new again.",
+      "text": "Grippy again",
+      "result": {
+        "say": "They grab dust like new again.",
+        "headline": "Grippy again",
+        "before": "Smeary cloth",
+        "after": "Grabs dust"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "Daily hidden cleaning hacks, at hiddenclean dot com.",
+      "text": "Daily hidden cleaning hacks"
+    }
+  ],
+  "words": 66,
+  "warn": [],
+  "elevenlabsPrompt": "[playful] Your microfibre cloths stopped working. Here's why.\n\n[intrigued] Here's the problem. Fabric softener clogs the fibres.\n\n[friendly] Wash them on their own, at forty to sixty degrees. Use just a little liquid detergent. Skip the fabric softener and dryer sheets. Air dry, or tumble on low. And no bleach, it breaks down the fibres.\n\n[delighted] They grab dust like new again.\n\n[warm] Daily hidden cleaning hacks, at hiddenclean dot com."
+}
