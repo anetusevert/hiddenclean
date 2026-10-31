@@ -181,3 +181,17 @@ v2-clean-a-keyboard.mp4
   https://www.pexels.com/video/close-up-of-laptop-keyboard-13555319/
   https://www.pexels.com/video/person-disinfecting-mobile-phone-4218342/
   https://www.pexels.com/video/typing-on-laptop-keyboard-close-up-40123798/
+
+=== 8 Nov 2026 tip (built 2026-10-31): all clips Pexels License, free commercial use, no attribution required: https://www.pexels.com/license/ ===
+v2-clean-a-fabric-sofa.mp4
+  https://www.pexels.com/video/28682717/
+  https://www.pexels.com/video/a-little-girl-doing-house-chores-10558007/
+  https://www.pexels.com/video/video-of-a-sofa-7709542/
+  https://www.pexels.com/video/36507355/
+  https://www.pexels.com/video/9473231/
+  https://www.pexels.com/video/9473230/
+  https://www.pexels.com/video/close-up-on-hand-taking-cup-and-cleaning-stain-10568255/
+  https://www.pexels.com/video/a-person-washing-dishes-9462917/
+  https://www.pexels.com/video/a-person-wiping-a-table-with-a-cloth-9462907/
+  https://www.pexels.com/video/house-apartment-home-clean-4109491/
+Voice: ElevenLabs Mira (rdEyNni8e60Jlx1RsV9N), eleven_v4 (~451 credits). Music/SFX: own HiddenClean kit.

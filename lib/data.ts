@@ -450,4 +450,10 @@ export const RAW: Raw[] = [
     "Unplug it, or switch off the laptop|Turn the keyboard upside down and tap gently to shake out crumbs (tilt a laptop, don't bang it)|Brush between the keys with a soft, clean paintbrush or make-up brush|Wipe the keys with a microfibre cloth barely damp with isopropyl alcohol|Let it dry fully before switching back on",
     "Never spray or pour liquid onto a keyboard: put a little on the cloth instead. Rubbing alcohol is flammable, so keep it away from heat and let it dry before you power on. Use it on its own, never mixed with other cleaners.",
     "2026-10-30"],
+  // --- 8 Nov 2026 (Sun, general): fabric sofa ---
+  ["how to clean a fabric sofa", "Your sofa has a secret cleaning code", "fl",
+    "Check the cleaning code on the label first (W or WS means water is fine, S means solvent cleaner only, X means vacuum only). Vacuum every seam, spot-test a hidden patch, then dab marks with warm water and a drop of washing-up liquid on a white cloth and blot dry. Don't soak it.",
+    "Find the cleaning code on the label under the seat cushions: W or WS means water-based cleaning is fine, S means solvent cleaner only, X means vacuum only|Vacuum the whole sofa with the upholstery brush, including the seams and under the cushions|Stir a drop of washing-up liquid into a bowl of warm water and test it on a hidden patch first; let it dry and check for colour change or water rings|Dip a white cloth, wring it out well and dab the mark from the outside in: blot, don't rub or soak|Blot again with a cloth dampened in plain water, then press dry with a towel and let it air-dry|For smells, sprinkle bicarbonate of soda on the dry fabric, leave it 20 minutes and vacuum it off",
+    "Only use water on W or WS codes. On S or X sofas, vacuum only and ask an upholstery cleaner about stains. Spot-test first, never soak the cushions, and only machine-wash covers if their label says so. One product at a time: never mix upholstery cleaners with bleach, ammonia or vinegar.",
+    "2026-11-08"],
 ];

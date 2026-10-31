@@ -1,0 +1,74 @@
+{
+  "key": "how-to-clean-a-fabric-sofa",
+  "n": 106,
+  "slug": "how-to-clean-a-fabric-sofa",
+  "title": "How to clean a fabric sofa",
+  "appliance": "dishwasher",
+  "revealAt": "part",
+  "url": "https://www.hiddenclean.com/tips/how-to-clean-a-fabric-sofa",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Your sofa is dirtier than it looks.",
+      "text": "Your sofa is dirtier than it looks.",
+      "label": "HIDDEN GRIME"
+    },
+    {
+      "beat": "do",
+      "say": "Here's the hidden spot. The cleaning code on the label.",
+      "text": "The cleaning code label"
+    },
+    {
+      "beat": "steps",
+      "say": "W or WS? Water's okay. S or X? No water.",
+      "text": "W/WS = water OK",
+      "step": 1,
+      "scene": "open"
+    },
+    {
+      "beat": "steps",
+      "say": "Vacuum every seam and cushion first.",
+      "text": "Vacuum first",
+      "step": 2,
+      "scene": "remove"
+    },
+    {
+      "beat": "steps",
+      "say": "Spot-test warm water with a drop of washing-up liquid.",
+      "text": "Spot-test hidden area",
+      "step": 3,
+      "scene": "wipe"
+    },
+    {
+      "beat": "steps",
+      "say": "Then blot the mark with a cloth. Blot, don't soak.",
+      "text": "Blot, don't soak",
+      "step": 4,
+      "scene": "wipe"
+    },
+    {
+      "beat": "safety",
+      "say": "One cleaner at a time, never mix them.",
+      "text": "Never mix cleaners"
+    },
+    {
+      "beat": "result",
+      "say": "Fresh sofa, no water rings.",
+      "text": "Fresh, not soaked",
+      "result": {
+        "say": "Fresh sofa, no water rings.",
+        "headline": "Fresh, not soaked",
+        "before": "Grubby sofa",
+        "after": "Fresh sofa"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "Daily hidden cleaning hacks, at hiddenclean dot com.",
+      "text": "Daily hidden cleaning hacks"
+    }
+  ],
+  "words": 73,
+  "warn": [],
+  "elevenlabsPrompt": "[playful] Your sofa is dirtier than it looks.\n\n[intrigued] Here's the hidden spot. The cleaning code on the label.\n\n[friendly] W or WS? Water's okay. S or X? No water. Vacuum every seam and cushion first. Spot-test warm water with a drop of washing-up liquid. Then blot the mark with a cloth. Blot, don't soak. One cleaner at a time, never mix them.\n\n[delighted] Fresh sofa, no water rings.\n\n[warm] Daily hidden cleaning hacks, at hiddenclean dot com."
+}

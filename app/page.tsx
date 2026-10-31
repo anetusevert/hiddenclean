@@ -42,7 +42,7 @@ export default function Home() {
         <h2 className="section" id="routines">Quick cleaning routines <span className="h-sub">timed, free, printable</span></h2>
         <div className="hubs guides">{liveGuides().map((g) => <Link key={g.id} href={`/how-to/${g.id}`} className="hub"><strong>{g.displayName}</strong><span>{g.title}{g.kind !== "list" ? ` · ${g.minutes} min` : ""}</span></Link>)}</div>
         <h2 className="section" id="watch">Latest cleaning hacks <span className="h-sub">tap to watch</span></h2>
-        <div className="shorts">{SHORTS.map((v) => <ShortCard key={v.id} s={v} href={liveSlugs.has(v.tipSlug) ? `/tips/${v.tipSlug}` : undefined} />)}
+        <div className="shorts">{SHORTS.filter((v) => liveSlugs.has(v.tipSlug)).map((v) => <ShortCard key={v.id} s={v} href={liveSlugs.has(v.tipSlug) ? `/tips/${v.tipSlug}` : undefined} />)}
           <aside className="follow"><strong>New hack every day</strong><p>Bathrooms, stains, floors and the odd appliance secret. Follow along.</p><Social /><Link className="btn" href="/subscribe">Get it by email</Link></aside></div>
         <p className="credit">Stock footage via <a href="https://www.pexels.com/license/" rel="noopener">Pexels</a> (free licence). Follow for a new one every day.</p>
         <h2 className="section">Browse by room</h2>

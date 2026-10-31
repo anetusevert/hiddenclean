@@ -1,6 +1,8 @@
 // v2 real-footage shorts. Stock clips: Pexels License (free commercial use), see docs/media-credits.txt.
+// Home only lists shorts whose tip is live (date-gated), so future videos can be added ahead.
 export type Short = { id: string; hook: string; tipSlug: string; label: string };
 export const SHORTS: Short[] = [
+  { id: "fabric-sofa", hook: "Your sofa is *FILTHY*", tipSlug: "how-to-clean-a-fabric-sofa", label: "Clean a fabric sofa" },
   { id: "toilet-rim", hook: "Your toilet is hiding *THIS*", tipSlug: "how-to-clean-under-the-toilet-rim", label: "Under the toilet rim" },
   { id: "hairbrush", hook: "Your hairbrush is *GROSS*", tipSlug: "how-to-clean-a-hairbrush", label: "Clean a hairbrush" },
   { id: "microfibre", hook: "Softener is ruining your *CLOTHS*", tipSlug: "how-to-wash-microfibre-cloths", label: "Wash microfibre cloths" },

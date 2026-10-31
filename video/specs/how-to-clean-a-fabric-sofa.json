@@ -1,0 +1,16 @@
+{
+  "hook": "Your sofa is dirtier than it looks.",
+  "hookLabel": "HIDDEN GRIME",
+  "doLead": "Here's the hidden spot.",
+  "doThis": "The cleaning code on the label.",
+  "doText": "The cleaning code label",
+  "appliance": "dishwasher",
+  "steps": [
+    { "say": "W or WS? Water's okay. S or X? No water.", "text": "W/WS = water OK", "scene": "open" },
+    { "say": "Vacuum every seam and cushion first.", "text": "Vacuum first", "scene": "remove" },
+    { "say": "Spot-test warm water with a drop of washing-up liquid.", "text": "Spot-test hidden area", "scene": "wipe" },
+    { "say": "Then blot the mark with a cloth. Blot, don't soak.", "text": "Blot, don't soak", "scene": "wipe" }
+  ],
+  "safety": { "say": "One cleaner at a time, never mix them.", "text": "Never mix cleaners" },
+  "result": { "say": "Fresh sofa, no water rings.", "headline": "Fresh, not soaked", "before": "Grubby sofa", "after": "Fresh sofa" }
+}
