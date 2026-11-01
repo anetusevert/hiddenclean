@@ -123,5 +123,23 @@
   "drop": [
    "s4"
   ]
+ },
+ "v2r-microfibre": {
+  "slug": "how-to-wash-microfibre-cloths",
+  "hook": "Your cloths just *SMEAR?*",
+  "say": "Microfibre cloth just smearing dust around? Here's why.",
+  "first": "hook2",
+  "drop": [
+   "s4"
+  ]
+ },
+ "v2r-toothbrush-holder": {
+  "slug": "how-to-clean-a-toothbrush-holder",
+  "hook": "Look under your *CUP*",
+  "say": "Pick up your toothbrush cup and look at the bottom.",
+  "first": "do",
+  "drop": [
+   "s4"
+  ]
  }
 }
