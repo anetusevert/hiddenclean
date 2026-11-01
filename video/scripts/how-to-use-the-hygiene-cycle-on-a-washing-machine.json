@@ -1,0 +1,74 @@
+{
+  "key": "how-to-use-the-hygiene-cycle-on-a-washing-machine",
+  "n": 107,
+  "slug": "how-to-use-the-hygiene-cycle-on-a-washing-machine",
+  "title": "How to use the hygiene cycle on a washing machine",
+  "appliance": "washer",
+  "revealAt": "button",
+  "url": "https://www.hiddenclean.com/tips/how-to-use-the-hygiene-cycle-on-a-washing-machine",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Your washing machine has a secret germ setting.",
+      "text": "Your washing machine has a secret germ setting.",
+      "label": "HIDDEN SETTING"
+    },
+    {
+      "beat": "do",
+      "say": "Here's the hidden setting. It's called Hygiene, or Allergy.",
+      "text": "Hygiene / Allergy cycle"
+    },
+    {
+      "beat": "steps",
+      "say": "Check the labels. Bedding and towels that take sixty degrees.",
+      "text": "60°C-safe cottons",
+      "step": 1,
+      "scene": "open"
+    },
+    {
+      "beat": "steps",
+      "say": "Turn the dial to Hygiene or Allergy.",
+      "text": "Select Hygiene",
+      "step": 2,
+      "scene": "press"
+    },
+    {
+      "beat": "steps",
+      "say": "Normal detergent only, then start.",
+      "text": "Normal detergent only",
+      "step": 3,
+      "scene": "pour"
+    },
+    {
+      "beat": "steps",
+      "say": "Dry it straight away, and leave the door open.",
+      "text": "Dry it right away",
+      "step": 4,
+      "scene": "close"
+    },
+    {
+      "beat": "safety",
+      "say": "Follow your manual. One product only, never mix cleaners.",
+      "text": "One product. Never mix."
+    },
+    {
+      "beat": "result",
+      "say": "Fresher sheets, and fewer dust mites.",
+      "text": "Hot-washed fresh",
+      "result": {
+        "say": "Fresher sheets, and fewer dust mites.",
+        "headline": "Hot-washed fresh",
+        "before": "Musty bedding",
+        "after": "Hygiene-fresh"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "Daily hidden cleaning hacks, at hiddenclean dot com.",
+      "text": "Daily hidden cleaning hacks"
+    }
+  ],
+  "words": 71,
+  "warn": [],
+  "elevenlabsPrompt": "[playful] Your washing machine has a secret germ setting.\n\n[intrigued] Here's the hidden setting. It's called Hygiene, or Allergy.\n\n[friendly] Check the labels. Bedding and towels that take sixty degrees. Turn the dial to Hygiene or Allergy. Normal detergent only, then start. Dry it straight away, and leave the door open. Follow your manual. One product only, never mix cleaners.\n\n[delighted] Fresher sheets, and fewer dust mites.\n\n[warm] Daily hidden cleaning hacks, at hiddenclean dot com."
+}

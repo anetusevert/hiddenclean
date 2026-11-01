@@ -134,6 +134,7 @@ const DEFS: Omit<Guide, "id" | "title">[] = [
     sections: [
       { title: "Self-clean buttons and modes", items: [
         { text: "Washing machine: the drum clean or tub clean program.", tip: T("how to clean a washing machine drum") },
+        { text: "Washing machine: the hygiene (allergy) cycle for bedding and towels.", tip: T("how to use the hygiene cycle on a washing machine") },
         { text: "Dishwasher: the machine care or clean cycle.", tip: T("how to use the dishwasher clean cycle") },
         { text: "Oven: the steam clean setting that loosens grease with water.", tip: T("how to use the steam clean function on an oven") },
         { text: "Oven: pyrolytic self clean, and how to run it safely.", tip: T("how to clean an oven with the self clean setting") },
@@ -155,6 +156,7 @@ const DEFS: Omit<Guide, "id" | "title">[] = [
     ],
     faq: [
       { q: "Do washing machines have a self-clean button?", a: "Most modern ones do, usually called drum clean, tub clean or machine clean. Run it empty, hot, about once a month, with a washing machine cleaner or nothing at all, never mixed with another product." },
+      { q: "What is the hygiene cycle on a washing machine?", a: "A hotter, longer program (often called Hygiene, Allergy or Sanitise) that washes at 60°C or more with an extra rinse to flush out germs, dust mites and detergent residue. Use it for bedding and towels whose care labels allow 60°C, with your normal detergent only." },
       { q: "Does my iron have a self-clean button?", a: "Many steam irons have a self-clean, calc-clean or anti-calc button. Fill the tank, heat to max, unplug, hold it flat over the sink and press the button so hot water flushes the scale out." },
       { q: "Are appliance self-clean modes safe?", a: `Yes, if you follow the manual: unplug or switch off before you touch filters, ventilate during oven self clean, and use one product at a time. ${SAFETY_RULE}` },
     ],

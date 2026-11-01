@@ -1,0 +1,17 @@
+{
+  "hook": "Your washing machine has a secret germ setting.",
+  "hookLabel": "HIDDEN SETTING",
+  "doLead": "Here's the hidden setting.",
+  "doThis": "It's called Hygiene, or Allergy.",
+  "doText": "Hygiene / Allergy cycle",
+  "appliance": "washer",
+  "revealAt": "button",
+  "steps": [
+    { "say": "Check the labels. Bedding and towels that take sixty degrees.", "text": "60°C-safe cottons", "scene": "open" },
+    { "say": "Turn the dial to Hygiene or Allergy.", "text": "Select Hygiene", "scene": "press" },
+    { "say": "Normal detergent only, then start.", "text": "Normal detergent only", "scene": "pour" },
+    { "say": "Dry it straight away, and leave the door open.", "text": "Dry it right away", "scene": "close" }
+  ],
+  "safety": { "say": "Follow your manual. One product only, never mix cleaners.", "text": "One product. Never mix." },
+  "result": { "say": "Fresher sheets, and fewer dust mites.", "headline": "Hot-washed fresh", "before": "Musty bedding", "after": "Hygiene-fresh" }
+}
