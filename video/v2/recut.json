@@ -141,5 +141,23 @@
   "drop": [
    "s4"
   ]
+ },
+ "v2r-keyboard": {
+  "slug": "how-to-clean-a-keyboard",
+  "hook": "Your keyboard's *SNACK* stash",
+  "say": "There's a whole snack hiding under your keyboard keys.",
+  "first": "do",
+  "drop": [
+   "s3"
+  ]
+ },
+ "v2r-kitchen-sponge": {
+  "slug": "how-to-clean-a-kitchen-sponge",
+  "hook": "Smell your *SPONGE*",
+  "say": "Smell your kitchen sponge. Go on, I'll wait.",
+  "first": "hook2",
+  "drop": [
+   "s3"
+  ]
  }
 }
