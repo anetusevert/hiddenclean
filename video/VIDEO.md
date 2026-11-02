@@ -1,4 +1,4 @@
-# HiddenClean daily short (9:16, 1080x1920, 30 fps, ~25-35s)
+# HiddenClean daily short (9:16, 1080x1920, 30 fps, 18-22s since 2026-11-02)
 
 Content mix (Utena 2026-10-25): mostly **general cleaning hacks** (bathroom, floors, stains, kitchen surfaces). About **one appliance / secret-button** video per week as the signature. Same safety rules. Details in `docs/CONTENT.md`.
 
@@ -22,6 +22,16 @@ Pipeline copied from TechTipADay's Remotion setup (script / align / render), wit
 4. **Before / after:** two panels, gunky vs sparkling (reveal on AFTER) + headline.
 5. **CTA:** logo reveal, "Daily hidden cleaning hacks", `hiddenclean.com` pill; VO: "Daily hidden cleaning hacks, at hiddenclean dot com."
 
+## Retention spec (2026-11-02: OVERRIDES the lengths and timings above; applies to every new v2 short and v2r recut)
+Why: Buffer data 1 Nov: average watch time 2.6 s (TikTok) / 2.8 s (Instagram), TikTok stalls at ~250 views. Best: gross-reveal topics (washer filter, kettle limescale, oven).
+- **Length 18-22 s.** `recut.mjs`: MAX 22 s, MIN 18 s (warns), outro 0.8 s, VO lead 0.05 s, gaps 0.08 s; after the `drop` list it auto-drops the longest middle step until <= 22 s (keeps step 1, keeps >= 2 steps). `build.mjs`: outro 1.0 s, VO lead 0.05 s, warns over 22.5 s.
+- **New specs are shorter:** VO <= 50 words, hook 4-10 words, 2-3 steps (script.mjs warns). Keep the safety line and the mixing check (unchanged).
+- **Frame 0 = the most striking real shot**: gross reveal (gunk, slime, crumbs, limescale) or the before/after result. Never a slow intro, logo, hands-typing or generic B-roll. Set it explicitly: `"open": "<pexelsId>@<sec>"` in `v2/recut.json` (per recut) or `v2/config.json` (per short); it becomes shot 1 and is dropped from the rest of the hook list. Pick it from a contact sheet of candidate stills.
+- **Hook text readable in frame 0** (fully legible by 0.1 s, settled by ~0.3 s; spec: within 0.5 s): punch 1.12 -> 1.0 (was 1.5), navy radial scrim behind the text, sparkle ring starts at frame 4 so it doesn't cover frame 0. No white flash and only a mild 1.08 punch on the first shot so frame 0 is clean.
+- **Cuts every 1-1.5 s**: hook piece split into <= 1.0 s shots, every other piece <= 1.5 s (was 1.8 s).
+- Everything else stays locked: Pexels footage, Mira voice (no new audio needed for recuts that reuse their hook line), word-by-word captions, safety card, header after the hook, CTA sign-off.
+- QA: `ffprobe` duration 18-22 s, and grab frames 0, 15 (0.5 s) and a mid frame: frame 0 must show the striking shot with the hook text.
+
 ## Sound & voice
 - Kit in `public/audio/` (see its README), generated once, reused forever.
 - Voice (`voice.json`): **Mira - Bright & Friendly Narrator** `rdEyNni8e60Jlx1RsV9N`, `eleven_v4`, `generations_count: 1`, ~460 credits per ~26s VO. Tags: [playful] hook, [intrigued] reveal, [friendly] steps+safety, [delighted] result, [warm] CTA.
@@ -40,7 +50,7 @@ Pipeline copied from TechTipADay's Remotion setup (script / align / render), wit
   "safety": { "say": "No bleach, and never mix cleaners.", "text": "No bleach. Never mix cleaners." },
   "result": { "say": "...", "headline": "2-5 words", "before": "Gunky filter", "after": "Sparkling clean" } }
 ```
-Copy: VO <= 75 words, hook 5-12 words, 2-4 steps. Illustrations: `src/Dishwasher.tsx` (`appliance: "dishwasher"`, scenes rack-out, twist, rinse) and `src/appliances.tsx` for
+Copy (retention spec 2026-11-02): VO <= 50 words, hook 4-10 words, 2-3 steps. Illustrations: `src/Dishwasher.tsx` (`appliance: "dishwasher"`, scenes rack-out, twist, rinse) and `src/appliances.tsx` for
 `washer`, `oven`, `fridge`, `microwave`, `kettle`, `coffee`, `dryer`, `vacuum`, `airfryer`. Each has a hidden `part`, a `button`, a `Draw` driven by one generic
 state and a `Closeup` for the before/after panels. Generic step scenes: `open`, `remove`, `rinse`, `refit`, `pour`, `press` (button glows, mode on), `steam`,
 `wait` (clock), `wipe` (cloth), `close`. `"revealAt": "button"` puts the hidden-spot reveal on the setting button (hidden-setting tips), otherwise on the part.
@@ -72,4 +82,4 @@ Setup: `npm ci` (needs ffmpeg; uses google-chrome if present). Sound kit: `pytho
 ## TikTok recuts (v2r, 2026-10-30: TikTok at 3 posts/day)
 - `v2/recut.json`: per recut id `v2r-<name>`: source `slug`, new on-screen `hook` (`*KEY*` = amber chip), spoken first line `say`, `first` (`do` = open on the hidden-spot clip, `hook2` = second hook clip), `drop` (steps removed, in order, only while the cut is over ~24.4 s).
 - New hook lines: one ElevenLabs Mira/eleven_v4 generation with every line as its own `[playful]` paragraph (~57 credits a line), split with align.py into `public/vo/r/<id>-hook.wav`.
-- `node v2/recut.mjs <id>`: drops the do piece's lead-in ("Here's the hidden part."), splices hook + original VO, re-times with whisper, renders `video-out/<id>.mp4` (22-25 s). `v2/timings.mjs <slug>` prints the source piece lengths.
+- `node v2/recut.mjs <id>`: drops the do piece's lead-in ("Here's the hidden part."), splices hook + original VO, re-times with whisper, renders `video-out/<id>.mp4` (18-22 s, see Retention spec; optional `open` = frame-0 clip). `v2/timings.mjs <slug>` prints the source piece lengths.

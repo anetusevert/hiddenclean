@@ -149,7 +149,8 @@
   "first": "do",
   "drop": [
    "s3"
-  ]
+  ],
+  "open": "5805641@0.5"
  },
  "v2r-kitchen-sponge": {
   "slug": "how-to-clean-a-kitchen-sponge",
@@ -157,7 +158,9 @@
   "say": "Smell your kitchen sponge. Go on, I'll wait.",
   "first": "hook2",
   "drop": [
-   "s3"
-  ]
+   "s3",
+   "s1"
+  ],
+  "open": "6873327@1"
  }
 }

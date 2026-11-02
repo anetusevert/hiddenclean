@@ -1,9 +1,9 @@
-// node v2/recut.mjs <id> [--dry] : 15-25s TikTok recut of an existing v2 short (v2/recut.json).
+// node v2/recut.mjs <id> [--dry] : 18-22s TikTok recut (retention spec 2026-11-02) of an existing v2 short (v2/recut.json).
 // New hook line (public/vo/r/<id>-hook.wav) + the original VO from the "do" piece on, minus dropped steps
 // (only while the cut is over budget). Same HiddenCleanV2 composition, locked style, same clips.
 import { spawnSync } from "node:child_process"; import fs from "node:fs"; import path from "node:path"; import { fileURLToPath } from "node:url";
 import { original } from "./timings.mjs";
-const dir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), ".."); const FPS = 30, LEAD = 0.15, OUTRO = 1.3, MAX = 24.4, GAP = 0.12;
+const dir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), ".."); const FPS = 30, LEAD = 0.05, OUTRO = 0.8, MAX = 22.0, MIN = 18.0, GAP = 0.08, CUT = 1.5, HOOK_CUT = 1.0, MIN_STEPS = 2;
 const id = process.argv[2]; const rc = JSON.parse(fs.readFileSync(path.join(dir, "v2/recut.json"), "utf8"))[id]; if (!rc) throw new Error("no recut " + id);
 const o = await original(rc.slug); const { s, cfg, al, ends } = o;
 const hookWav = path.join(dir, "public/vo/r", `${id}-hook.wav`);
@@ -19,7 +19,10 @@ const segDur = (i) => ends[i] - al.starts[i];
 const total = () => LEAD + hookDur + GAP + keep.reduce((a, i) => a + segDur(i) + GAP, 0) + OUTRO;
 const stepIdx = (name) => s.pieces.findIndex((p) => p.beat === "steps" && "s" + p.step === name);
 for (const d of rc.drop ?? []) { if (total() <= MAX) break; keep = keep.filter((i) => i !== stepIdx(d)); }
-if (total() > MAX) console.warn(`⚠ ${id} still ${total().toFixed(1)}s`);
+// still over budget: drop more steps (longest middle step first), but keep the first step (often unplug/safety) and >= MIN_STEPS
+while (total() > MAX) { const st = keep.filter((i) => s.pieces[i].beat === "steps"); if (st.length <= MIN_STEPS) break;
+  const cand = st.slice(1).sort((a, b) => segDur(b) - segDur(a))[0]; console.warn(`auto-drop s${s.pieces[cand].step}`); keep = keep.filter((i) => i !== cand); }
+if (total() > MAX) console.warn(`⚠ ${id} still ${total().toFixed(1)}s (> ${MAX}s)`); if (total() < MIN) console.warn(`⚠ ${id} only ${total().toFixed(1)}s (< ${MIN}s)`);
 // splice audio
 const voOut = path.join(dir, "public/vo/r", `${id}.wav`);
 const inputs = ["-i", hookWav, "-i", o.vo]; let fc = "", labels = "[h]";
@@ -38,10 +41,13 @@ const voStart = f(LEAD), voEnd = f(LEAD + dur);
 const pieces = pieces0.map((p, i) => ({ ...p, start: i === 0 ? voStart : voStart + f(al2.starts[i]) }));
 const words = al2.words.map((w) => ({ w: w.w, p: w.p, s: voStart + f(w.s), e: voStart + f(w.e) }));
 const tot = voEnd + f(OUTRO); const cta = pieces.find((p) => p.beat === "cta").start;
-const clips = { ...cfg.clips, hook: rc.first === "do" ? [cfg.clips.do[0].startsWith("gfx:") ? cfg.clips.hook[1] : cfg.clips.do[0], ...cfg.clips.hook] : [cfg.clips.hook[1] ?? cfg.clips.hook[0], cfg.clips.hook[0]] };
+// Frame 0 = the most striking real shot: rc.open (explicit "<id>@<ss>", gross reveal or before/after result) wins, then cfg.open.
+const opener = rc.open ?? cfg.open;
+const clips0 = { ...cfg.clips, hook: rc.first === "do" ? [cfg.clips.do[0].startsWith("gfx:") ? cfg.clips.hook[1] : cfg.clips.do[0], ...cfg.clips.hook] : [cfg.clips.hook[1] ?? cfg.clips.hook[0], cfg.clips.hook[0]] };
+const clips = opener ? { ...clips0, hook: [opener, ...clips0.hook.filter((e) => e !== opener)] } : clips0;
 const shots = [];
 pieces.forEach((p, i) => { if (p.beat === "cta") return; const key2 = p.beat === "steps" ? "s" + (p.origStep ?? p.step) : p.beat; const list = clips[key2] ?? clips.result;
-  const st = i === 0 ? 0 : p.start, en = pieces[i + 1].start; const n = Math.max(1, Math.ceil((en - st) / (1.8 * FPS)));
+  const st = i === 0 ? 0 : p.start, en = pieces[i + 1].start; const n = Math.max(1, Math.ceil((en - st) / ((i === 0 ? HOOK_CUT : CUT) * FPS)));
   const lastClean = p.beat === "steps" && pieces[i + 1].beat !== "steps";
   for (let k = 0; k < n; k++) { const e = list[k % list.length]; const [clip, ss] = e.split("@"); const a = st + Math.round(((en - st) * k) / n);
     shots.push({ from: a, clip: clip.startsWith("gfx:") ? undefined : clip, gfx: clip.startsWith("gfx:") ? clip.slice(4) : undefined,

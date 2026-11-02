@@ -32,11 +32,13 @@ const DEFS: Omit<Guide, "id" | "title">[] = [
         { text: "Crusty white build-up on the tap? Wrap it in a vinegar-soaked cloth while you do the toilet and shower, then scrub, rinse and buff dry (chrome only).", tip: T("how to remove limescale from taps") }] },
       { title: "Toilet", minutes: 4, items: [
         { text: "Squeeze toilet cleaner up under the rim, let it sit while you wipe the seat, lid and base.", tip: T("how to clean under the toilet rim") },
-        { text: "Scrub upwards under the rim and around the bowl, then flush. Limescale ring? Treat it separately another day.", tip: T("how to remove limescale from a toilet") }] },
+        { text: "Scrub upwards under the rim and around the bowl, then flush. Limescale ring? Treat it separately another day.", tip: T("how to remove limescale from a toilet") },
+        { text: "Trap the brush under the seat so it drips dry before it goes back in the holder.", tip: T("how to clean a toilet brush") }] },
       { title: "Shower or bath", minutes: 3, items: [
         { text: "Wipe the pre-sprayed tiles and rinse them with warm water.", tip: T("how to clean bathroom tiles") },
         { text: "Squeegee or dry the glass door so hard-water spots don't form.", tip: T("how to clean a shower door") },
-        { text: "Check the silicone for black spots and note it for a longer treatment.", tip: T("how to remove mould from silicone") }] },
+        { text: "Check the silicone for black spots and note it for a longer treatment.", tip: T("how to remove mould from silicone") },
+        { text: "Slow drain? Lift the cover and pull out the hair clog while you're there.", tip: T("how to clean a shower drain") }] },
       { title: "Floor and finish", minutes: 2, items: [
         { text: "Sweep or vacuum, then mop from the far corner towards the door with clean water.", tip: T("how to mop floors without streaks") },
         { text: "Put fresh towels out and switch the extractor fan on to dry the room.", tip: T("how to clean a bathroom exhaust fan") }] },
@@ -56,12 +58,15 @@ const DEFS: Omit<Guide, "id" | "title">[] = [
         { text: "Wipe the hob once it's cool and clean the counters.", tip: T("how to clean a glass hob") },
         { text: "Rinse and dry the sink, clean the drain.", tip: T("how to clean a kitchen sink drain") },
         { text: "Wash or swap the kitchen sponge.", tip: T("how to clean a kitchen sponge") },
-        { text: "Oil and dry the wooden cutting board.", tip: T("how to clean a wooden cutting board") }] },
+        { text: "Oil and dry the wooden cutting board.", tip: T("how to clean a wooden cutting board") },
+        { text: "Scrub the dish rack and empty the drip tray.", tip: T("how to clean a dish drying rack") }] },
       { title: "Tuesday: bathroom", minutes: 15, items: [
         { text: "Run the 15-minute bathroom reset.", guide: "clean-a-bathroom-in-15-minutes" },
         { text: "Clean under the toilet rim.", tip: T("how to clean under the toilet rim") },
         { text: "Scrub the toothbrush holder.", tip: T("how to clean a toothbrush holder") },
-        { text: "Wipe the mirror streak-free.", tip: T("how to clean a mirror without streaks") }] },
+        { text: "Wipe the mirror streak-free.", tip: T("how to clean a mirror without streaks") },
+        { text: "Pull the hair out of the shower drain.", tip: T("how to clean a shower drain") },
+        { text: "Rinse the toilet brush and wash its holder.", tip: T("how to clean a toilet brush") }] },
       { title: "Wednesday: floors", minutes: 20, items: [
         { text: "Vacuum every room; untangle the brush roll if it's wrapped in hair.", tip: T("how to clean a vacuum brush roll") },
         { text: "Mop hard floors with clean water.", tip: T("how to mop floors without streaks") },
@@ -75,7 +80,8 @@ const DEFS: Omit<Guide, "id" | "title">[] = [
         { text: "Bin old food and wipe the fridge shelves.", tip: T("how to clean a refrigerator") },
         { text: "Empty the toaster crumb tray.", tip: T("how to clean a toaster") },
         { text: "Steam-clean the microwave with lemon.", tip: T("how to clean a microwave with lemon") },
-        { text: "Rinse the dishwasher filter.", tip: T("how to clean a dishwasher filter") }] },
+        { text: "Rinse the dishwasher filter.", tip: T("how to clean a dishwasher filter") },
+        { text: "Wipe out the salad drawers and the runners under them.", tip: T("how to clean fridge drawers") }] },
       { title: "Saturday: bedrooms and dusting", minutes: 20, items: [
         { text: "Change the bed and vacuum the mattress once a month.", tip: T("how to clean a mattress") },
         { text: "Dust surfaces and wipe the baseboards.", tip: T("how to clean baseboards") },
@@ -85,6 +91,8 @@ const DEFS: Omit<Guide, "id" | "title">[] = [
       { title: "Sunday: 10-minute reset", minutes: 10, items: [
         { text: "Put things back where they live and empty all bins." },
         { text: "Wipe condensation off the windows and open them for 10 minutes.", tip: T("how to get rid of condensation on windows") },
+        { text: "Strip and wash your water bottle lid, seal and straw.", tip: T("how to clean a reusable water bottle") },
+        { text: "Wipe the bin lid and pedal; wash the whole bin once a month.", tip: T("how to clean a kitchen bin") },
         { text: "Print next week's checklist." }] },
     ],
     faq: [
@@ -109,7 +117,8 @@ const DEFS: Omit<Guide, "id" | "title">[] = [
       { title: "Fridge", minutes: 6, items: [
         { text: "Bin old food, wipe shelves and door bins with warm soapy water.", tip: T("how to clean a refrigerator") },
         { text: "Wipe the door seal and clear the drain hole at the back.", tip: T("how to clean a fridge door seal") },
-        { text: "Leave an open box of bicarbonate of soda to absorb smells.", tip: T("how to deodorize a fridge") }] },
+        { text: "Leave an open box of bicarbonate of soda to absorb smells.", tip: T("how to deodorize a fridge") },
+        { text: "Slide out the salad drawers, wash them and wipe the sticky runners underneath.", tip: T("how to clean fridge drawers") }] },
       { title: "Small appliances and dishwasher", minutes: 5, items: [
         { text: "Unplug the toaster and empty the crumb tray.", tip: T("how to clean a toaster") },
         { text: "Twist out and rinse the dishwasher filter.", tip: T("how to clean a dishwasher filter") },
@@ -118,9 +127,11 @@ const DEFS: Omit<Guide, "id" | "title">[] = [
         { text: "Freshen the drain without harsh chemicals.", tip: T("how to clean a kitchen sink drain") },
         { text: "Polish a stainless steel sink with flour, then rinse.", tip: T("how to clean a stainless steel sink") },
         { text: "Unscrew and soak the tap aerator if the flow is weak.", tip: T("how to clean a tap aerator") },
-        { text: "Swap or sanitise the sponge.", tip: T("how to clean a kitchen sponge") }] },
+        { text: "Swap or sanitise the sponge.", tip: T("how to clean a kitchen sponge") },
+        { text: "Scrub the dish rack joints and drip tray.", tip: T("how to clean a dish drying rack") }] },
       { title: "Floor", minutes: 4, items: [
-        { text: "Refit the hood filters, sweep, and mop with clean water towards the door.", tip: T("how to mop floors without streaks") }] },
+        { text: "Refit the hood filters, sweep, and mop with clean water towards the door.", tip: T("how to mop floors without streaks") },
+        { text: "Empty the bin, scrub the lid and pedal, and dust bicarbonate of soda in the bottom.", tip: T("how to clean a kitchen bin") }] },
     ],
     faq: [
       { q: "How do you deep clean a kitchen fast?", a: "Start the jobs that need soaking or steaming first (hood filters, microwave), clean high surfaces before low ones, and finish with the floor. Thirty focused minutes covers the hob, fridge, sink, appliances and floor." },

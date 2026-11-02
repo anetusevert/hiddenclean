@@ -6,7 +6,7 @@ import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { build } from "esbuild";
 const dir = path.dirname(fileURLToPath(import.meta.url));
-const MAX_WORDS = 75;
+const MAX_WORDS = 50; // retention spec 2026-11-02: ~18-22s shorts
 export const CTA_SAY = "Daily hidden cleaning hacks, at hiddenclean dot com.";
 const BANNED = [/\bmix(ed|ing)?\b/i, /\bbleach\b/i, /bleach.*(vinegar|ammonia)|(vinegar|ammonia).*bleach/i, /\bcombine\b/i];
 export async function loadTips() {
@@ -34,12 +34,12 @@ export async function buildScript(arg) {
   const beats = []; for (const p of pieces) { const b = beats.at(-1); if (b && tags[b.beat] === tags[p.beat]) b.text += ` ${p.say}`; else beats.push({ beat: p.beat, text: p.say }); }
   const all = pieces.map((p) => p.say).join(" "); const words = all.split(/\s+/).length; const warn = [];
   if (words > MAX_WORDS) warn.push(`VO is ${words} words (> ${MAX_WORDS})`);
-  const hw = v.hook.split(/\s+/).length; if (hw < 5 || hw > 12) warn.push(`hook is ${hw} words (want 5-12)`);
+  const hw = v.hook.split(/\s+/).length; if (hw < 4 || hw > 10) warn.push(`hook is ${hw} words (want 4-10)`);
   if (!v.safety) warn.push("no safety line: add one unless the tip truly needs none");
   // Safety rule: no sentence may suggest mixing/combining products. Warning sentences (never/don't/no/not) are allowed.
   for (const sent of all.match(/[^.!?]+[.!?]*/g) ?? []) { if (/\b(never|don't|do not|no|not)\b/i.test(sent)) continue;
     for (const re of BANNED) if (re.test(sent)) throw new Error(`Safety: "${sent.trim()}" matches ${re} (never suggest mixing chemicals)`); }
-  if (v.steps.length < 2 || v.steps.length > 4) warn.push(`${v.steps.length} steps (want 2-4)`);
+  if (v.steps.length < 2 || v.steps.length > 3) warn.push(`${v.steps.length} steps (want 2-3)`);
   return { key: tip.slug, n, slug: tip.slug, title: tip.title, appliance: v.appliance ?? "dishwasher", revealAt: v.revealAt ?? "part", url: `https://www.hiddenclean.com/tips/${tip.slug}`,
     pieces, words, warn, elevenlabsPrompt: beats.map((b) => `${tags[b.beat]} ${b.text}`).join("\n\n") };
 }

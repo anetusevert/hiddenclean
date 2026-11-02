@@ -26,12 +26,14 @@ function Gfx({ kind, f, dur }: { kind: "reveal" | "twist" | "lift"; f: number; d
 }
 
 function ShotView({ sh, f, dur }: { sh: Shot; f: number; dur: number }) {
-  const punch = interpolate(f, [0, 7], [1.14, 1.04], clamp) + interpolate(f, [7, dur], [0, 0.05], clamp); // punch-in then slow push
-  const flash = interpolate(f, [0, 3], [0.55, 0], clamp);
+  // Retention spec 2026-11-02: frame 0 of the video must be the clean striking shot (no white flash, mild punch).
+  const first = sh.from === 0;
+  const punch = interpolate(f, [0, 7], [first ? 1.08 : 1.14, 1.04], clamp) + interpolate(f, [7, dur], [0, 0.05], clamp); // punch-in then slow push
+  const flash = first ? 0 : interpolate(f, [0, 3], [0.55, 0], clamp);
   return <AbsoluteFill>
     {sh.gfx ? <Gfx kind={sh.gfx} f={f} dur={dur} /> :
       <AbsoluteFill style={{ transform: `scale(${punch})` }}><OffthreadVideo src={staticFile(`stock/${sh.clip}.mp4`)} startFrom={sh.ss ?? 0} muted style={{ width: 1080, height: 1920, objectFit: "cover" }} /></AbsoluteFill>}
-    {sh.sparkle && <svg width={1080} height={1920} style={{ position: "absolute" }}><HaloDef /><Reveal cx={560} cy={900} r={300} t={f - 3} /></svg>}
+    {sh.sparkle && !first && <svg width={1080} height={1920} style={{ position: "absolute" }}><HaloDef /><Reveal cx={560} cy={900} r={300} t={f - 3} /></svg>}
     <AbsoluteFill style={{ background: C.pale, opacity: flash, mixBlendMode: "screen" }} />
   </AbsoluteFill>;
 }
@@ -44,7 +46,8 @@ export function HiddenCleanV2(p: Props & { hook?: string; shots?: Shot[] }) {
   const doP = at("do"), safety = at("safety"), result = at("result"), cta = at("cta"); const introEnd = ps[0].start;
   const shots = (p.shots ?? []).map((s) => ({ s, st: s.from, en: s.to }));
   const hookShake = f < doP.start ? Math.sin(f * 1.9) * 6 * interpolate(f, [introEnd + 15, introEnd + 25], [0, 1], clamp) : 0;
-  const bed = interpolate(f, [0, p.voStart, p.voStart + 8, p.voEnd, p.voEnd + 10, p.total - 20, p.total], [0.45, 0.45, 0.1, 0.1, 0.28, 0.28, 0], clamp);
+  const bedUp = p.voEnd + Math.min(10, Math.max(1, Math.floor((p.total - p.voEnd) / 3))), bedOut = Math.max(bedUp + 1, p.total - 20); // short outros (retention spec) need guarded ranges
+  const bed = interpolate(f, [0, Math.max(1, p.voStart), p.voStart + 8, p.voEnd, bedUp, bedOut, Math.max(bedOut + 1, p.total)], [0.45, 0.45, 0.1, 0.1, 0.28, 0.28, 0], clamp);
   const beatOrder: Beat[] = ["hook", "do", "steps", "result", "cta"]; const bi = beatOrder.indexOf(cur.beat === "safety" ? "steps" : cur.beat);
   const safetyDim = interpolate(f, [safety.start, safety.start + 5, result.start - 3, result.start], [0, 0.55, 0.55, 0], clamp);
   return <AbsoluteFill style={{ background: C.navy, overflow: "hidden" }}>
@@ -70,10 +73,12 @@ export function HiddenCleanV2(p: Props & { hook?: string; shots?: Shot[] }) {
     {f >= introEnd && <Captions words={p.words} f={f} />}
     {f >= introEnd && f < cta.start && <div style={{ position: "absolute", bottom: 90, left: 0, right: 0, display: "flex", justifyContent: "center", gap: 18 }}>
       {beatOrder.slice(0, 4).map((b, i) => <div key={b} style={{ width: i === bi ? 70 : 22, height: 22, borderRadius: 11, background: i <= bi ? C.mint : "rgba(255,255,255,.35)" }} />)}</div>}
-    {f < 54 && (() => { const hs = spring({ frame: f, fps, config: { stiffness: 260, mass: 0.6, damping: 12 } }); const o = interpolate(f, [44, 54], [1, 0], clamp);
+    {f < 54 && (() => { // hook text fully readable from frame 0 (small punch 1.12 -> 1.0, settles by ~0.3s), ring after it lands
+      const hs = spring({ frame: f, fps, config: { stiffness: 320, mass: 0.5, damping: 14 } }); const o = interpolate(f, [44, 54], [1, 0], clamp);
       return <AbsoluteFill style={{ alignItems: "center", justifyContent: "center", opacity: o }}>
-        <svg width={1080} height={1920} style={{ position: "absolute" }}><HaloDef /><Reveal cx={540} cy={1000} r={320} t={f} /></svg>
-        <div style={{ transform: `scale(${1.5 - 0.5 * hs}) rotate(-3deg)`, textAlign: "center", padding: "0 60px", fontFamily: fDisplay, fontWeight: 700, fontSize: 124, lineHeight: 1.0, color: C.ink, textShadow: "0 8px 0 rgba(0,0,0,.45)", marginTop: -120 }}>
+        <AbsoluteFill style={{ background: `radial-gradient(ellipse 75% 32% at 50% 44%, ${C.deep}8c 0%, ${C.deep}40 55%, transparent 100%)` }} />
+        <svg width={1080} height={1920} style={{ position: "absolute" }}><HaloDef /><Reveal cx={540} cy={1000} r={320} t={f - 4} /></svg>
+        <div style={{ transform: `scale(${1.12 - 0.12 * hs}) rotate(-3deg)`, textAlign: "center", padding: "0 60px", fontFamily: fDisplay, fontWeight: 700, fontSize: 124, lineHeight: 1.0, color: C.ink, textShadow: "0 8px 0 rgba(0,0,0,.45)", marginTop: -120 }}>
           {(p.hook ?? "").split(" ").map((w, i) => /^\*.*\*$/.test(w) ? <span key={i} style={{ background: C.warn, color: C.navy, padding: "0 24px", borderRadius: 24, display: "inline-block", margin: "6px 10px" }}>{w.slice(1, -1)}</span> : <span key={i} style={{ display: "inline-block", margin: "6px 14px" }}>{w}</span>)}</div></AbsoluteFill>; })()}
     <Audio src={staticFile("audio/bed.wav")} loop volume={bed} />
     <Sfx name="swish" at={0} volume={0.6} /><Sfx name="sparkle" at={1} volume={0.6} />
