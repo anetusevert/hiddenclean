@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { shortFor } from "@/lib/videos";
+import { isoDuration, shortFor } from "@/lib/videos";
 import { guidesForTip, liveGuides } from "@/lib/guides";
 import { JsonLd } from "@/components/JsonLd";
 import { TipCard } from "@/components/TipCard";
@@ -15,8 +15,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const tip = getTip((await params).slug);
   if (!tip) return {};
   const v = shortFor(tip.slug);
-  const img = v ? { url: `/v/${v.id}.jpg`, width: 1080, height: 1920, alt: tip.displayName } : { url: "/og.png", width: 1200, height: 630, alt: tip.displayName };
-  return { title: { absolute: `${tip.title} | ${SITE_NAME}` }, description: metaDescription(tip.title, tip.answer), alternates: pageAlternates(`/tips/${tip.slug}`), openGraph: { title: tip.displayName, description: tip.answer, type: "article", publishedTime: tip.date, url: `/tips/${tip.slug}`, images: [img] }, twitter: { card: "summary_large_image", title: tip.displayName, description: tip.answer, images: [img.url] } };
+  // Per-tip 1200x630 card first (link previews, Discover, AI answers); the vertical video still second (Pinterest-friendly).
+  const card = { url: `/og/${tip.slug}`, width: 1200, height: 630, alt: tip.displayName, type: "image/png" };
+  const imgs = v ? [card, { url: `/v/${v.id}.jpg`, width: 432, height: 768, alt: tip.displayName }] : [card];
+  return { title: { absolute: `${tip.title} | ${SITE_NAME}` }, description: metaDescription(tip.title, tip.answer), alternates: pageAlternates(`/tips/${tip.slug}`), openGraph: { title: tip.displayName, description: tip.answer, type: "article", publishedTime: tip.date, url: `/tips/${tip.slug}`, images: imgs }, twitter: { card: "summary_large_image", title: tip.displayName, description: tip.answer, images: [card.url] } };
 }
 
 export default async function TipPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -25,7 +27,7 @@ export default async function TipPage({ params }: { params: Promise<{ slug: stri
   const url = `${SITE_URL}/tips/${tip.slug}`;
   const hub = tip.hubs[0];
   const v = shortFor(tip.slug);
-  const video = v ? { "@type": "VideoObject", name: tip.displayName, description: `${tip.answer} Safety: ${tip.safety}`, thumbnailUrl: `${SITE_URL}/v/${v.id}.jpg`, contentUrl: `${SITE_URL}/v/${v.id}.mp4`, uploadDate: `${tip.date}T07:30:00${berlinOffset(tip.date)}`, duration: "PT30S", publisher: { "@id": `${SITE_URL}/#org` } } : null;
+  const video = v ? { "@type": "VideoObject", name: tip.displayName, description: `${tip.answer} Safety: ${tip.safety}`, thumbnailUrl: `${SITE_URL}/v/${v.id}.jpg`, contentUrl: `${SITE_URL}/v/${v.id}.mp4`, uploadDate: `${tip.date}T07:30:00${berlinOffset(tip.date)}`, duration: isoDuration(v), publisher: { "@id": `${SITE_URL}/#org` } } : null;
   // Related: the tips either side of this one in its hub (circular), so every tip gets inbound links, not just the newest 3.
   const inHub = hubTips(hub);
   const at = inHub.findIndex((t) => t.slug === tip.slug);
@@ -45,7 +47,7 @@ export default async function TipPage({ params }: { params: Promise<{ slug: stri
   return (
     <article className="wrap page tip">
       <JsonLd data={{ "@context": "https://schema.org", "@type": "HowTo", name: tip.title, description: tip.answer, url, datePublished: tip.date, inLanguage: "en", totalTime: "PT15M",
-        ...(video ? { image: video.thumbnailUrl, video } : { image: `${SITE_URL}/og.png` }),
+        ...(video ? { image: [`${SITE_URL}/og/${tip.slug}`, video.thumbnailUrl], video } : { image: `${SITE_URL}/og/${tip.slug}` }),
         publisher: { "@id": `${SITE_URL}/#org` }, isPartOf: { "@id": `${SITE_URL}/#website` }, about: hub.title,
         step: tip.steps.map((s, i) => ({ "@type": "HowToStep", position: i + 1, name: s.split(/[.!]/)[0].slice(0, 80), text: s, url: `${url}#step-${i + 1}` })) }} />
       {video && <JsonLd data={{ "@context": "https://schema.org", ...video }} />}
@@ -62,7 +64,7 @@ export default async function TipPage({ params }: { params: Promise<{ slug: stri
       {inGuides.length > 0 && <p className="in-guide">Part of: {inGuides.map((g, i) => <span key={g.id}>{i ? " · " : ""}<Link href={`/how-to/${g.id}`}>{g.displayName}</Link></span>)}</p>}
       <h2>Step by step</h2>
       <ol className="steps">{tip.steps.map((s, i) => <li key={s} id={`step-${i + 1}`}>{s}</li>)}</ol>
-      {v && (<><h2>Watch it in 30 seconds</h2><video className="tip-video" src={`/v/${v.id}.mp4`} poster={`/v/${v.id}.jpg`} controls playsInline preload="none" width={1080} height={1920} aria-label={`Video: ${tip.displayName}`} /></>)}
+      {v && (<><h2>Watch it in {v.sec ?? 30} seconds</h2><video className="tip-video" src={`/v/${v.id}.mp4`} poster={`/v/${v.id}.jpg`} controls playsInline preload="none" width={1080} height={1920} aria-label={`Video: ${tip.displayName}`} /></>)}
       <h2>FAQ</h2>
       <div className="faq">{tip.faq.map((f) => <details key={f.q}><summary>{f.q}</summary><p>{f.a}</p></details>)}</div>
       {related.length > 0 && (<><h2>More {hub.title.replace(/^How to /, "").toLowerCase()} hacks</h2><div className="grid">{related.map((t) => <TipCard key={t.slug} tip={t} />)}</div></>)}

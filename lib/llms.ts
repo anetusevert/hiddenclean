@@ -1,10 +1,13 @@
 import { byNewest, liveHubs, hubTips, SITE_DESC, SITE_NAME, SITE_URL, SAFETY_RULE } from "./tips";
 import { guideTips, liveGuides } from "./guides";
+import { shortFor } from "./videos";
+
+const updated = () => { const t = byNewest(); return `Updated: ${t[0]?.date ?? ""} (Europe/Berlin). ${t.length} live tips, ${liveGuides().length} routines, one new tip a day.`; };
 
 export function llmsTxt() {
   const tips = byNewest();
   return [
-    `# ${SITE_NAME}`, "", `> ${SITE_DESC}`, "", `Safety rule on every tip: ${SAFETY_RULE}`, "",
+    `# ${SITE_NAME}`, "", `> ${SITE_DESC}`, "", updated(), "", `Safety rule on every tip: ${SAFETY_RULE}`, "",
     "## Routines and checklists", ...liveGuides().map((g) => `- ${SITE_URL}/how-to/${g.id}: ${g.title} (${g.displayName}). ${g.answer}`), "",
     "## Find by task", ...liveHubs().map((h) => `- ${SITE_URL}/how-to/${h.id}: ${h.title}. ${h.intro} (${hubTips(h).length} tips)`), "",
     "## Tips", ...tips.map((t) => `- ${SITE_URL}/tips/${t.slug}: ${t.searchPhrase} - ${t.answer}`), "",
@@ -13,7 +16,7 @@ export function llmsTxt() {
 }
 
 export function llmsFullTxt() {
-  return [`# ${SITE_NAME}: every live tip in full`, "", `> ${SITE_DESC}`, "",
+  return [`# ${SITE_NAME}: every live tip in full`, "", `> ${SITE_DESC}`, "", updated(), "",
     "## Find by task", ...liveHubs().map((h) => `- ${SITE_URL}/how-to/${h.id}: ${h.title}. ${h.intro}`), "",
     ...liveGuides().flatMap((g) => [
       `## ${g.title} (${g.displayName})`, `URL: ${SITE_URL}/how-to/${g.id}`, `Published: ${g.date}`, `Answer: ${g.answer}`,
@@ -23,7 +26,7 @@ export function llmsFullTxt() {
     ...byNewest().flatMap((t) => [
       `## ${t.title}`, `URL: ${SITE_URL}/tips/${t.slug}`, `Published: ${t.date}`, `Search phrase: ${t.searchPhrase}`,
       `Answer: ${t.answer}`, "Steps:", ...t.steps.map((s, i) => `${i + 1}. ${s}`),
-      `Safety check: ${t.safety} ${SAFETY_RULE}`, ...t.faq.map((f) => `- FAQ: ${f.q} ${f.a}`), "",
+      `Safety check: ${t.safety} ${SAFETY_RULE}`, ...(shortFor(t.slug) ? [`Video: ${SITE_URL}/v/${shortFor(t.slug)!.id}.mp4`] : []), ...t.faq.map((f) => `- FAQ: ${f.q} ${f.a}`), "",
     ]),
   ].join("\n");
 }
