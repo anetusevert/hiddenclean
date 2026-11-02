@@ -1,0 +1,16 @@
+{
+  "hook": "Your taps are crusty, and you know it.",
+  "hookLabel": "LIMESCALE ALERT",
+  "doLead": "Here's the trick.",
+  "doThis": "Wrap them in a vinegar cloth.",
+  "doText": "The vinegar wrap",
+  "appliance": "dishwasher",
+  "steps": [
+    { "say": "Soak a cloth in white vinegar and wrap the tap.", "text": "Vinegar cloth wrap", "scene": "wipe" },
+    { "say": "Leave it thirty minutes to an hour.", "text": "Wait 30-60 min", "scene": "wait" },
+    { "say": "Scrub the crust off with an old toothbrush.", "text": "Toothbrush scrub", "scene": "wipe" },
+    { "say": "Rinse, then buff it dry.", "text": "Rinse + buff dry", "scene": "rinse" }
+  ],
+  "safety": { "say": "Not on stone or coated taps, and never mix cleaners.", "text": "Chrome only. Never mix cleaners." },
+  "result": { "say": "Shiny taps, zero scrubbing marathon.", "headline": "Shiny again", "before": "Crusty tap", "after": "Shiny tap" }
+}

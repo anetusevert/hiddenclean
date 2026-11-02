@@ -1,0 +1,74 @@
+{
+  "key": "how-to-remove-limescale-from-taps",
+  "n": 108,
+  "slug": "how-to-remove-limescale-from-taps",
+  "title": "How to remove limescale from taps",
+  "appliance": "dishwasher",
+  "revealAt": "part",
+  "url": "https://www.hiddenclean.com/tips/how-to-remove-limescale-from-taps",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Your taps are crusty, and you know it.",
+      "text": "Your taps are crusty, and you know it.",
+      "label": "LIMESCALE ALERT"
+    },
+    {
+      "beat": "do",
+      "say": "Here's the trick. Wrap them in a vinegar cloth.",
+      "text": "The vinegar wrap"
+    },
+    {
+      "beat": "steps",
+      "say": "Soak a cloth in white vinegar and wrap the tap.",
+      "text": "Vinegar cloth wrap",
+      "step": 1,
+      "scene": "wipe"
+    },
+    {
+      "beat": "steps",
+      "say": "Leave it thirty minutes to an hour.",
+      "text": "Wait 30-60 min",
+      "step": 2,
+      "scene": "wait"
+    },
+    {
+      "beat": "steps",
+      "say": "Scrub the crust off with an old toothbrush.",
+      "text": "Toothbrush scrub",
+      "step": 3,
+      "scene": "wipe"
+    },
+    {
+      "beat": "steps",
+      "say": "Rinse, then buff it dry.",
+      "text": "Rinse + buff dry",
+      "step": 4,
+      "scene": "rinse"
+    },
+    {
+      "beat": "safety",
+      "say": "Not on stone or coated taps, and never mix cleaners.",
+      "text": "Chrome only. Never mix cleaners."
+    },
+    {
+      "beat": "result",
+      "say": "Shiny taps, zero scrubbing marathon.",
+      "text": "Shiny again",
+      "result": {
+        "say": "Shiny taps, zero scrubbing marathon.",
+        "headline": "Shiny again",
+        "before": "Crusty tap",
+        "after": "Shiny tap"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "Daily hidden cleaning hacks, at hiddenclean dot com.",
+      "text": "Daily hidden cleaning hacks"
+    }
+  ],
+  "words": 70,
+  "warn": [],
+  "elevenlabsPrompt": "[playful] Your taps are crusty, and you know it.\n\n[intrigued] Here's the trick. Wrap them in a vinegar cloth.\n\n[friendly] Soak a cloth in white vinegar and wrap the tap. Leave it thirty minutes to an hour. Scrub the crust off with an old toothbrush. Rinse, then buff it dry. Not on stone or coated taps, and never mix cleaners.\n\n[delighted] Shiny taps, zero scrubbing marathon.\n\n[warm] Daily hidden cleaning hacks, at hiddenclean dot com."
+}

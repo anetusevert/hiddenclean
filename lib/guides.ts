@@ -28,7 +28,8 @@ const DEFS: Omit<Guide, "id" | "title">[] = [
         { text: "Wipe the mirror with a barely damp microfibre cloth, then buff with a dry one so it doesn't streak.", tip: T("how to clean a mirror without streaks") }] },
       { title: "Sink and counter", minutes: 3, items: [
         { text: "Scrub the toothbrush cup with hot soapy water and leave it upside down to dry.", tip: T("how to clean a toothbrush holder") },
-        { text: "Wipe the basin, tap and counter; pull the stopper and clear any hair if it drains slowly.", tip: T("how to clean a bathroom sink drain") }] },
+        { text: "Wipe the basin, tap and counter; pull the stopper and clear any hair if it drains slowly.", tip: T("how to clean a bathroom sink drain") },
+        { text: "Crusty white build-up on the tap? Wrap it in a vinegar-soaked cloth while you do the toilet and shower, then scrub, rinse and buff dry (chrome only).", tip: T("how to remove limescale from taps") }] },
       { title: "Toilet", minutes: 4, items: [
         { text: "Squeeze toilet cleaner up under the rim, let it sit while you wipe the seat, lid and base.", tip: T("how to clean under the toilet rim") },
         { text: "Scrub upwards under the rim and around the bowl, then flush. Limescale ring? Treat it separately another day.", tip: T("how to remove limescale from a toilet") }] },
