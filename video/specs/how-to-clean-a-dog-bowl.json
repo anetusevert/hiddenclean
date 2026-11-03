@@ -1,0 +1,30 @@
+{
+  "hook": "Touch your dog's water bowl. Feel that slime?",
+  "hookLabel": "GROSS ALERT",
+  "doLead": "That's biofilm.",
+  "doThis": "Wash it every day.",
+  "doText": "Wash it every day",
+  "appliance": "dishwasher",
+  "steps": [
+    {
+      "say": "Scrub with hot soapy water and a brush.",
+      "text": "Hot soapy scrub",
+      "scene": "wipe"
+    },
+    {
+      "say": "Rinse well, or run it through the dishwasher.",
+      "text": "Rinse or dishwasher",
+      "scene": "rinse"
+    }
+  ],
+  "safety": {
+    "say": "Rinse off all soap, and never mix cleaners.",
+    "text": "Rinse well. Never mix cleaners."
+  },
+  "result": {
+    "say": "Fresh water, zero slime.",
+    "headline": "Zero slime",
+    "before": "Slimy bowl",
+    "after": "Fresh bowl"
+  }
+}

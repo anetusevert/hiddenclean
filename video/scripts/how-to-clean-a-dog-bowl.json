@@ -1,0 +1,60 @@
+{
+  "key": "how-to-clean-a-dog-bowl",
+  "n": 115,
+  "slug": "how-to-clean-a-dog-bowl",
+  "title": "How to clean a dog bowl",
+  "appliance": "dishwasher",
+  "revealAt": "part",
+  "url": "https://www.hiddenclean.com/tips/how-to-clean-a-dog-bowl",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Touch your dog's water bowl. Feel that slime?",
+      "text": "Touch your dog's water bowl. Feel that slime?",
+      "label": "GROSS ALERT"
+    },
+    {
+      "beat": "do",
+      "say": "That's biofilm. Wash it every day.",
+      "text": "Wash it every day"
+    },
+    {
+      "beat": "steps",
+      "say": "Scrub with hot soapy water and a brush.",
+      "text": "Hot soapy scrub",
+      "step": 1,
+      "scene": "wipe"
+    },
+    {
+      "beat": "steps",
+      "say": "Rinse well, or run it through the dishwasher.",
+      "text": "Rinse or dishwasher",
+      "step": 2,
+      "scene": "rinse"
+    },
+    {
+      "beat": "safety",
+      "say": "Rinse off all soap, and never mix cleaners.",
+      "text": "Rinse well. Never mix cleaners."
+    },
+    {
+      "beat": "result",
+      "say": "Fresh water, zero slime.",
+      "text": "Zero slime",
+      "result": {
+        "say": "Fresh water, zero slime.",
+        "headline": "Zero slime",
+        "before": "Slimy bowl",
+        "after": "Fresh bowl"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "Daily hidden cleaning hacks, at hiddenclean dot com.",
+      "text": "Daily hidden cleaning hacks"
+    }
+  ],
+  "words": 50,
+  "warn": [],
+  "elevenlabsPrompt": "[playful] Touch your dog's water bowl. Feel that slime?\n\n[intrigued] That's biofilm. Wash it every day.\n\n[friendly] Scrub with hot soapy water and a brush. Rinse well, or run it through the dishwasher. Rinse off all soap, and never mix cleaners.\n\n[delighted] Fresh water, zero slime.\n\n[warm] Daily hidden cleaning hacks, at hiddenclean dot com."
+}

@@ -93,6 +93,7 @@ const DEFS: Omit<Guide, "id" | "title">[] = [
         { text: "Wipe condensation off the windows and open them for 10 minutes.", tip: T("how to get rid of condensation on windows") },
         { text: "Strip and wash your water bottle lid, seal and straw.", tip: T("how to clean a reusable water bottle") },
         { text: "Wipe the bin lid and pedal; wash the whole bin once a month.", tip: T("how to clean a kitchen bin") },
+        { text: "Got a pet? Put the water and food bowls through a hot dishwasher cycle (or scrub them in hot soapy water) to clear the slimy film.", tip: T("how to clean a dog bowl") },
         { text: "Print next week's checklist." }] },
     ],
     faq: [
