@@ -162,5 +162,27 @@
    "s1"
   ],
   "open": "6873327@1"
+ },
+ "v2r-fabric-sofa": {
+  "slug": "how-to-clean-a-fabric-sofa",
+  "hook": "Your sofa has a *SECRET* code",
+  "say": "Your sofa has a secret cleaning code.",
+  "first": "hook2",
+  "drop": [
+   "s3",
+   "s2"
+  ],
+  "open": "28682717@1"
+ },
+ "v2r-washer-hygiene": {
+  "slug": "how-to-use-the-hygiene-cycle-on-a-washing-machine",
+  "hook": "Sneezing in bed? Try *THIS*",
+  "say": "Sneezing in bed? Your washer has a hidden allergy cycle.",
+  "first": "hook2",
+  "drop": [
+   "s4",
+   "s3"
+  ],
+  "open": "6865227@1.5"
  }
 }
