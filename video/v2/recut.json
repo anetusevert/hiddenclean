@@ -184,5 +184,29 @@
    "s3"
   ],
   "open": "6865227@1.5"
+ },
+ "v2r-limescale-taps": {
+  "slug": "how-to-remove-limescale-from-taps",
+  "hook": "That white crust? *LIMESCALE*",
+  "say": "That white crust on your tap? It's limescale.",
+  "first": "hook2",
+  "drop": [
+   "s4",
+   "s2"
+  ],
+  "open": "30615528@4.6",
+  "ask": "Hard water where you live: *YES* or *NO?*"
+ },
+ "v2r-kettle-flakes": {
+  "slug": "how-to-descale-a-kettle",
+  "hook": "You're *DRINKING* this",
+  "say": "You're drinking these white flakes every day.",
+  "first": "do",
+  "drop": [
+   "s4",
+   "s3"
+  ],
+  "open": "5983910@2",
+  "ask": "Descaled yours this month: *YES* or *NEVER?*"
  }
 }
