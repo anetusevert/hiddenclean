@@ -1,0 +1,15 @@
+{
+  "hook": "Your phone is dirtier than your toilet.",
+  "hookLabel": "GROSS ALERT",
+  "doLead": "It goes everywhere.",
+  "doThis": "Clean it weekly.",
+  "doText": "Clean it weekly",
+  "appliance": "dishwasher",
+  "steps": [
+    { "say": "Switch off, take the case off.", "text": "Off, case off", "scene": "remove" },
+    { "say": "Wipe it with an alcohol wipe.", "text": "Alcohol wipe", "scene": "wipe" },
+    { "say": "Wash the case in soapy water.", "text": "Wash the case", "scene": "rinse" }
+  ],
+  "safety": { "say": "No sprays, no bleach, never mix cleaners.", "text": "No sprays or bleach. Never mix cleaners." },
+  "result": { "say": "Clean phone, clean hands.", "headline": "Clean phone", "before": "Germy phone", "after": "Clean phone" }
+}

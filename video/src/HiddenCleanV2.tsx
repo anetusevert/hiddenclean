@@ -38,7 +38,16 @@ function ShotView({ sh, f, dur }: { sh: Shot; f: number; dur: number }) {
   </AbsoluteFill>;
 }
 
-export function HiddenCleanV2(p: Props & { hook?: string; shots?: Shot[] }) {
+// On-screen comment question (plan 2026-11-02): last ~2 s, top of the CTA card; *WORD* = amber answer chip.
+function Ask({ text, f }: { text: string; f: number }) {
+  const { fps } = useVideoConfig(); const s = spring({ frame: f, fps, config: { stiffness: 260, mass: 0.6, damping: 13 } }); const bob = Math.sin(f / 5) * 6;
+  return <div style={{ position: "absolute", top: 110, left: 60, right: 60, display: "flex", flexDirection: "column", alignItems: "center", opacity: Math.min(1, f / 4), transform: `scale(${0.8 + 0.2 * s}) rotate(-2deg)` }}>
+    <div style={{ fontFamily: fSans, fontWeight: 900, fontSize: 34, letterSpacing: 3, color: C.navy, background: C.pale, padding: "6px 22px", borderRadius: 999, marginBottom: 14 }}>COMMENT ↓</div>
+    <div style={{ textAlign: "center", fontFamily: fDisplay, fontWeight: 700, fontSize: 70, lineHeight: 1.08, color: C.ink, textShadow: "0 6px 0 rgba(0,0,0,.4)", transform: `translateY(${bob}px)` }}>
+      {text.split(" ").map((w, i) => /^\*.*\*[?!.,]*$/.test(w) ? <span key={i} style={{ background: C.warn, color: C.navy, padding: "0 16px", borderRadius: 18, display: "inline-block", margin: "4px 8px" }}>{w.replace(/\*/g, "")}</span> : <span key={i} style={{ display: "inline-block", margin: "4px 8px" }}>{w}</span>)}</div></div>;
+}
+
+export function HiddenCleanV2(p: Props & { hook?: string; shots?: Shot[]; ask?: string }) {
   const f = useCurrentFrame(); const { fps } = useVideoConfig(); const ps = p.pieces;
   const end = (i: number) => ps[i + 1]?.start ?? p.total;
   const ci = Math.max(0, ps.findLastIndex((x) => x.start <= f)); const cur = ps[ci];
@@ -69,7 +78,7 @@ export function HiddenCleanV2(p: Props & { hook?: string; shots?: Shot[] }) {
       {cur.beat === "safety" && <Sequence from={safety.start} layout="none"><HeadlineAt p={{ ...safety, text: "Keep it safe" }} dur={result.start - safety.start} /></Sequence>}
     </div>
     {cur.beat === "safety" && <SafetyCard text={safety.text} f={f - safety.start} />}
-    {f >= cta.start && <AbsoluteFill style={{ background: C.navy }}><AbsoluteFill style={{ backgroundImage: "linear-gradient(rgba(255,255,255,.045) 2px, transparent 2px), linear-gradient(90deg, rgba(255,255,255,.045) 2px, transparent 2px)", backgroundSize: "135px 135px" }} /><Cta f={f - cta.start} /></AbsoluteFill>}
+    {f >= cta.start && <AbsoluteFill style={{ background: C.navy }}><AbsoluteFill style={{ backgroundImage: "linear-gradient(rgba(255,255,255,.045) 2px, transparent 2px), linear-gradient(90deg, rgba(255,255,255,.045) 2px, transparent 2px)", backgroundSize: "135px 135px" }} /><Cta f={f - cta.start} />{p.ask && f >= Math.max(cta.start, p.total - 66) && <Ask text={p.ask} f={f - Math.max(cta.start, p.total - 66)} />}</AbsoluteFill>}
     {f >= introEnd && <Captions words={p.words} f={f} />}
     {f >= introEnd && f < cta.start && <div style={{ position: "absolute", bottom: 90, left: 0, right: 0, display: "flex", justifyContent: "center", gap: 18 }}>
       {beatOrder.slice(0, 4).map((b, i) => <div key={b} style={{ width: i === bi ? 70 : 22, height: 22, borderRadius: 11, background: i <= bi ? C.mint : "rgba(255,255,255,.35)" }} />)}</div>}

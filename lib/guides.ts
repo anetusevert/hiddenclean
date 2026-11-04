@@ -87,6 +87,7 @@ const DEFS: Omit<Guide, "id" | "title">[] = [
         { text: "Dust surfaces and wipe the baseboards.", tip: T("how to clean baseboards") },
         { text: "Clean the hairbrush.", tip: T("how to clean a hairbrush") },
         { text: "Tap out and wipe the keyboard.", tip: T("how to clean a keyboard") },
+        { text: "Take the phone case off, wipe the phone with an alcohol wipe and wash the case.", tip: T("how to clean a phone") },
         { text: "Vacuum the sofa seams and under the cushions; blot any marks.", tip: T("how to clean a fabric sofa") }] },
       { title: "Sunday: 10-minute reset", minutes: 10, items: [
         { text: "Put things back where they live and empty all bins." },

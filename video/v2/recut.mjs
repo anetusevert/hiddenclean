@@ -53,7 +53,7 @@ pieces.forEach((p, i) => { if (p.beat === "cta") return; const key2 = p.beat ===
     shots.push({ from: a, clip: clip.startsWith("gfx:") ? undefined : clip, gfx: clip.startsWith("gfx:") ? clip.slice(4) : undefined,
       ss: f(Number(ss ?? 0) + Math.floor(k / list.length) * 1.6), sparkle: p.beat === "result" || (p.beat === "do" && k === 0) || (lastClean && k === n - 1) }); } });
 shots.forEach((x, i) => (x.to = shots[i + 1]?.from ?? cta));
-const props = { appliance: s.appliance, n: s.n, title: s.title, url: s.url, pieces, words, voStart, voEnd, total: tot, voFile: `vo/.norm/${key}.wav`, hook: rc.hook, shots };
+const props = { appliance: s.appliance, n: s.n, title: s.title, url: s.url, pieces, words, voStart, voEnd, total: tot, voFile: `vo/.norm/${key}.wav`, hook: rc.hook, shots, ask: rc.ask };
 fs.mkdirSync(path.join(dir, ".cache"), { recursive: true }); const pp = path.join(dir, ".cache", `${key}.props.json`); fs.writeFileSync(pp, JSON.stringify(props, null, 1));
 console.log(`${key}: total ${(tot / FPS).toFixed(1)}s kept ${pieces.map((p) => p.beat[0] + (p.step ?? "")).join(",")}`, pieces.map((p) => `${p.beat}@${(p.start / FPS).toFixed(2)}`).join(" "));
 if (process.argv.includes("--dry")) process.exit(0);

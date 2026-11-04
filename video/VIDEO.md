@@ -77,6 +77,7 @@ Setup: `npm ci` (needs ffmpeg; uses google-chrome if present). Sound kit: `pytho
 - Config per video in `v2/config.json`: `hook` (3-6 words, `*KEY*` = amber chip), optional `hookSay` + `vo` (spliced VO when the first line was regenerated), `clips` per beat (`hook`, `do`, `s1..s4`, `safety`, `result`), entries `<pexelsId>@<startSec>` or `gfx:reveal|twist|lift`.
 - Stock: download the Pexels file, pre-cut to `public/stock/<id>.mp4` (9s, 1080x1920, 30fps, no audio; gitignored, re-download from credits.txt URLs). Run ffmpeg pre-cuts max 3 in parallel (54 at once got OOM-killed).
 - `node v2/build.mjs <slug>` -> whisper re-timing, shots auto-split to <=1.8s per piece, renders `video-out/v2-<slug minus how-to->.mp4`. `--dry` prints timings.
+- **On-screen comment question** (2026-11-04, plan of 2 Nov): optional `"ask"` in `v2/config.json` (per short) or `v2/recut.json` (per recut), e.g. `"Cleaned yours this week: *YES* or *NEVER?*"` (`*WORD*` = amber answer chip). Shown in the last ~2.2 s over the top of the CTA card with a `COMMENT ↓` pill; end the caption with the same question.
 - Hook line regen: generate only the first line in Mira/eleven_v4 (`generations_count: 1`, ~50 credits), trim its tail silence, concat with the original VO from the second piece onwards.
 
 ## TikTok recuts (v2r, 2026-10-30: TikTok at 3 posts/day)

@@ -239,3 +239,18 @@ v2-clean-a-dog-bowl.mp4
   https://www.pexels.com/video/person-washing-a-cup-7477423/
   https://www.pexels.com/video/pouring-dog-food-in-a-pet-bowl-8434094/
 Voice: ElevenLabs Mira (rdEyNni8e60Jlx1RsV9N), eleven_v4 (~344 credits). Music/SFX: own HiddenClean kit.
+
+=== 12 Nov 2026 tip (built 2026-11-04): all clips Pexels License, free commercial use, no attribution required: https://www.pexels.com/license/ ===
+v2-clean-a-phone.mp4
+  https://www.pexels.com/video/flushing-the-toilet-bowl-5942153/
+  https://www.pexels.com/video/a-man-using-his-cellphone-in-the-bathroom-7172121/
+  https://www.pexels.com/video/a-woman-in-pink-gloves-cleaning-a-toilet-9472823/
+  https://www.pexels.com/video/person-disinfecting-mobile-phone-4218342/
+  https://www.pexels.com/video/person-putting-the-case-of-a-smart-phone-3649786/
+  https://www.pexels.com/video/hands-smartphone-anonymous-cleaning-4058039/
+  https://www.pexels.com/video/a-person-pumping-dishwashing-soap-dispenser-7640968/
+  https://www.pexels.com/video/person-washing-a-cup-7477423/
+  https://www.pexels.com/video/a-person-washing-the-bowl-9462921/
+  https://www.pexels.com/video/person-squeezing-a-sponge-9733259/
+Voice: ElevenLabs Mira (rdEyNni8e60Jlx1RsV9N), eleven_v4 (~344 credits). Music/SFX: own HiddenClean kit.
+v2r-limescale-taps.mp4 / v2r-kettle-flakes.mp4 (TikTok recuts, same clips as their v2 shorts): new Mira hook lines, one eleven_v4 generation (~112 credits).

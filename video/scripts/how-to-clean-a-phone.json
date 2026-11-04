@@ -1,0 +1,67 @@
+{
+  "key": "how-to-clean-a-phone",
+  "n": 116,
+  "slug": "how-to-clean-a-phone",
+  "title": "How to clean a phone",
+  "appliance": "dishwasher",
+  "revealAt": "part",
+  "url": "https://www.hiddenclean.com/tips/how-to-clean-a-phone",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Your phone is dirtier than your toilet.",
+      "text": "Your phone is dirtier than your toilet.",
+      "label": "GROSS ALERT"
+    },
+    {
+      "beat": "do",
+      "say": "It goes everywhere. Clean it weekly.",
+      "text": "Clean it weekly"
+    },
+    {
+      "beat": "steps",
+      "say": "Switch off, take the case off.",
+      "text": "Off, case off",
+      "step": 1,
+      "scene": "remove"
+    },
+    {
+      "beat": "steps",
+      "say": "Wipe it with an alcohol wipe.",
+      "text": "Alcohol wipe",
+      "step": 2,
+      "scene": "wipe"
+    },
+    {
+      "beat": "steps",
+      "say": "Wash the case in soapy water.",
+      "text": "Wash the case",
+      "step": 3,
+      "scene": "rinse"
+    },
+    {
+      "beat": "safety",
+      "say": "No sprays, no bleach, never mix cleaners.",
+      "text": "No sprays or bleach. Never mix cleaners."
+    },
+    {
+      "beat": "result",
+      "say": "Clean phone, clean hands.",
+      "text": "Clean phone",
+      "result": {
+        "say": "Clean phone, clean hands.",
+        "headline": "Clean phone",
+        "before": "Germy phone",
+        "after": "Clean phone"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "Daily hidden cleaning hacks, at hiddenclean dot com.",
+      "text": "Daily hidden cleaning hacks"
+    }
+  ],
+  "words": 50,
+  "warn": [],
+  "elevenlabsPrompt": "[playful] Your phone is dirtier than your toilet.\n\n[intrigued] It goes everywhere. Clean it weekly.\n\n[friendly] Switch off, take the case off. Wipe it with an alcohol wipe. Wash the case in soapy water. No sprays, no bleach, never mix cleaners.\n\n[delighted] Clean phone, clean hands.\n\n[warm] Daily hidden cleaning hacks, at hiddenclean dot com."
+}
