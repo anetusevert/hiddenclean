@@ -12,12 +12,14 @@ const hookDur = Number(spawnSync("ffprobe", ["-v", "error", "-show_entries", "fo
 const spec = JSON.parse(fs.readFileSync(path.join(dir, "specs", `${rc.slug}.json`), "utf8"));
 const leadN = (spec.doLead ?? "Here's the hidden setting.").split(/\s+/).length; const doI = s.pieces.findIndex((p) => p.beat === "do");
 const doWords = al.words.filter((w) => w.p === doI);
-if (doWords[leadN]) { al.starts[doI] = doWords[leadN].s - 0.05; s.pieces[doI] = { ...s.pieces[doI], say: spec.doThis }; }
+if (!rc.keepLead && doWords[leadN]) { al.starts[doI] = doWords[leadN].s - 0.05; s.pieces[doI] = { ...s.pieces[doI], say: spec.doThis }; }
 // keep pieces 1..n; piece i audio = [start_i, end_i]
 let keep = s.pieces.map((p, i) => i).filter((i) => i > 0);
 const segDur = (i) => ends[i] - al.starts[i];
 const total = () => LEAD + hookDur + GAP + keep.reduce((a, i) => a + segDur(i) + GAP, 0) + OUTRO;
 const stepIdx = (name) => s.pieces.findIndex((p) => p.beat === "steps" && "s" + p.step === name);
+// rc.cut: steps always removed (even under budget), e.g. to land a borderline cut inside 22 s; rc.keepLead keeps the do lead-in (pads short cuts to >= 18 s)
+for (const d of rc.cut ?? []) keep = keep.filter((i) => i !== stepIdx(d));
 for (const d of rc.drop ?? []) { if (total() <= MAX) break; keep = keep.filter((i) => i !== stepIdx(d)); }
 // still over budget: drop more steps (longest middle step first), but keep the first step (often unplug/safety) and >= MIN_STEPS
 while (total() > MAX) { const st = keep.filter((i) => s.pieces[i].beat === "steps"); if (st.length <= MIN_STEPS) break;

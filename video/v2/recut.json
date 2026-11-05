@@ -208,5 +208,51 @@
   ],
   "open": "5983910@2",
   "ask": "Descaled yours this month: *YES* or *NEVER?*"
+ },
+ "v2r-dog-bowl": {
+  "slug": "how-to-clean-a-dog-bowl",
+  "hook": "Your dog drinks *SLIME*",
+  "say": "Your dog drinks from this slime every day.",
+  "first": "hook2",
+  "drop": [],
+  "open": "5006627@3.2",
+  "ask": "Washed the bowl today: *YES* or *NO?*",
+  "keepLead": true
+ },
+ "v2r-washer-gunk": {
+  "slug": "how-to-clean-a-washing-machine-filter",
+  "hook": "Tiny door, full of *GUNK*",
+  "say": "Your washer has a tiny door full of gunk.",
+  "first": "do",
+  "drop": [],
+  "open": "9462947@1",
+  "ask": "Ever opened that door: *YES* or *NEVER?*",
+  "cut": [
+   "s4",
+   "s2"
+  ]
+ },
+ "v2r-phone": {
+  "slug": "how-to-clean-a-phone",
+  "hook": "Phone on the *TOILET?*",
+  "say": "Your phone carries more germs than a toilet seat.",
+  "first": "hook2",
+  "drop": [
+   "s3"
+  ],
+  "open": "7172121@1",
+  "ask": "Cleaned yours this week: *YES* or *NEVER?*",
+  "keepLead": true
+ },
+ "v2r-dishwasher-gunk": {
+  "slug": "how-to-clean-a-dishwasher-filter",
+  "hook": "That smell? It's *THIS*",
+  "say": "Dishwasher smells funky? Something's rotting in there.",
+  "first": "do",
+  "drop": [
+   "s1"
+  ],
+  "open": "4109344@1.5",
+  "ask": "Ever cleaned that filter: *YES* or *NEVER?*"
  }
 }
