@@ -38,7 +38,8 @@ const DEFS: Omit<Guide, "id" | "title">[] = [
         { text: "Wipe the pre-sprayed tiles and rinse them with warm water.", tip: T("how to clean bathroom tiles") },
         { text: "Squeegee or dry the glass door so hard-water spots don't form.", tip: T("how to clean a shower door") },
         { text: "Check the silicone for black spots and note it for a longer treatment.", tip: T("how to remove mould from silicone") },
-        { text: "Slow drain? Lift the cover and pull out the hair clog while you're there.", tip: T("how to clean a shower drain") }] },
+        { text: "Slow drain? Lift the cover and pull out the hair clog while you're there.", tip: T("how to clean a shower drain") },
+        { text: "Lift the bath mat and hang it over the edge to dry; scrub its suction cups weekly.", tip: T("how to clean a bath mat") }] },
       { title: "Floor and finish", minutes: 2, items: [
         { text: "Sweep or vacuum, then mop from the far corner towards the door with clean water.", tip: T("how to mop floors without streaks") },
         { text: "Put fresh towels out and switch the extractor fan on to dry the room.", tip: T("how to clean a bathroom exhaust fan") }] },
@@ -66,7 +67,8 @@ const DEFS: Omit<Guide, "id" | "title">[] = [
         { text: "Scrub the toothbrush holder.", tip: T("how to clean a toothbrush holder") },
         { text: "Wipe the mirror streak-free.", tip: T("how to clean a mirror without streaks") },
         { text: "Pull the hair out of the shower drain.", tip: T("how to clean a shower drain") },
-        { text: "Rinse the toilet brush and wash its holder.", tip: T("how to clean a toilet brush") }] },
+        { text: "Rinse the toilet brush and wash its holder.", tip: T("how to clean a toilet brush") },
+        { text: "Flip the bath mat, scrub the suction cups and hang it to dry.", tip: T("how to clean a bath mat") }] },
       { title: "Wednesday: floors", minutes: 20, items: [
         { text: "Vacuum every room; untangle the brush roll if it's wrapped in hair.", tip: T("how to clean a vacuum brush roll") },
         { text: "Mop hard floors with clean water.", tip: T("how to mop floors without streaks") },

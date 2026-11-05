@@ -1,0 +1,16 @@
+{
+  "hook": "Flip your bath mat over.",
+  "hookLabel": "GROSS ALERT",
+  "doLead": "That's mould.",
+  "doThis": "Wash it weekly.",
+  "doText": "Wash it weekly",
+  "appliance": "dishwasher",
+  "steps": [
+    { "say": "Peel it up, rinse it in the tub.", "text": "Peel up + rinse", "scene": "remove" },
+    { "say": "Scrub the cups in hot soapy water.", "text": "Scrub the cups", "scene": "rinse" },
+    { "say": "Hang it up to dry fully.", "text": "Hang to dry", "scene": "wipe" }
+  ],
+  "safety": { "say": "One cleaner only. Never mix cleaners.", "text": "One cleaner only. Never mix cleaners." },
+  "result": { "say": "Fresh mat, no slime.", "headline": "Fresh mat", "before": "Mouldy cups", "after": "Fresh mat" },
+  "safetyCheck": "Checked 2026-11-05: washing-up liquid and hot water only, one product at a time; no bleach, no vinegar+bleach, no ammonia, no acid+bleach, nothing mixed. Rubber/PVC suction mats: check the care label before any machine wash (low temp, no tumble dryer). Bin a mat with mould that won't scrub off. Wear gloves for mouldy mats and ventilate the bathroom."
+}

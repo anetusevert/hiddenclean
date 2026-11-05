@@ -254,3 +254,22 @@ v2-clean-a-phone.mp4
   https://www.pexels.com/video/person-squeezing-a-sponge-9733259/
 Voice: ElevenLabs Mira (rdEyNni8e60Jlx1RsV9N), eleven_v4 (~344 credits). Music/SFX: own HiddenClean kit.
 v2r-limescale-taps.mp4 / v2r-kettle-flakes.mp4 (TikTok recuts, same clips as their v2 shorts): new Mira hook lines, one eleven_v4 generation (~112 credits).
+
+=== 13 Nov 2026 tip (built 2026-11-05): all clips Pexels License, free commercial use, no attribution required: https://www.pexels.com/license/ ===
+v2-clean-a-bath-mat.mp4
+  https://www.pexels.com/video/close-up-of-mold-growth-on-surface-34617328/
+  https://www.pexels.com/video/bubbles-and-rubber-duck-in-drain-13767351/
+  https://www.pexels.com/video/feet-legs-girl-young-4155078/
+  https://www.pexels.com/video/person-wearing-a-pair-of-cute-slippers-6651856/
+  https://www.pexels.com/video/legs-girl-bathroom-marble-4155077/
+  https://www.pexels.com/video/shower-head-filling-bathtub-with-water-6810588/
+  https://www.pexels.com/video/filling-up-a-bucket-with-water-from-the-shower-head-4159571/
+  https://www.pexels.com/video/a-person-holding-a-scrub-brush-9474127/
+  https://www.pexels.com/video/a-close-up-video-of-a-person-washing-cloths-in-a-basin-6843727/
+  https://www.pexels.com/video/a-woman-in-pink-gloves-cleaning-a-bathtub-9472820/
+  https://www.pexels.com/video/man-hanging-towel-on-a-string-10398426/
+  https://www.pexels.com/video/laundry-hanging-on-a-clothesline-to-dry-6841999/
+  https://www.pexels.com/video/a-woman-wearing-gloves-squeezing-water-out-from-newly-soaked-fabrics-6843722/
+  https://www.pexels.com/video/a-woman-in-pink-gloves-cleaning-a-bathtub-9472831/
+Voice: ElevenLabs Mira (rdEyNni8e60Jlx1RsV9N), eleven_v4 (~315 credits). Music/SFX: own HiddenClean kit.
+v2r-dog-bowl.mp4 / v2r-washer-gunk.mp4 / v2r-phone.mp4 / v2r-dishwasher-gunk.mp4 (TikTok recuts, same clips as their v2 shorts): 4 new Mira hook lines, one eleven_v4 generation (~232 credits).

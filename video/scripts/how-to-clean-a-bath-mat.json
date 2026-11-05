@@ -1,0 +1,68 @@
+{
+  "key": "how-to-clean-a-bath-mat",
+  "n": 117,
+  "slug": "how-to-clean-a-bath-mat",
+  "title": "How to clean a bath mat",
+  "appliance": "dishwasher",
+  "revealAt": "part",
+  "url": "https://www.hiddenclean.com/tips/how-to-clean-a-bath-mat",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Flip your bath mat over.",
+      "text": "Flip your bath mat over.",
+      "label": "GROSS ALERT"
+    },
+    {
+      "beat": "do",
+      "say": "That's mould. Wash it weekly.",
+      "text": "Wash it weekly"
+    },
+    {
+      "beat": "steps",
+      "say": "Peel it up, rinse it in the tub.",
+      "text": "Peel up + rinse",
+      "step": 1,
+      "scene": "remove"
+    },
+    {
+      "beat": "steps",
+      "say": "Scrub the cups in hot soapy water.",
+      "text": "Scrub the cups",
+      "step": 2,
+      "scene": "rinse"
+    },
+    {
+      "beat": "steps",
+      "say": "Hang it up to dry fully.",
+      "text": "Hang to dry",
+      "step": 3,
+      "scene": "wipe"
+    },
+    {
+      "beat": "safety",
+      "say": "One cleaner only. Never mix cleaners.",
+      "text": "One cleaner only. Never mix cleaners."
+    },
+    {
+      "beat": "result",
+      "say": "Fresh mat, no slime.",
+      "text": "Fresh mat",
+      "result": {
+        "say": "Fresh mat, no slime.",
+        "headline": "Fresh mat",
+        "before": "Mouldy cups",
+        "after": "Fresh mat"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "Daily hidden cleaning hacks, at hiddenclean dot com.",
+      "text": "Daily hidden cleaning hacks"
+    }
+  ],
+  "words": 49,
+  "warn": [],
+  "elevenlabsPrompt": "[playful] Flip your bath mat over.\n\n[intrigued] That's mould. Wash it weekly.\n\n[friendly] Peel it up, rinse it in the tub. Scrub the cups in hot soapy water. Hang it up to dry fully. One cleaner only. Never mix cleaners.\n\n[delighted] Fresh mat, no slime.\n\n[warm] Daily hidden cleaning hacks, at hiddenclean dot com.",
+  "safetyCheck": "Checked 2026-11-05: washing-up liquid and hot water only, one product at a time; no bleach, no vinegar+bleach, no ammonia, no acid+bleach, nothing mixed. Rubber/PVC suction mats: check the care label before any machine wash (low temp, no tumble dryer). Bin a mat with mould that won't scrub off. Wear gloves for mouldy mats and ventilate the bathroom."
+}
