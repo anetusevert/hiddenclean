@@ -3,6 +3,7 @@
 // sec = real clip length (ffprobe on public/v/<id>.mp4, rounded). Used for VideoObject + video sitemap duration; falls back to 30.
 export type Short = { id: string; hook: string; tipSlug: string; label: string; sec?: number };
 export const SHORTS: Short[] = [
+  { id: "duvet", hook: "You *SLEEP* under this", tipSlug: "how-to-wash-a-duvet", label: "Wash a duvet", sec: 22 },
   { id: "bath-mat", hook: "Under your bath mat? *MOULD*", tipSlug: "how-to-clean-a-bath-mat", label: "Bath mat mould", sec: 20 },
   { id: "phone", hook: "Dirtier than your *TOILET*", tipSlug: "how-to-clean-a-phone", label: "Phone germs", sec: 22 },
   { id: "dog-bowl", hook: "Your dog's bowl is *SLIMY*", tipSlug: "how-to-clean-a-dog-bowl", label: "Dog bowl slime", sec: 21 },

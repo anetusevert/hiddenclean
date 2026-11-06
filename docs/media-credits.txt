@@ -273,3 +273,23 @@ v2-clean-a-bath-mat.mp4
   https://www.pexels.com/video/a-woman-in-pink-gloves-cleaning-a-bathtub-9472831/
 Voice: ElevenLabs Mira (rdEyNni8e60Jlx1RsV9N), eleven_v4 (~315 credits). Music/SFX: own HiddenClean kit.
 v2r-dog-bowl.mp4 / v2r-washer-gunk.mp4 / v2r-phone.mp4 / v2r-dishwasher-gunk.mp4 (TikTok recuts, same clips as their v2 shorts): 4 new Mira hook lines, one eleven_v4 generation (~232 credits).
+
+=== 14 Nov 2026 tip (built 2026-11-06): all clips Pexels License, free commercial use, no attribution required: https://www.pexels.com/license/ ===
+v2-wash-a-duvet.mp4
+  https://www.pexels.com/video/woman-putting-towels-inside-a-washing-machine-8756813/
+  https://www.pexels.com/video/close-up-view-of-clothes-spinning-inside-a-washing-machine-15432350/
+  https://www.pexels.com/video/a-woman-standing-on-bed-while-holding-blanket-6863732/
+  https://www.pexels.com/video/bed-bedroom-home-blanket-4153241/
+  https://www.pexels.com/video/5592544/
+  https://www.pexels.com/video/girl-getting-clothes-in-washing-machine-7086406/
+  https://www.pexels.com/video/a-person-dropping-a-bottle-of-detergent-in-a-laundry-basket-10566660/
+  https://www.pexels.com/video/woman-putting-clothes-in-washing-machine-8756886/
+  https://www.pexels.com/video/a-person-picking-up-a-bottle-of-laundry-liquid-10566655/
+  https://www.pexels.com/video/a-woman-holding-a-laundry-basket-7280813/
+  https://www.pexels.com/video/a-person-placing-a-pillow-inside-a-pillowcase-9057920/
+  https://www.pexels.com/video/a-man-closing-the-door-of-a-commercial-washing-machine-8756952/
+  https://www.pexels.com/video/a-man-making-bed-7641639/
+Voice: ElevenLabs Mira (rdEyNni8e60Jlx1RsV9N), eleven_v4 (~347 credits). Music/SFX: own HiddenClean kit.
+
+=== v2r recuts rim-gunk + tile-scum (2026-11-06): same Pexels clips as their v2 sources; 2 new Mira hook lines, one ~120-credit generation. ===
+

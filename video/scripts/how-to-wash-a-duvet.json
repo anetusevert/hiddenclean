@@ -1,0 +1,67 @@
+{
+  "key": "how-to-wash-a-duvet",
+  "n": 118,
+  "slug": "how-to-wash-a-duvet",
+  "title": "How to wash a duvet",
+  "appliance": "washer",
+  "revealAt": "part",
+  "url": "https://www.hiddenclean.com/tips/how-to-wash-a-duvet",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "You sleep under THIS every night.",
+      "text": "You sleep under THIS every night.",
+      "label": "GROSS ALERT"
+    },
+    {
+      "beat": "do",
+      "say": "Wash the duvet. Dust builds up inside.",
+      "text": "Wash the duvet"
+    },
+    {
+      "beat": "steps",
+      "say": "Check the care label and drum size.",
+      "text": "Label + drum size",
+      "step": 1,
+      "scene": "open"
+    },
+    {
+      "beat": "steps",
+      "say": "Wash it alone with detergent.",
+      "text": "Wash alone",
+      "step": 2,
+      "scene": "pour"
+    },
+    {
+      "beat": "steps",
+      "say": "Dry it fully so mould can't grow.",
+      "text": "Dry fully",
+      "step": 3,
+      "scene": "wait"
+    },
+    {
+      "beat": "safety",
+      "say": "One product only. Never mix cleaners.",
+      "text": "One product. Never mix cleaners."
+    },
+    {
+      "beat": "result",
+      "say": "Fresh duvet, cleaner sleep.",
+      "text": "Fresh duvet",
+      "result": {
+        "say": "Fresh duvet, cleaner sleep.",
+        "headline": "Fresh duvet",
+        "before": "Dusty duvet",
+        "after": "Fresh duvet"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "Daily hidden cleaning hacks, at hiddenclean dot com.",
+      "text": "Daily hidden cleaning hacks"
+    }
+  ],
+  "words": 50,
+  "warn": [],
+  "elevenlabsPrompt": "[playful] You sleep under THIS every night.\n\n[intrigued] Wash the duvet. Dust builds up inside.\n\n[friendly] Check the care label and drum size. Wash it alone with detergent. Dry it fully so mould can't grow. One product only. Never mix cleaners.\n\n[delighted] Fresh duvet, cleaner sleep.\n\n[warm] Daily hidden cleaning hacks, at hiddenclean dot com."
+}

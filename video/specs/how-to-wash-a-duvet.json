@@ -1,0 +1,16 @@
+{
+  "hook": "You sleep under THIS every night.",
+  "hookLabel": "GROSS ALERT",
+  "doLead": "Wash the duvet.",
+  "doThis": "Dust builds up inside.",
+  "doText": "Wash the duvet",
+  "appliance": "washer",
+  "steps": [
+    { "say": "Check the care label and drum size.", "text": "Label + drum size", "scene": "open" },
+    { "say": "Wash it alone with detergent.", "text": "Wash alone", "scene": "pour" },
+    { "say": "Dry it fully so mould can't grow.", "text": "Dry fully", "scene": "wait" }
+  ],
+  "safety": { "say": "One product only. Never mix cleaners.", "text": "One product. Never mix cleaners." },
+  "result": { "say": "Fresh duvet, cleaner sleep.", "headline": "Fresh duvet", "before": "Dusty duvet", "after": "Fresh duvet" },
+  "safetyCheck": "Checked 2026-11-06: liquid detergent only, one product at a time; no bleach, no vinegar+bleach, no ammonia, nothing mixed. Check care label and drum capacity before washing; dry fully (tumble low or air) so mould cannot grow inside; do not overload the drum or force a wet duvet into a small dryer."
+}

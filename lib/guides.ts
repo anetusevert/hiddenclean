@@ -76,6 +76,7 @@ const DEFS: Omit<Guide, "id" | "title">[] = [
         { text: "Spot-treat any carpet stains.", tip: T("how to remove carpet stains") }] },
       { title: "Thursday: laundry and cloths", minutes: 15, items: [
         { text: "Wash microfibre cloths on their own, no softener.", tip: T("how to wash microfibre cloths") },
+        { text: "Check the care label and wash your duvet every 3–6 months; dry it fully.", tip: T("how to wash a duvet") },
         { text: "Leave the washer door and drawer open to dry.", tip: T("how to clean a front load washer smell") },
         { text: "Wipe the washing machine door seal.", tip: T("how to clean a washing machine door seal") }] },
       { title: "Friday: fridge and appliances", minutes: 20, items: [
